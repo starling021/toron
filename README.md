@@ -15,8 +15,8 @@
   <a href="https://github.com/entynetproject/copycat/releases">
     <img src="https://img.shields.io/github/release/entynetproject/copycat.svg">
   </a>
-  <a href="https://wikipedia.org/wiki/Shell_script">
-    <img src="https://img.shields.io/badge/language-shell-green.svg">
+  <a href="https://wikipedia.org/wiki/Python_(programming_language)">
+    <img src="https://img.shields.io/badge/language-python-blue.svg">
  </a>
   <a href="https://github.com/entynetproject/copycat">
       <img src="https://img.shields.io/badge/database-shodan-red.svg?maxAge=2592000">
