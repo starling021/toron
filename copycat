@@ -100,7 +100,7 @@ echo
 cd ~/copycat
 cat banner/banner.txt            
 echo
-echo  "Usage: copycat [OPTION...] <argument...>"
+echo  "Usage: copycat [OPTION...] <arguments...>"
 echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."
 echo 
 echo  "    host     <host>                Show all available information for an IP."
@@ -108,7 +108,7 @@ echo  "    honeypot <host>                Check whether the IP is a honeypot or 
 echo  "    download <filename> <request>  Download search results as JSON database."
 echo  "    parse    <format> <filename>   Extract information out of compressed JSON."
 echo  "    stats    <request>             Provide summary information about a search."                 
-echo  "    search   <request>             Search the internet of things from Copycat."
+echo  "    search   <request>             Search the internet database from Copycat."
 echo  "    domain   <domain>              Show all available information for a domain."
 echo  "    stream                         Stream Copycat search results in real-time."
 echo  "    radar                          The real-time map of Copycat search results."
@@ -776,7 +776,7 @@ echo
 echo  "   Name      : Copycat Toolkit"
 echo  "   Developer : Entynetproject"
 echo  "   Version   : v1.5 (copycat-v1.5-dev)"
-echo  "   Database  : Shodan (https://shodan.io/)"
+echo  "   Database  : Shodan (Internet Database)"
 echo  "   Site      : https://entynetproject.simplesite.com/"
 echo
 exit
@@ -884,7 +884,7 @@ echo
 cd ~/copycat
 cat banner/banner.txt           
 echo 
-echo  "Usage: copycat [OPTION...] <argument...>"
+echo  "Usage: copycat [OPTION...] <arguments...>"
 echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."           
 echo  
 echo  "    host     <host>                Show all available information for an IP."
@@ -892,7 +892,7 @@ echo  "    honeypot <host>                Check whether the IP is a honeypot or 
 echo  "    download <filename> <request>  Download search results as JSON database."
 echo  "    parse    <format> <filename>   Extract information out of compressed JSON."
 echo  "    stats    <request>             Provide summary information about a search."                 
-echo  "    search   <request>             Search the internet of things from Copycat."
+echo  "    search   <request>             Search the internet database from Copycat."
 echo  "    domain   <domain>              Show all available information for a domain."
 echo  "    stream                         Stream Copycat search results in real-time."
 echo  "    radar                          The real-time map of Copycat search results."
