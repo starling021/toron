@@ -27,8 +27,8 @@
   <a href="https://github.com/entynetproject/copycat/wiki">
       <img src="https://img.shields.io/badge/wiki%20-copycat-lightgrey.svg">
  </a>
-  <a href="https://twitter.com/copycat_toolkit">
-    <img src="https://img.shields.io/badge/twitter-copycat-blue.svg">
+  <a href="https://twitter.com/entynetproject">
+    <img src="https://img.shields.io/badge/twitter-entynetproject-blue.svg">
  </a>
 </p>
 
