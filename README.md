@@ -116,19 +116,19 @@
     
 # Copycat parse formats
 
-    --only-ip             (view only ip)       
-    --only-port           (view only port)
-    --only-org            (view only org)
-    --only-hostnames      (view only hostnames)
-    --only-data           (view ip and port)
-    --only-ip-port        (view ip and port)
-    --only-ip-org         (view ip and org)
-    --only-ip-hostnames   (view ip and hostnames)
-    --only-port-org       (view port and org)
-    --only-port-hostnames (view port and hostnames)
-    --only-org-hostnames  (view org and hostnames)
-    --only-data-org       (view ip, port and org)
-    --only-data-hostnames (view ip, port and hostnames)
+    --only-ip             (Show only IP)       
+    --only-port           (Show only port)
+    --only-org            (Show only org)
+    --only-hostnames      (Show only hostnames)
+    --only-data           (Show IP and port)
+    --only-ip-port        (Show IP and port)
+    --only-ip-org         (Show IP and org)
+    --only-ip-hostnames   (Show IP and hostnames)
+    --only-port-org       (Show port and org)
+    --only-port-hostnames (Show port and hostnames)
+    --only-org-hostnames  (Show org and hostnames)
+    --only-data-org       (Show IP, port and org)
+    --only-data-hostnames (Show IP, port and hostnames)
 
 # Terms of use
 
