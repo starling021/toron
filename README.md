@@ -18,7 +18,7 @@
   <a href="https://wikipedia.org/wiki/Shell_script">
     <img src="https://img.shields.io/badge/language-shell-green.svg">
  </a>
-  <a href="https://shodan.io/">
+  <a href="https://github.com/entynetproject/copycat">
       <img src="https://img.shields.io/badge/database-shodan-red.svg?maxAge=2592000">
  </a>
   <a href="https://github.com/entynetproject/copycat/issues?q=is%3Aissue+is%3Aclosed">
@@ -69,7 +69,7 @@
 
 > copycat help
 
-    Usage: copycat [OPTION...] <argument...>
+    Usage: copycat [OPTION...] <arguments...>
     Copyright (C) 2019, Entynetproject. All Rights Reserved.
  
         host     <host>                Show all available information for an IP.
@@ -77,7 +77,7 @@
         download <filename> <request>  Download search results as JSON database.
         parse    <format> <filename>   Extract information out of compressed JSON.
         stats    <request>             Provide summary information about a search.               
-        search   <request>             Search the internet of things from Copycat.
+        search   <request>             Search the internet database from Copycat.
         domain   <domain>              Show all available information for a domain.
         stream                         Stream Copycat search results in real-time.
         radar                          The real-time map of Copycat search results.
