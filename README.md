@@ -15,8 +15,8 @@
   <a href="https://github.com/entynetproject/copycat/releases">
     <img src="https://img.shields.io/github/release/entynetproject/copycat.svg">
   </a>
-  <a href="https://ru.m.wikipedia.org/wiki/Python">
-    <img src="https://img.shields.io/badge/language-python-blue.svg">
+  <a href="https://wikipedia.org/wiki/Shell_script">
+    <img src="https://img.shields.io/badge/language-shell-green.svg">
  </a>
   <a href="https://shodan.io/">
       <img src="https://img.shields.io/badge/database-shodan-red.svg?maxAge=2592000">
@@ -27,7 +27,7 @@
   <a href="https://github.com/entynetproject/copycat/wiki">
       <img src="https://img.shields.io/badge/wiki%20-copycat-lightgrey.svg">
  </a>
-  <a href="https://mobile.twitter.com/copycat_toolkit">
+  <a href="https://twitter.com/copycat_toolkit">
     <img src="https://img.shields.io/badge/twitter-copycat-blue.svg">
  </a>
 </p>
