@@ -43,8 +43,6 @@ else
 	GNS="-e \e[0;32m"
 fi
 
-cd ~/copycat
-
 if [[ -d ~/copycat ]]
 then
 cd ~
