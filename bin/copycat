@@ -51,8 +51,8 @@ then
 {
 cd ~/copycat
 } &> /dev/null
-chmod +x ~/copycat/copycat
-~/copycat/copycat $1 $2 $3 $4 $5 $6 $7 $8 $9
+chmod +x copycat
+copycat $1 $2 $3 $4 $5 $6 $7 $8 $9
 else
 {
 ASESR="$( timeout -s SIGTERM 40 curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
@@ -64,8 +64,8 @@ cd ~
 git clone https://github.com/entynetproject/copycat.git
 cd ~/copycat
 } &> /dev/null
-chmod +x ~/copycat/copycat
-~/copycat/copycat $1 $2 $3 $4 $5 $6 $7 $8 $9
+chmod +x copycat
+copycat $1 $2 $3 $4 $5 $6 $7 $8 $9
 else
 cd ~
 sleep 1
