@@ -43,6 +43,8 @@ else
 	GNS="-e \e[0;32m"
 fi
 
+printf '\033]2;Copycat Toolkit\a'
+
 cd ~
 if [[ -d ~/copycat ]]
 then
