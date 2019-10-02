@@ -45,19 +45,6 @@ fi
 
 printf '\033]2;Copycat Toolkit\a'
 
-if [[ -d ~/copycat ]]
-then
-cd ~
-sleep 0.5
-cd ~/copycat
-else
-cd ~
-{
-git clone https://github.com/entynetproject/copycat.git
-} &> /dev/null
-cd ~/copycat
-fi
-
 {
 SED="$( cat ~/.shodan/api_key )"
 } &> /dev/null
