@@ -97,7 +97,6 @@ shodan init "$SHO"
 fi
 sleep 1
 echo
-cd ~/copycat
 cat banner/banner.txt            
 echo
 echo  "Usage: copycat [OPTION...] <arguments...>"
@@ -770,7 +769,6 @@ exit
 elif [[ "$1" = "info" ]]
 then
 echo
-cd ~/copycat
 cat banner/banner.txt        
 echo  
 echo  "   Name      : Copycat Toolkit"
@@ -881,7 +879,6 @@ fi
 
 sleep 1
 echo
-cd ~/copycat
 cat banner/banner.txt           
 echo 
 echo  "Usage: copycat [OPTION...] <arguments...>"
