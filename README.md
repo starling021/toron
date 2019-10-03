@@ -32,7 +32,7 @@
  </a>
 </p>
 
-# Copycat toolkit credits
+# Copycat toolkit details
    
     Name      : Copycat Toolkit 
     Developer : Entynetproject
