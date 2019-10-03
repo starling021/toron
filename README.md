@@ -32,14 +32,6 @@
  </a>
 </p>
 
-# Copycat toolkit details
-   
-    Name      : Copycat Toolkit 
-    Developer : Entynetproject
-    Version   : v1.5 (copycat-v1.5-dev)
-    Database  : Shodan (Internet Database)
-    Site      : https://entynetproject.simplesite.com/
-
 # About copycat toolkit
 
     INFO: Copycat Toolkit is a set of tools to view information 
@@ -83,7 +75,6 @@
         stream                         Stream Copycat search results in real-time.
         radar                          The real-time map of Copycat search results.
         update                         Update Copycat Toolkit and API configuration.
-        details                        Show all information about Copycat Toolkit.
         help                           Show all available Copycat Toolkit options.
  
  # Copycat toolkit examples
