@@ -99,7 +99,6 @@ echo  "    domain   <domain>              Show all available information for a d
 echo  "    stream                         Stream Copycat search results in real-time."
 echo  "    radar                          The real-time map of Copycat search results."
 echo  "    update                         Update Copycat Toolkit and API configuration."
-echo  "    details                        Show all information about Copycat Toolkit."
 echo  "    help                           Show all available Copycat Toolkit options."
 echo    
 exit
@@ -752,20 +751,6 @@ echo ""$GNS"Successfully updated..."$CE""
 sleep 1
 exit
 
-
-elif [[ "$1" = "details" ]]
-then
-echo
-cat banner/banner.txt        
-echo  
-echo  "   Name      : Copycat Toolkit"
-echo  "   Developer : Entynetproject"
-echo  "   Version   : v1.5 (copycat-v1.5-dev)"
-echo  "   Database  : Shodan (Internet Database)"
-echo  "   Site      : https://entynetproject.simplesite.com/"
-echo
-exit
-
 elif [[ "$1" = "search" ]]
 then
 if [[ -f /usr/local/bin/shodan ]]
@@ -881,7 +866,6 @@ echo  "    domain   <domain>              Show all available information for a d
 echo  "    stream                         Stream Copycat search results in real-time."
 echo  "    radar                          The real-time map of Copycat search results."
 echo  "    update                         Update Copycat Toolkit and API configuration."
-echo  "    details                        Show all information about Copycat Toolkit."
 echo  "    help                           Show all available Copycat Toolkit options."
 echo    
 exit
