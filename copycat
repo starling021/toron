@@ -99,7 +99,7 @@ echo  "    domain   <domain>              Show all available information for a d
 echo  "    stream                         Stream Copycat search results in real-time."
 echo  "    radar                          The real-time map of Copycat search results."
 echo  "    update                         Update Copycat Toolkit and API configuration."
-echo  "    info                           Show all information about Copycat Toolkit."
+echo  "    details                        Show all information about Copycat Toolkit."
 echo  "    help                           Show all available Copycat Toolkit options."
 echo    
 exit
@@ -753,7 +753,7 @@ sleep 1
 exit
 
 
-elif [[ "$1" = "info" ]]
+elif [[ "$1" = "details" ]]
 then
 echo
 cat banner/banner.txt        
@@ -881,7 +881,7 @@ echo  "    domain   <domain>              Show all available information for a d
 echo  "    stream                         Stream Copycat search results in real-time."
 echo  "    radar                          The real-time map of Copycat search results."
 echo  "    update                         Update Copycat Toolkit and API configuration."
-echo  "    info                           Show all information about Copycat Toolkit."
+echo  "    details                        Show all information about Copycat Toolkit."
 echo  "    help                           Show all available Copycat Toolkit options."
 echo    
 exit
