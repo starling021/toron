@@ -83,7 +83,7 @@
         stream                         Stream Copycat search results in real-time.
         radar                          The real-time map of Copycat search results.
         update                         Update Copycat Toolkit and API configuration.
-        info                           Show all information about Copycat Toolkit.
+        details                        Show all information about Copycat Toolkit.
         help                           Show all available Copycat Toolkit options.
  
  # Copycat toolkit examples
