@@ -220,6 +220,7 @@ sleep 0.5
 else
      sleep 0.5
      {
+     pip uninstall shodan -y
      pip install shodan
      } &> /dev/null
 sleep 0.5
