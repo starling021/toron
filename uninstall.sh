@@ -77,6 +77,3 @@ sleep 1
 echo  ""$RS"Uninstalling installed dependencies..."$CE""
 sleep 1
 cd 
-{
-pip uninstall -y shodan
-} &> /dev/null
