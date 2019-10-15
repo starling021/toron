@@ -65,7 +65,6 @@ cat banner/banner.txt
 echo 
 sleep 0.5
 echo  ""$RS"Uninstalling Copycat Toolkit..."$CE""
-sleep 1
 {
 rm /usr/local/bin/copycat
 rm /usr/local/bin/copycat-radar
@@ -75,5 +74,5 @@ rm -r ~/copycat
 } &> /dev/null
 sleep 1
 echo  ""$RS"Uninstalling installed dependencies..."$CE""
-sleep 1
+sleep 3
 cd 
