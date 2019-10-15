@@ -96,12 +96,12 @@ echo
 cd ~/copycat
 cat banner/banner.txt
 echo
-sleep 1
 
 if [[ -f /etc/copycat.conf ]]
 then
 
 CONF="$( cat /etc/copycat.conf )"
+sleep 1
 
 if [[ "$CONF" = "arm" ]]
 then
