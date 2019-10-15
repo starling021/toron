@@ -49,7 +49,7 @@ fi
 
 if [[ $EUID -ne 0 ]]
 then
-   echo ""$RS"["$YSA"!"$RSA"] This script must be run as "$YSA"root"$CE""
+   echo -e "["$RSA"*"$CE"] "$RSA"This script must be run as "$YSA"root"$CE""
    exit
 fi
 
