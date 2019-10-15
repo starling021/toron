@@ -98,10 +98,10 @@ cat banner/banner.txt
 echo
 sleep 1
 
-if [[ -f /etc/copycat.d ]]
+if [[ -f /etc/copycat.conf ]]
 then
 
-CONF="$( cat /etc/copycat.d )"
+CONF="$( cat /etc/copycat.conf )"
 
 if [[ "$CONF" = "arm" ]]
 then
@@ -154,7 +154,7 @@ if [[ "$CONF" = "" ]]
 then
 exit
 else
-echo "$CONF" >> /etc/copycat.d
+echo "$CONF" >> /etc/copycat.conf
 fi
 sleep 1
 
