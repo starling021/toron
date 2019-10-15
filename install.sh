@@ -47,16 +47,9 @@ YSA="\e[1;33m"
 	GNS="-e \e[0;32m"
 fi
 
-WHO="$( whoami )"
-
-if [[ "$WHO" != "root" ]]
-then
-sleep 1
-echo -e "$RSA"run it as"$CE" "$YSA"root"$CE"
-sleep 1
-echo -e "$RSA"or use"$CE" "$YSA"sudo"$CE"
-sleep 1
-exit
+if [[ $EUID -ne 0 ]]; then
+   echo "[!] This script must be run as root" 1>&2
+   exit 1
 fi
 
 if [[ -d ~/copycat ]]
