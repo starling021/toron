@@ -35,9 +35,9 @@
 # About copycat toolkit
 
     INFO: Copycat Toolkit is a set of tools to view information 
-    about a hostname, IP’s vulnerabilities, internet connected computers 
+    about a hostname, IP’s vulnerabilities, Internet connected computers 
     and etc. Copycat Toolkit also allows users to to find specific types 
-    of computers connected to the internet using a variety of filters. 
+    of computers connected to the Internet using a variety of filters. 
     
 # How to install copycat
 
@@ -70,7 +70,7 @@
         download <filename> <request>  Download search results as JSON database.
         parse    <format> <filename>   Extract information out of compressed JSON.
         stats    <request>             Provide summary information about a search.               
-        search   <request>             Search the internet database from Copycat.
+        search   <request>             Search the Internet database from Copycat.
         domain   <domain>              Show all available information for a domain.
         stream                         Stream Copycat search results in real-time.
         radar                          The real-time map of Copycat search results.
