@@ -67,7 +67,5 @@ rm /bin/copycat
 rm /bin/copycat-radar
 rm -r ~/copycat
 } &> /dev/null
-sleep 1
-echo  ""$RS"Uninstalling installed dependencies..."$CE""
 sleep 3
 cd 
