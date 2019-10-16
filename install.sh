@@ -148,7 +148,16 @@ if [[ "$CONF" = "" ]]
 then
 exit
 else
+if [[ "$CONF" = "arm" ]]
+then
+read -e -p $'This is a Single Board Computer [yes/no]? ' PI
+if [[ "$PI" = "yes" ]]
+then
+echo "amd" >> /etc/copycat.conf
+CONF="amd"
+else
 echo "$CONF" >> /etc/copycat.conf
+fi
 fi
 sleep 1
 
