@@ -67,7 +67,7 @@
  
        host     <host>                Show all available information for an IP.
        honeypot <host>                Check whether the IP is a honeypot or not.
-       download <filename> <request>  Download search results as JSON database.
+       download <request> <filename>  Download search results as JSON database.
        parse    <format> <filename>   Extract information out of compressed JSON.
        stats    <request>             Provide summary information about a search.               
        search   <request>             Search the Internet database from Copycat.
