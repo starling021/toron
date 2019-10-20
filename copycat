@@ -90,22 +90,27 @@ echo
 echo  "Usage: copycat [OPTION...] <arguments...>"
 echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."
 echo 
-echo  "    host     <host>                Show all available information for an IP."
-echo  "    honeypot <host>                Check whether the IP is a honeypot or not."
-echo  "    download <filename> <request>  Download search results as JSON database."
-echo  "    parse    <format> <filename>   Extract information out of compressed JSON."
-echo  "    stats    <request>             Provide summary information about a search."                 
-echo  "    search   <request>             Search the Internet database from Copycat."
-echo  "    domain   <domain>              Show all available information for a domain."
-echo  "    stream                         Stream Copycat search results in real-time."
-echo  "    radar                          The real-time map of Copycat search results."
-echo  "    update                         Update Copycat Toolkit and API configuration."
-echo  "    help                           Show all available Copycat Toolkit options."
+echo  "   host     <host>                Show all available information for an IP."
+echo  "   honeypot <host>                Check whether the IP is a honeypot or not."
+echo  "   download <request> <filename>  Download search results as JSON database."
+echo  "   parse    <format> <filename>   Extract information out of compressed JSON."
+echo  "   stats    <request>             Provide summary information about a search."                 
+echo  "   search   <request>             Search the Internet database from Copycat."
+echo  "   domain   <domain>              Show all available information for a domain."
+echo  "   stream                         Stream Copycat search results in real-time."
+echo  "   radar                          The real-time map of Copycat search results."
+echo  "   update                         Update Copycat Toolkit and API configuration."
+echo  "   help                           Show all available Copycat Toolkit options."
 echo    
 exit
 
 elif [[ "$1" = "host" ]]
 then
+if [[ $2 = "" ]]
+then
+echo -e "Usage: copycat $1 <host>"
+exit
+fi
 if [[ -f /usr/local/bin/shodan ]]
 then
 sleep 0.5
@@ -137,6 +142,16 @@ exit
 
 elif [[ "$1" = "download" ]]
 then
+if [[ $2 = "" ]]
+then
+echo -e "Usage: copycat $1 <request> <filename>"
+exit
+fi
+if [[ $3 = "" ]]
+then
+echo -e "Usage: copycat $1 <request> <filename>"
+exit
+fi
 if [[ -f /usr/local/bin/shodan ]]
 then
 sleep 0.5
@@ -164,11 +179,21 @@ shodan init "$SHO"
 fi
 SAS="$2"
 SIS="$3"
-shodan download "$SAS" "$SIS"
+shodan download "$SIS" "$SAS"
 exit
 
 elif [[ "$1" = "parse" ]]
 then
+if [[ $2 = "" ]]
+then
+echo -e "Usage: copycat $1 <format> <filename>"
+exit
+fi
+if [[ $3 = "" ]]
+then
+echo -e "Usage: copycat $1 <format> <filename>"
+exit
+fi
 if [[ "$2" = "--only-ip-port" ]]
 then
 if [[ -f /usr/local/bin/shodan ]]
@@ -634,6 +659,11 @@ exit
 
 elif [[ "$1" = "stats" ]]
 then
+if [[ $2 = "" ]]
+then
+echo -e "Usage: copycat $1 <request>"
+exit
+fi
 if [[ -f /usr/local/bin/shodan ]]
 then
 sleep 0.5
@@ -665,6 +695,11 @@ exit
 
 elif [[ "$1" = "honeypot" ]]
 then
+if [[ $2 = "" ]]
+then
+echo -e "Usage: copycat $1 <host>"
+exit
+fi
 if [[ -f /usr/local/bin/shodan ]]
 then
 sleep 0.5
@@ -783,6 +818,11 @@ exit
 
 elif [[ "$1" = "search" ]]
 then
+if [[ $2 = "" ]]
+then
+echo -e "Usage: copycat $1 <request>"
+exit
+fi
 if [[ -f /usr/local/bin/shodan ]]
 then
 sleep 0.5
@@ -814,6 +854,11 @@ exit
 
 elif [[ "$1" = "domain" ]]
 then
+if [[ $2 = "" ]]
+then
+echo -e "Usage: copycat $1 <domain>"
+exit
+fi
 if [[ -f /usr/local/bin/shodan ]]
 then
 sleep 0.5
@@ -889,16 +934,16 @@ echo
 echo  "Usage: copycat [OPTION...] <arguments...>"
 echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."           
 echo  
-echo  "    host     <host>                Show all available information for an IP."
-echo  "    honeypot <host>                Check whether the IP is a honeypot or not."
-echo  "    download <filename> <request>  Download search results as JSON database."
-echo  "    parse    <format> <filename>   Extract information out of compressed JSON."
-echo  "    stats    <request>             Provide summary information about a search."                 
-echo  "    search   <request>             Search the Internet database from Copycat."
-echo  "    domain   <domain>              Show all available information for a domain."
-echo  "    stream                         Stream Copycat search results in real-time."
-echo  "    radar                          The real-time map of Copycat search results."
-echo  "    update                         Update Copycat Toolkit and API configuration."
-echo  "    help                           Show all available Copycat Toolkit options."
+echo  "   host     <host>                Show all available information for an IP."
+echo  "   honeypot <host>                Check whether the IP is a honeypot or not."
+echo  "   download <request> <filename>  Download search results as JSON database."
+echo  "   parse    <format> <filename>   Extract information out of compressed JSON."
+echo  "   stats    <request>             Provide summary information about a search."                 
+echo  "   search   <request>             Search the Internet database from Copycat."
+echo  "   domain   <domain>              Show all available information for a domain."
+echo  "   stream                         Stream Copycat search results in real-time."
+echo  "   radar                          The real-time map of Copycat search results."
+echo  "   update                         Update Copycat Toolkit and API configuration."
+echo  "   help                           Show all available Copycat Toolkit options."
 echo    
 exit
