@@ -88,6 +88,8 @@ chmod +x ~/copycat/copycat-radar
 } &> /dev/null
 fi
 sleep 0.5
+clear
+sleep 0.5
 echo  
 cd ~/copycat
 cat banner/banner.txt
