@@ -74,9 +74,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -128,9 +128,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -170,9 +170,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -215,9 +215,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -247,9 +247,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -279,9 +279,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -311,9 +311,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -343,9 +343,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -375,9 +375,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -407,9 +407,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -439,9 +439,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -471,9 +471,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -503,9 +503,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -535,9 +535,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -567,9 +567,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -599,9 +599,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -631,9 +631,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -661,9 +661,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -698,9 +698,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -735,9 +735,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -767,9 +767,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -798,9 +798,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -861,9 +861,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -898,9 +898,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -930,9 +930,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
+     pip2 install setuptools
+     pip2 uninstall shodan -y
+     pip2 install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
