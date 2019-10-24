@@ -109,10 +109,8 @@ echo ""$BS"Installing dependencies..."$CE""
 else 
 echo ""$BS"Installing dependencies..."$CE""
 pkg update
-pkg install python
-pkg install python-pip
 pkg install python2
-pkg install python2-pip
+pkg install python-pip
 fi
 fi
 
@@ -124,10 +122,8 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install python
-apt-get install python-pip
 apt-get install python2
-apt-get install python2-pip
+apt-get install python-pip
 fi
 fi
 
@@ -139,10 +135,8 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install python
-apt-get install python-pip
 apt-get install python2
-apt-get install python2-pip
+apt-get install python-pip
 fi
 fi
 
@@ -174,10 +168,8 @@ echo ""$BS"Installing dependencies..."$CE""
 else 
 echo ""$BS"Installing dependencies..."$CE""
 pkg update
-pkg install python
-pkg install python-pip
 pkg install python2
-pkg install python2-pip
+pkg install python-pip
 fi
 fi
 
@@ -189,10 +181,8 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install python
-apt-get install python-pip
 apt-get install python2
-apt-get install python2-pip
+apt-get install python-pip
 fi
 fi
 
@@ -204,10 +194,8 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install python
-apt-get install python-pip
 apt-get install python2
-apt-get install python2-pip
+apt-get install python-pip
 fi
 fi
 fi
