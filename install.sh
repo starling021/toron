@@ -228,6 +228,7 @@ sleep 0.5
 else
      sleep 0.5
      {
+     pip install setuptools
      pip uninstall shodan -y
      pip install shodan
      } &> /dev/null
