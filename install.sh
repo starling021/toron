@@ -110,7 +110,7 @@ else
 echo ""$BS"Installing dependencies..."$CE""
 pkg update
 pkg install python2
-pkg install python-pip2
+pkg install python-pip
 fi
 fi
 
@@ -123,7 +123,7 @@ else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
 apt-get install python2
-apt-get install python-pip2
+apt-get install python-pip
 fi
 fi
 
@@ -136,7 +136,7 @@ else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
 apt-get install python2
-apt-get install python-pip2
+apt-get install python-pip
 fi
 fi
 
@@ -169,7 +169,7 @@ else
 echo ""$BS"Installing dependencies..."$CE""
 pkg update
 pkg install python2
-pkg install python-pip2
+pkg install python-pip
 fi
 fi
 
@@ -182,7 +182,7 @@ else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
 apt-get install python2
-apt-get install python-pip2
+apt-get install python-pip
 fi
 fi
 
@@ -195,7 +195,7 @@ else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
 apt-get install python2
-apt-get install python-pip2
+apt-get install python-pip
 fi
 fi
 fi
@@ -216,9 +216,9 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip2 install setuptools
-     pip2 uninstall shodan -y
-     pip2 install shodan
+     pip install setuptools
+     pip uninstall shodan -y
+     pip install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
