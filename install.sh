@@ -66,9 +66,9 @@ chmod +x /usr/local/bin/copycat-radar
 cp copycat /bin
 chmod +x /bin/copycat
 cp copycat-radar /bin
-cp bin/copycat /data/data/com.termux/files/usr/bin/
+cp copycat /data/data/com.termux/files/usr/bin
 chmod +x /data/data/com.termux/files/usr/bin/copycat
-cp bin/copycat-radar /data/data/com.termux/files/usr/bin/
+cp copycat-radar /data/data/com.termux/files/usr/bin
 chmod +x /data/data/com.termux/files/usr/bin/copycat-radar
 chmod +x /bin/copycat-radar
 chmod +x ~/copycat/copycat
@@ -86,9 +86,9 @@ chmod +x /usr/local/bin/copycat-radar
 cp copycat /bin
 chmod +x /bin/copycat
 cp copycat-radar /bin
-cp bin/copycat /data/data/com.termux/files/usr/bin/
+cp copycat /data/data/com.termux/files/usr/bin
 chmod +x /data/data/com.termux/files/usr/bin/copycat
-cp bin/copycat-radar /data/data/com.termux/files/usr/bin/
+cp copycat-radar /data/data/com.termux/files/usr/bin
 chmod +x /data/data/com.termux/files/usr/bin/copycat-radar
 chmod +x /bin/copycat-radar
 chmod +x ~/copycat/copycat
