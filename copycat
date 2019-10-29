@@ -813,6 +813,16 @@ exit
 
 elif [[ "$1" = "update" ]]
 then
+{
+ASESR="$( curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
+} &> /dev/null
+if [[ "$ASESR" != "" ]]
+then 
+sleep 1
+echo ""$RS"Download failed!"$CE""
+sleep 1
+exit
+fi
 if [[ $EUID -ne 0 ]]
 then
 sleep 1
@@ -834,7 +844,7 @@ cd copycat
 chmod +x install.sh
 ./install.sh
 } &> /dev/null
-echo ""$GNS"Successfully updated..."$CE""
+echo ""$GNS"Successfully updated!"$CE""
 sleep 1
 exit
 
