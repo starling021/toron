@@ -164,6 +164,8 @@ CONF="amd"
 else
 echo "$CONF" >> /etc/copycat.conf
 fi
+else
+echo "$CONF" >> /etc/copycat.conf
 fi
 fi
 sleep 1
