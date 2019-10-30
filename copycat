@@ -816,7 +816,7 @@ then
 {
 ASESR="$( curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
 } &> /dev/null
-if [[ "$ASESR" != "" ]]
+if [[ "$ASESR" = "" ]]
 then 
 sleep 1
 echo ""$RS"Download failed!"$CE""
