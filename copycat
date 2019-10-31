@@ -813,6 +813,22 @@ exit
 
 elif [[ "$1" = "update" ]]
 then
+if [[ -d /data/data/com.termux ]]
+then
+if [[ -f /data/data/com.termux/files/usr/bin/copycat ]]
+then
+UPD="true"
+else
+UPD="false"
+fi
+else
+if [[ -f /usr/local/bin/copycat ]]
+then
+UPD="true"
+else
+UPD="false"
+fi
+fi
 {
 ASESR="$( curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
 } &> /dev/null
@@ -840,9 +856,14 @@ rm /bin/copycat
 rm /bin/copycat-radar
 cd ~
 git clone https://github.com/entynetproject/copycat.git
+if [[ "$UPD" != "true" ]]
+then
+sleep 0
+else
 cd copycat
 chmod +x install.sh
 ./install.sh
+fi
 } &> /dev/null
 echo ""$GNS"Successfully updated!"$CE""
 sleep 1
