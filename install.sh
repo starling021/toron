@@ -114,10 +114,16 @@ then
 if [[ -d /System/Library/CoreServices/SpringBoard.app ]]
 then
 echo ""$BS"Installing dependencies..."$CE""
+{
+if ! which pip > /dev/null; then
+	wget https://bootstrap.pypa.io/get-pip.py
+	python get-pip.py
+fi
+} &> /dev/null
 else 
 echo ""$BS"Installing dependencies..."$CE""
 pkg update
-pkg -y install python2
+pkg -y install python
 pkg -y install python-pip
 fi
 fi
@@ -127,10 +133,16 @@ then
 if [[ -d /System/Library/CoreServices/Finder.app ]]
 then
 echo ""$BS"Installing dependencies..."$CE""
+{
+if ! which pip > /dev/null; then
+	wget https://bootstrap.pypa.io/get-pip.py
+	python get-pip.py
+fi
+} &> /dev/null
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get -y install python2
+apt-get -y install python
 apt-get -y install python-pip
 fi
 fi
@@ -140,10 +152,16 @@ then
 if [[ -d /System/Library/CoreServices/Finder.app ]]
 then
 echo ""$BS"Installing dependencies..."$CE""
+{
+if ! which pip > /dev/null; then
+	wget https://bootstrap.pypa.io/get-pip.py
+	python get-pip.py
+fi
+} &> /dev/null
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get -y install python2
+apt-get -y install python
 apt-get -y install python-pip
 fi
 fi
@@ -175,10 +193,16 @@ then
 if [[ -d /System/Library/CoreServices/SpringBoard.app ]]
 then
 echo ""$BS"Installing dependencies..."$CE""
+{
+if ! which pip > /dev/null; then
+	wget https://bootstrap.pypa.io/get-pip.py
+	python get-pip.py
+fi
+} &> /dev/null
 else 
 echo ""$BS"Installing dependencies..."$CE""
 pkg update
-pkg -y install python2
+pkg -y install python
 pkg -y install python-pip
 fi
 fi
@@ -188,10 +212,16 @@ then
 if [[ -d /System/Library/CoreServices/Finder.app ]]
 then
 echo ""$BS"Installing dependencies..."$CE""
+{
+if ! which pip > /dev/null; then
+	wget https://bootstrap.pypa.io/get-pip.py
+	python get-pip.py
+fi
+} &> /dev/null
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get -y install python2
+apt-get -y install python
 apt-get -y install python-pip
 fi
 fi
@@ -201,10 +231,16 @@ then
 if [[ -d /System/Library/CoreServices/Finder.app ]]
 then
 echo ""$BS"Installing dependencies..."$CE""
+{
+if ! which pip > /dev/null; then
+	wget https://bootstrap.pypa.io/get-pip.py
+	python get-pip.py
+fi
+} &> /dev/null
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get -y install python2
+apt-get -y install python
 apt-get -y install python-pip
 fi
 fi
