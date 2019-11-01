@@ -116,8 +116,7 @@ then
 echo ""$BS"Installing dependencies..."$CE""
 {
 if ! which pip > /dev/null; then
-	wget https://bootstrap.pypa.io/get-pip.py
-	python get-pip.py
+	curl https://bootstrap.pypa.io/get-pip.py | python
 fi
 } &> /dev/null
 else 
@@ -135,8 +134,7 @@ then
 echo ""$BS"Installing dependencies..."$CE""
 {
 if ! which pip > /dev/null; then
-	wget https://bootstrap.pypa.io/get-pip.py
-	python get-pip.py
+	curl https://bootstrap.pypa.io/get-pip.py | python
 fi
 } &> /dev/null
 else
@@ -154,8 +152,7 @@ then
 echo ""$BS"Installing dependencies..."$CE""
 {
 if ! which pip > /dev/null; then
-	wget https://bootstrap.pypa.io/get-pip.py
-	python get-pip.py
+	curl https://bootstrap.pypa.io/get-pip.py | python
 fi
 } &> /dev/null
 else
@@ -195,8 +192,7 @@ then
 echo ""$BS"Installing dependencies..."$CE""
 {
 if ! which pip > /dev/null; then
-	wget https://bootstrap.pypa.io/get-pip.py
-	python get-pip.py
+	curl https://bootstrap.pypa.io/get-pip.py | python
 fi
 } &> /dev/null
 else 
@@ -214,8 +210,7 @@ then
 echo ""$BS"Installing dependencies..."$CE""
 {
 if ! which pip > /dev/null; then
-	wget https://bootstrap.pypa.io/get-pip.py
-	python get-pip.py
+	curl https://bootstrap.pypa.io/get-pip.py | python
 fi
 } &> /dev/null
 else
@@ -233,8 +228,7 @@ then
 echo ""$BS"Installing dependencies..."$CE""
 {
 if ! which pip > /dev/null; then
-	wget https://bootstrap.pypa.io/get-pip.py
-	python get-pip.py
+	curl https://bootstrap.pypa.io/get-pip.py | python
 fi
 } &> /dev/null
 else
