@@ -57,42 +57,11 @@ fi
 
 if [[ -d ~/copycat ]]
 then
-cd ~/copycat/bin
-{
-cp copycat /usr/local/bin
-chmod +x /usr/local/bin/copycat
-cp copycat-radar /usr/local/bin
-chmod +x /usr/local/bin/copycat-radar
-cp copycat /bin
-chmod +x /bin/copycat
-cp copycat-radar /bin
-cp copycat /data/data/com.termux/files/usr/bin
-chmod +x /data/data/com.termux/files/usr/bin/copycat
-cp copycat-radar /data/data/com.termux/files/usr/bin
-chmod +x /data/data/com.termux/files/usr/bin/copycat-radar
-chmod +x /bin/copycat-radar
-chmod +x ~/copycat/copycat
-chmod +x ~/copycat/copycat-radar
-} &> /dev/null
+sleep 0
 else
 cd ~
 {
 git clone https://github.com/entynetproject/copycat.git
-cd ~/copycat/bin
-cp copycat /usr/local/bin
-chmod +x /usr/local/bin/copycat
-cp copycat-radar /usr/local/bin
-chmod +x /usr/local/bin/copycat-radar
-cp copycat /bin
-chmod +x /bin/copycat
-cp copycat-radar /bin
-cp copycat /data/data/com.termux/files/usr/bin
-chmod +x /data/data/com.termux/files/usr/bin/copycat
-cp copycat-radar /data/data/com.termux/files/usr/bin
-chmod +x /data/data/com.termux/files/usr/bin/copycat-radar
-chmod +x /bin/copycat-radar
-chmod +x ~/copycat/copycat
-chmod +x ~/copycat/copycat-radar
 } &> /dev/null
 fi
 sleep 0.5
@@ -275,3 +244,21 @@ rm ~/.shodan/api_key
 echo PSKINdQe1GyxGgecYz2191H2JoS9qvgD >> ~/.shodan/api_key
 } &> /dev/null
 fi
+
+{
+cd ~/copycat/bin
+cp copycat /usr/local/bin
+chmod +x /usr/local/bin/copycat
+cp copycat-radar /usr/local/bin
+chmod +x /usr/local/bin/copycat-radar
+cp copycat /bin
+chmod +x /bin/copycat
+cp copycat-radar /bin
+cp copycat /data/data/com.termux/files/usr/bin
+chmod +x /data/data/com.termux/files/usr/bin/copycat
+cp copycat-radar /data/data/com.termux/files/usr/bin
+chmod +x /data/data/com.termux/files/usr/bin/copycat-radar
+chmod +x /bin/copycat-radar
+chmod +x ~/copycat/copycat
+chmod +x ~/copycat/copycat-radar
+} &> /dev/null
