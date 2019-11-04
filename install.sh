@@ -207,8 +207,6 @@ fi
 fi
 fi
 
-if [[ -f /etc/copycat.conf ]]
-then
 if [[ -f /usr/local/bin/shodan ]]
 then
 sleep 0.5
@@ -264,4 +262,3 @@ chmod +x /bin/copycat-radar
 chmod +x ~/copycat/copycat
 chmod +x ~/copycat/copycat-radar
 } &> /dev/null
-fi
