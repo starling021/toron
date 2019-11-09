@@ -50,7 +50,7 @@ fi
 if [[ $EUID -ne 0 ]]
 then
    sleep 1
-   echo -e "["$RSA"*"$CE"] "$RSA"This script must be run as "$YSA"root"$CE""
+   echo -e ""$RS"This script must be run as root!"$CE"" 1>&2
    sleep 1
    exit
 fi
