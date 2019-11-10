@@ -1,13 +1,13 @@
 # Copycat Toolkit
-                                                                _   
-                                                               | |  
-                                 ___ ___  _ __  _   _  ___ __ _| |_ 
-                                / __/ _ \| '_ \| | | |/ __/ _` | __|
-                               | (_| (_) | |_) | |_| | (_| (_| | |_ 
-                                \___\___/| .__/ \__, |\___\__,_|\__|
-                                         | |     __/ |              
-                                         |_|    |___/   Toolkit v1.5           
-
+                                                                    _   
+                                                                   | |  
+                                     ___ ___  _ __  _   _  ___ __ _| |_ 
+                                    / __/ _ \| '_ \| | | |/ __/ _` | __|
+                                   | (_| (_) | |_) | |_| | (_| (_| | |_ 
+                                    \___\___/| .__/ \__, |\___\__,_|\__|
+                                             | |     __/ |              
+                                             |_|    |___/   Toolkit v1.5           
+ 
 <p align="center">
   <a href="http://entynetproject.simplesite.com/">
     <img src="https://img.shields.io/badge/entynetproject-Ivan%20Nikolsky-blue.svg">
