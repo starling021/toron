@@ -22,12 +22,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-cd ~
 if [[ -d ~/copycat ]]
 then
-{
-cd ~/copycat
-} &> /dev/null
 python ~/copycat/copycat-radar
 else
 {
@@ -38,7 +34,7 @@ then
 cd ~
 {
 git clone https://github.com/entynetproject/copycat.git
-cd ~/copycat
+cd $OLDPWD
 } &> /dev/null
 python ~/copycat/copycat-radar
 else
