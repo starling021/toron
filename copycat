@@ -46,7 +46,13 @@ fi
 
 if [[ "$1" = "help" ]]
 then
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -99,7 +105,13 @@ then
 echo -e "Usage: copycat $1 <host>"
 exit
 fi
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -141,7 +153,13 @@ then
 echo -e "Usage: copycat $1 <request> <filename>"
 exit
 fi
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -193,7 +211,13 @@ exit
 fi
 if [[ "$2" = "--only-ip-port" ]]
 then
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -225,7 +249,13 @@ exit
 fi
 if [[ "$2" = "--only-ip-org" ]]
 then
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -257,7 +287,13 @@ exit
 fi
 if [[ "$2" = "--only-org-hostnames" ]]
 then
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -289,7 +325,13 @@ exit
 fi
 if [[ "$2" = "--only-port-hostnames" ]]
 then
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -321,7 +363,13 @@ exit
 fi
 if [[ "$2" = "--only-port-org" ]]
 then
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -353,7 +401,13 @@ exit
 fi
 if [[ "$2" = "--only-data-hostnames" ]]
 then
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -385,7 +439,13 @@ exit
 fi
 if [[ "$2" = "--only-hostnames" ]]
 then
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -417,7 +477,13 @@ exit
 fi
 if [[ "$2" = "--only-ip-org" ]]
 then
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -449,7 +515,13 @@ exit
 fi
 if [[ "$2" = "--only-ip-hostnames" ]]
 then
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -481,7 +553,13 @@ exit
 fi
 if [[ "$2" = "--only-data-org" ]]
 then
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -513,7 +591,13 @@ exit
 fi
 if [[ "$2" = "--only-data" ]]
 then
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -545,7 +629,13 @@ exit
 fi
 if [[ "$2" = "--only-org" ]]
 then
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -577,7 +667,13 @@ exit
 fi
 if [[ "$2" = "--only-port" ]]
 then
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -609,7 +705,13 @@ exit
 fi
 if [[ "$2" = "--only-ip" ]]
 then
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -639,7 +741,13 @@ SAS="$3"
 shodan parse --fields ip_str --separator , "$SAS"
 exit
 fi
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -674,7 +782,13 @@ then
 echo -e "Usage: copycat $1 <request>"
 exit
 fi
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -711,7 +825,13 @@ then
 echo -e "Usage: copycat $1 <host>"
 exit
 fi
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -743,7 +863,13 @@ exit
 
 elif [[ "$1" = "stream" ]]
 then
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -774,7 +900,13 @@ exit
 
 elif [[ "$1" = "radar" ]]
 then
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -883,7 +1015,13 @@ then
 echo -e "Usage: copycat $1 <request>"
 exit
 fi
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -920,7 +1058,13 @@ then
 echo -e "Usage: copycat $1 <domain>"
 exit
 fi
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
@@ -952,7 +1096,13 @@ exit
 
 fi
 
-if [[ -f /usr/local/bin/shodan ]]
+if [[ -d /data/data/com.termux ]]
+then
+pather="/data/data/com.termux/files/usr/bin/shodan"
+else
+pather="/usr/local/bin/shodan"
+fi
+if [[ -f $pather ]]
 then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
