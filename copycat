@@ -741,39 +741,6 @@ SAS="$3"
 shodan parse --fields ip_str --separator , "$SAS"
 exit
 fi
-if [[ -d /data/data/com.termux ]]
-then
-pather="/data/data/com.termux/files/usr/bin/shodan"
-else
-pather="/usr/local/bin/shodan"
-fi
-if [[ -f $pather ]]
-then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     pip install setuptools
-     pip uninstall shodan -y
-     pip install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
-exit
 
 elif [[ "$1" = "stats" ]]
 then
