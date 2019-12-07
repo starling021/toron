@@ -184,6 +184,13 @@ then
 echo -e "Usage: copycat $1 <format> <filename>"
 exit
 fi
+if [[ -f "$3" ]]
+then
+sleep 0
+else
+echo -e "Error: File not found"
+exit
+fi
 if [[ "$2" = "--only-ip-port" ]]
 then
 if [[ -f /usr/local/bin/shodan ]]
