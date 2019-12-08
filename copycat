@@ -58,7 +58,8 @@ sleep 0.5
      shodan init "$SHO"
      } &> /dev/null
      fi
-else
+fi
+if ! which shodan > /dev/null; then
      sleep 0.5
      {
      pip install setuptools
