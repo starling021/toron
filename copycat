@@ -982,7 +982,15 @@ echo PSKINdQe1GyxGgecYz2191H2JoS9qvgD >> ~/.shodan/api_key
 } &> /dev/null
 fi
 
-sleep 1     
+sleep 1  
+echo -e "                                 _   "
+echo -e "                                | |  "
+echo -e "  ___ ___  _ __  _   _  ___ __ _| |_ "
+echo -e " / __/ _ \| '_ \| | | |/ __/ _\` | __|"
+echo -e "| (_| (_) | |_) | |_| | (_| (_| | |_ "
+echo -e " \___\___/| .__/ \__, |\___\__,_|\__|"
+echo -e "          | |     __/ |              "
+echo -e "          |_|    |___/   Toolkit v1.5"
 echo 
 echo  "Usage: copycat [OPTION...] <arguments...>"
 echo  "Copyright (C) 2019, Entynetproject. All Rights Reserved."           
