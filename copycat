@@ -209,7 +209,7 @@ else
 echo -e "Error: File not found"
 exit
 fi
-if [[ "$2" = "--only-all" ]]
+if [[ "$2" = "--format-all" ]]
 then
 if [[ -d /data/data/com.termux ]]
 then
@@ -248,7 +248,7 @@ shodan parse "$SAS"
 exit
 fi
 
-if [[ "$2" = "--only-ip-port" ]]
+if [[ "$2" = "--format-ip-port" ]]
 then
 if [[ -d /data/data/com.termux ]]
 then
@@ -286,7 +286,7 @@ SAS="$3"
 shodan parse --fields ip_str,port --separator , "$SAS"
 exit
 fi
-if [[ "$2" = "--only-ip-org" ]]
+if [[ "$2" = "--format-ip-org" ]]
 then
 if [[ -d /data/data/com.termux ]]
 then
@@ -324,7 +324,7 @@ SAS="$3"
 shodan parse --fields ip_str,org --separator , "$SAS"
 exit
 fi
-if [[ "$2" = "--only-org-hostnames" ]]
+if [[ "$2" = "--format-org-hostnames" ]]
 then
 if [[ -d /data/data/com.termux ]]
 then
@@ -362,7 +362,7 @@ SAS="$3"
 shodan parse --fields org,hostnames --separator , "$SAS"
 exit
 fi
-if [[ "$2" = "--only-port-hostnames" ]]
+if [[ "$2" = "--format-port-hostnames" ]]
 then
 if [[ -d /data/data/com.termux ]]
 then
@@ -400,7 +400,7 @@ SAS="$3"
 shodan parse --fields port,hostnames --separator , "$SAS"
 exit
 fi
-if [[ "$2" = "--only-port-org" ]]
+if [[ "$2" = "--format-port-org" ]]
 then
 if [[ -d /data/data/com.termux ]]
 then
@@ -438,7 +438,7 @@ SAS="$3"
 shodan parse --fields port,org --separator , "$SAS"
 exit
 fi
-if [[ "$2" = "--only-data-hostnames" ]]
+if [[ "$2" = "--format-data-hostnames" ]]
 then
 if [[ -d /data/data/com.termux ]]
 then
@@ -476,7 +476,7 @@ SAS="$3"
 shodan parse --fields ip_str,port,hostnames --separator , "$SAS"
 exit
 fi
-if [[ "$2" = "--only-hostnames" ]]
+if [[ "$2" = "--format-hostnames" ]]
 then
 if [[ -d /data/data/com.termux ]]
 then
@@ -514,7 +514,7 @@ SAS="$3"
 shodan parse --fields hostnames --separator , "$SAS"
 exit
 fi
-if [[ "$2" = "--only-ip-org" ]]
+if [[ "$2" = "--format-ip-org" ]]
 then
 if [[ -d /data/data/com.termux ]]
 then
@@ -552,7 +552,7 @@ SAS="$3"
 shodan parse --fields ip_str,org --separator , "$SAS"
 exit
 fi
-if [[ "$2" = "--only-ip-hostnames" ]]
+if [[ "$2" = "--format-ip-hostnames" ]]
 then
 if [[ -d /data/data/com.termux ]]
 then
@@ -590,7 +590,7 @@ SAS="$3"
 shodan parse --fields ip_str,hostnames --separator , "$SAS"
 exit
 fi
-if [[ "$2" = "--only-data-org" ]]
+if [[ "$2" = "--format-data-org" ]]
 then
 if [[ -d /data/data/com.termux ]]
 then
@@ -628,7 +628,7 @@ SAS="$3"
 shodan parse --fields ip_str,port,org --separator , "$SAS"
 exit
 fi
-if [[ "$2" = "--only-data" ]]
+if [[ "$2" = "--format-data" ]]
 then
 if [[ -d /data/data/com.termux ]]
 then
@@ -666,7 +666,7 @@ SAS="$3"
 shodan parse --fields ip_str,port --separator , "$SAS"
 exit
 fi
-if [[ "$2" = "--only-org" ]]
+if [[ "$2" = "--format-org" ]]
 then
 if [[ -d /data/data/com.termux ]]
 then
@@ -704,7 +704,7 @@ SAS="$3"
 shodan parse --fields org --separator , "$SAS"
 exit
 fi
-if [[ "$2" = "--only-port" ]]
+if [[ "$2" = "--format-port" ]]
 then
 if [[ -d /data/data/com.termux ]]
 then
@@ -742,7 +742,7 @@ SAS="$3"
 shodan parse --fields port --separator , "$SAS"
 exit
 fi
-if [[ "$2" = "--only-ip" ]]
+if [[ "$2" = "--format-ip" ]]
 then
 if [[ -d /data/data/com.termux ]]
 then
