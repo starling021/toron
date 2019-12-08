@@ -40,9 +40,6 @@
     of computers connected to the Internet using a variety of filters. 
     
 # How to install copycat
-
-    INFO: Copycat Toolkit will be installed to /bin and
-    /usr/local/bin as /bin/copycat and /usr/local/bin/copycat!
     
 > cd copycat
 
