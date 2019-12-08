@@ -108,20 +108,20 @@
     
 # Copycat parse formats
 
-    --format-all            (Show all)
-    --format-ip             (Show IP)       
-    --format-port           (Show port)
-    --format-org            (Show org)
-    --format-hostnames      (Show hostnames)
-    --format-data           (Show IP and port)
-    --format-ip-port        (Show IP and port)
-    --format-ip-org         (Show IP and org)
-    --format-ip-hostnames   (Show IP and hostnames)
-    --format-port-org       (Show port and org)
-    --format-port-hostnames (Show port and hostnames)
-    --format-org-hostnames  (Show org and hostnames)
-    --format-data-org       (Show IP, port and org)
-    --format-data-hostnames (Show IP, port and hostnames)
+    --format-all            (Format to display all)
+    --format-ip             (Format to display IP)       
+    --format-port           (Format to display port)
+    --format-org            (Format to display org)
+    --format-hostnames      (Format to display hostnames)
+    --format-data           (Format to display IP and port)
+    --format-ip-port        (Format to display IP and port)
+    --format-ip-org         (Format to display IP and org)
+    --format-ip-hostnames   (Format to display IP and hostnames)
+    --format-port-org       (Format to display port and org)
+    --format-port-hostnames (Format to display port and hostnames)
+    --format-org-hostnames  (Format to display org and hostnames)
+    --format-data-org       (Format to display IP, port and org)
+    --format-data-hostnames (Format to display IP, port and hostnames)
 
 # Copycat toolkit disclaimer
 
