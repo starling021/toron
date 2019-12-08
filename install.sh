@@ -210,7 +210,7 @@ else
      {
      pip install setuptools
      pip uninstall shodan -y
-     pip install shodan
+     easy_install shodan
      } &> /dev/null
 sleep 0.5
 SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
