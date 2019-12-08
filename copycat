@@ -72,7 +72,7 @@ shodan init "$SHO"
 } &> /dev/null
 fi
 sleep 1
-echo """                                 _   
+echo -e """                                 _   
                                 | |  
   ___ ___  _ __  _   _  ___ __ _| |_ 
  / __/ _ \| '_ \| | | |/ __/ _` | __|
@@ -983,7 +983,7 @@ echo PSKINdQe1GyxGgecYz2191H2JoS9qvgD >> ~/.shodan/api_key
 fi
 
 sleep 1
-echo """                                 _   
+echo -e """                                 _   
                                 | |  
   ___ ___  _ __  _   _  ___ __ _| |_ 
  / __/ _ \| '_ \| | | |/ __/ _` | __|
