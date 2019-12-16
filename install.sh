@@ -50,6 +50,7 @@ cd ~
 git clone https://github.com/entynetproject/copycat.git
 } &> /dev/null
 fi
+
 sleep 0.5
 clear
 sleep 0.5
@@ -57,140 +58,21 @@ cd ~/copycat
 cat banner/banner.txt
 echo
 
-if [[ -f /etc/copycat.conf ]]
-then
-
-CONF="$( cat /etc/copycat.conf )"
+sleep 1
+echo ""$BS"Installing dependencies..."$CE""
 sleep 1
 
-if [[ "$CONF" = "arm" ]]
-then
-if [[ -d /System/Library/CoreServices/SpringBoard.app ]]
-then
-echo ""$BS"Installing dependencies..."$CE""
 {
-if ! which pip > /dev/null; then
-	curl https://bootstrap.pypa.io/get-pip.py | python
-fi
-} &> /dev/null
-else 
-echo ""$BS"Installing dependencies..."$CE""
 pkg update
 pkg -y install python
-fi
-fi
-
-if [[ "$CONF" = "amd" ]]
-then
-if [[ -d /System/Library/CoreServices/Finder.app ]]
-then
-echo ""$BS"Installing dependencies..."$CE""
-{
-if ! which pip > /dev/null; then
-	curl https://bootstrap.pypa.io/get-pip.py | python
-fi
-} &> /dev/null
-else
-echo ""$BS"Installing dependencies..."$CE""
 apt-get update
 apt-get -y install python
 apt-get -y install python-pip
-fi
-fi
-
-if [[ "$CONF" = "intel" ]]
-then
-if [[ -d /System/Library/CoreServices/Finder.app ]]
-then
-echo ""$BS"Installing dependencies..."$CE""
-{
-if ! which pip > /dev/null; then
-	curl https://bootstrap.pypa.io/get-pip.py | python
-fi
+apk add python
+apk add python-pip
+pacman -S python
+pacman -S python-pip
 } &> /dev/null
-else
-echo ""$BS"Installing dependencies..."$CE""
-apt-get update
-apt-get -y install python
-apt-get -y install python-pip
-fi
-fi
-
-else
-read -e -p $'Select your architecture (amd/intel/arm): ' CONF
-if [[ "$CONF" = "" ]]
-then
-exit
-else
-if [[ "$CONF" = "arm" ]]
-then
-read -e -p $'Is this a single board computer (yes/no)? ' PI
-if [[ "$PI" = "yes" ]]
-then
-echo "amd" >> /etc/copycat.conf
-CONF="amd"
-else
-echo "$CONF" >> /etc/copycat.conf
-fi
-else
-echo "$CONF" >> /etc/copycat.conf
-fi
-fi
-sleep 1
-
-if [[ "$CONF" = "arm" ]]
-then
-if [[ -d /System/Library/CoreServices/SpringBoard.app ]]
-then
-echo ""$BS"Installing dependencies..."$CE""
-{
-if ! which pip > /dev/null; then
-	curl https://bootstrap.pypa.io/get-pip.py | python
-fi
-} &> /dev/null
-else 
-echo ""$BS"Installing dependencies..."$CE""
-pkg update
-pkg -y install python
-fi
-fi
-
-if [[ "$CONF" = "amd" ]]
-then
-if [[ -d /System/Library/CoreServices/Finder.app ]]
-then
-echo ""$BS"Installing dependencies..."$CE""
-{
-if ! which pip > /dev/null; then
-	curl https://bootstrap.pypa.io/get-pip.py | python
-fi
-} &> /dev/null
-else
-echo ""$BS"Installing dependencies..."$CE""
-apt-get update
-apt-get -y install python
-apt-get -y install python-pip
-fi
-fi
-
-if [[ "$CONF" = "intel" ]]
-then
-if [[ -d /System/Library/CoreServices/Finder.app ]]
-then
-echo ""$BS"Installing dependencies..."$CE""
-{
-if ! which pip > /dev/null; then
-	curl https://bootstrap.pypa.io/get-pip.py | python
-fi
-} &> /dev/null
-else
-echo ""$BS"Installing dependencies..."$CE""
-apt-get update
-apt-get -y install python
-apt-get -y install python-pip
-fi
-fi
-fi
 
 if [[ -f /usr/local/bin/shodan ]]
 then
