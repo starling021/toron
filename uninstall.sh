@@ -47,7 +47,6 @@ rm /usr/local/bin/copycat-radar
 rm /bin/copycat
 rm /bin/copycat-radar
 rm -rf ~/copycat
-rm /etc/copycat.conf
 rm /data/data/com.termux/files/usr/bin/copycat
 rm /data/data/com.termux/files/usr/bin/copycat-radar
 } &> /dev/null
