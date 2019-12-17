@@ -73,6 +73,7 @@ apk add python-pip
 pacman -Sy
 yes | pacman -S python
 yes | pacman -S python-pip
+zypper refresh
 zypper install -y python
 zypper install -y python-pip
 yum -y install python
