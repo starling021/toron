@@ -86,8 +86,6 @@ eopkg -y install pip
 xbps-install -S
 xbps-install -y python
 xbps-install -y python-pip
-nix-env -i python
-nix-env -i python2.7-bootstrapped-pip-19.2.3
 } &> /dev/null
 
 if [[ -f /usr/local/bin/shodan ]]
