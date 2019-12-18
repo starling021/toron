@@ -22,6 +22,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import os
+
+os.system("printf '\033]2;Copycat Radar\a'")
+
 import curses
 import locale
 import random
