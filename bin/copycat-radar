@@ -22,6 +22,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+printf '\033]2;Copycat Radar\a'
+
 if [[ -d ~/copycat ]]
 then
 python ~/copycat/copycat-radar
