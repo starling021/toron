@@ -25,13 +25,13 @@
 RSA="\033[1;31m"
 YSA="\033[1;33m"
 #blue start 
-	BS="-e \033[34m"
+	BS="-e \033[0;34m"
 #color end
 	CE="\033[0m"
 #red start
-	RS="-e \033[31m"
+	RS="-e \033[0;31m"
 #green start
-	GNS="-e \033[32m"
+	GNS="-e \033[0;32m"
 
 if [[ $EUID -ne 0 ]]
 then
@@ -153,3 +153,7 @@ chmod +x /bin/copycat-radar
 chmod +x ~/copycat/copycat
 chmod +x ~/copycat/copycat-radar
 } &> /dev/null
+
+sleep 1
+echo ""$GNS"Successfully installed!"$CE""
+sleep 1
