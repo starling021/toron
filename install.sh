@@ -32,6 +32,8 @@ YSA="\033[1;33m"
 	RS="-e \033[0;31m"
 #green start
 	GNS="-e \033[0;32m"
+	
+printf '\033]2;install.sh\a'
 
 if [[ $EUID -ne 0 ]]
 then
