@@ -32,22 +32,28 @@
  </a>
 </p>
 
-# About copycat toolkit
+***
+
+# About Copycat Toolkit
 
     INFO: Copycat Toolkit is a set of tools to view information 
     about a hostname, IP’s vulnerabilities, Internet connected computers 
     and etc. Copycat Toolkit also allows users to to find specific types 
     of computers connected to the Internet using a variety of filters. 
     
-# How to install copycat
+***
     
+# Getting started
+
+## Copycat installation
+
 > cd copycat
 
 > chmod +x install.sh
 
 > ./install.sh
 
-# How to uninstall copycat
+## Copycat uninstallation
 
 > cd copycat
 
@@ -55,7 +61,9 @@
 
 > ./uninstall.sh
 
-# How to execute copycat
+***
+
+# Copycat Toolkit execution
 
 > copycat help
 
@@ -74,7 +82,9 @@
        update                         Update Copycat Toolkit and API configuration.
        help                           Show all available Copycat Toolkit options.
  
- # Copycat toolkit examples
+ ***
+ 
+ # Copycat Toolkit examples
  
 > copycat host 183.63.126.164
  
@@ -103,6 +113,8 @@
       [####################################]  100%  00:00:00
     Saved 1000 results into file tomcat.json.gz
     
+***
+    
 # Copycat parse formats
 
     --format-all             (Format to display all)
@@ -120,13 +132,17 @@
     --format-data-org        (Format to display IP, port and org)
     --format-data-hostnames  (Format to display IP, port and hostnames)
 
-# Copycat toolkit disclaimer
+***
+
+# Copycat Toolkit disclaimer
 
     INFO: Usage of the Copycat Toolkit for attacking targets without prior mutual consent is illegal. 
     It is the end user's responsibility to obey all applicable local, state, federal, and international laws. 
     Developers assume no liability and are not responsible for any misuse or damage caused by this program.
 
-# Copycat toolkit license
+***
+
+# Copycat Toolkit license
 
     MIT License
 
@@ -149,6 +165,8 @@
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
+
+***
 
 # Thats all!
  
