@@ -38,8 +38,8 @@
 
     Copycat Toolkit is a set of tools to view information about a 
     hostname, IP’s vulnerabilities, Internet connected computers and 
-    etc. Copycat Toolkit also allows users to to find specific types of 
-    computers connected to the Internet using a variety of filters. 
+    etc. Copycat Toolkit also allows users to to find specific types 
+    of computers connected to the Internet using a variety of filters. 
     
 ***
     
