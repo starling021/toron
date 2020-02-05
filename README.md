@@ -68,8 +68,7 @@
 > copycat help
 
     Usage: copycat [OPTION...] <arguments...>
-    Copyright (C) 2019-2020, Entynetproject. All Rights Reserved.
- 
+    
        host     <host>                Show all available information for an IP.
        honeypot <host>                Check whether the IP is a honeypot or not.
        download <request> <filename>  Download search results as JSON database.
