@@ -26,8 +26,25 @@ printf '\033]2;Copycat Toolkit\a'
 
 if [[ -d ~/copycat ]]
 then
+{
+cd ~/copycat
+mkdir etc/.disabled
+mv copycat etc/.disabled
+mv etc/copycat ~/copycat
+cp etc/.disabled/copycat etc
+rm -rf etc/.disabled
+cd $OLDPWD
+} &> /dev/null
 chmod +x ~/copycat/copycat
 ~/copycat/copycat $1 $2 $3 $4 $5 $6 $7 $8 $9
+{
+cd ~/copycat
+mkdir etc/.disabled
+mv copycat etc/.disabled
+mv etc/copycat ~/copycat
+cp etc/.disabled/copycat etc
+rm -rf etc/.disabled
+} &> /dev/null
 else
 {
 ASESR="$( curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
@@ -38,9 +55,24 @@ cd ~
 {
 git clone https://github.com/entynetproject/copycat.git
 cd $OLDPWD
+cd ~/copycat
+mkdir etc/.disabled
+mv copycat etc/.disabled
+mv etc/copycat ~/copycat
+cp etc/.disabled/copycat etc
+rm -rf etc/.disabled
+cd $OLDPWD
 } &> /dev/null
 chmod +x ~/copycat/copycat
 ~/copycat/copycat $1 $2 $3 $4 $5 $6 $7 $8 $9
+{
+cd ~/copycat
+mkdir etc/.disabled
+mv copycat etc/.disabled
+mv etc/copycat ~/copycat
+cp etc/.disabled/copycat etc
+rm -rf etc/.disabled
+} &> /dev/null
 else
 cd ~
 sleep 1
