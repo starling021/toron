@@ -792,24 +792,8 @@ SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
 shodan init "$SHO"
 } &> /dev/null
 fi
-if [[ -d /data/data/com.termux ]]
-then
-if [[ -f /data/data/com.termux/files/usr/bin/copycat-radar ]]
-then
-copycat-radar
-else
-echo -e "Error: Copycat Radar is not installed"
-exit
-fi
-else
-if [[ -f /usr/local/bin/copycat-radar ]]
-then
-copycat-radar
-else
-echo -e "Error: Copycat Radar is not installed"
-exit
-fi
-fi
+chmod +x copycat-radar
+./copycat-radar
 exit
 
 elif [[ "$1" = "update" ]]
