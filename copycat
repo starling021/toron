@@ -836,6 +836,7 @@ echo ""$BS"Installing update..."$CE""
 rm -rf ~/copycat
 rm /usr/local/bin/copycat
 rm /bin/copycat
+rm /data/data/com.termux/files/usr/bin/copycat
 cd ~
 git clone https://github.com/entynetproject/copycat.git
 if [[ "$UPD" != "true" ]]
