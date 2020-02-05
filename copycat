@@ -792,8 +792,7 @@ SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
 shodan init "$SHO"
 } &> /dev/null
 fi
-chmod +x copycat-radar
-./copycat-radar
+python core/copycat-radar.py
 exit
 
 elif [[ "$1" = "update" ]]
