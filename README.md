@@ -69,17 +69,17 @@
 
     Usage: copycat [OPTION...] <arguments...>
     
-       host     <host>                Show all available information for an IP.
-       honeypot <host>                Check whether the IP is a honeypot or not.
-       download <request> <filename>  Download search results as JSON database.
-       parse    <format> <filename>   Extract information out of compressed JSON.
-       stats    <request>             Provide summary information about a search.               
-       search   <request>             Search the Internet database from Copycat.
-       domain   <domain>              Show all available information for a domain.
-       stream                         Stream Copycat search results in real-time.
-       radar                          The real-time map of Copycat search results.
-       update                         Update Copycat Toolkit and API configuration.
-       help                           Show all available Copycat Toolkit options.
+      host     <host>                Show all available information for an IP.
+      honeypot <host>                Check whether the IP is a honeypot or not.
+      download <request> <filename>  Download search results as JSON database.
+      parse    <format> <filename>   Extract information out of compressed JSON.
+      stats    <request>             Provide summary information about a search.               
+      search   <request>             Search the Internet database from Copycat.
+      domain   <domain>              Show all available information for a domain.
+      stream                         Stream Copycat search results in real-time.
+      radar                          The real-time map of Copycat search results.
+      update                         Update Copycat Toolkit and API configuration.
+      help                           Show all available Copycat Toolkit options.
  
  ***
  
