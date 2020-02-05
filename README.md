@@ -67,6 +67,16 @@
 
 > copycat help
 
+
+                                  _   
+                                 | |  
+       ___ ___  _ __  _   _  ___ __ _| |_ 
+      / __/ _ \| '_ \| | | |/ __/ _` | __|
+     | (_| (_) | |_) | |_| | (_| (_| | |_ 
+      \___\___/| .__/ \__, |\___\__,_|\__|
+               | |     __/ |              
+               |_|    |___/       
+
     Usage: copycat [OPTION...] <arguments...>
     
       host     <host>                Show all available information for an IP.
