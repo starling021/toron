@@ -142,18 +142,10 @@ fi
 cd ~/copycat/bin
 cp copycat /usr/local/bin
 chmod +x /usr/local/bin/copycat
-cp copycat-radar /usr/local/bin
-chmod +x /usr/local/bin/copycat-radar
 cp copycat /bin
 chmod +x /bin/copycat
-cp copycat-radar /bin
 cp copycat /data/data/com.termux/files/usr/bin
 chmod +x /data/data/com.termux/files/usr/bin/copycat
-cp copycat-radar /data/data/com.termux/files/usr/bin
-chmod +x /data/data/com.termux/files/usr/bin/copycat-radar
-chmod +x /bin/copycat-radar
-chmod +x ~/copycat/copycat
-chmod +x ~/copycat/copycat-radar
 } &> /dev/null
 
 sleep 1
