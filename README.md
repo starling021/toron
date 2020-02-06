@@ -76,7 +76,7 @@
                | |     __/ |              
                |_|    |___/       
 
-    Usage: copycat [OPTION...] <arguments...>
+    Usage: copycat [option] <arguments>
     
        host     <host>                Show all available information for an IP.
        honeypot <host>                Check whether the IP is a honeypot or not.
