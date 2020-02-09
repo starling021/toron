@@ -1,13 +1,7 @@
 # Copycat Toolkit
-                                                                       _   
-                                                                      | |  
-                                        ___ ___  _ __  _   _  ___ __ _| |_ 
-                                       / __/ _ \| '_ \| | | |/ __/ _` | __|
-                                      | (_| (_) | |_) | |_| | (_| (_| | |_ 
-                                       \___\___/| .__/ \__, |\___\__,_|\__|
-                                                | |     __/ |              
-                                                |_|    |___/         
- 
+
+![copycat](https://user-images.githubusercontent.com/54115104/74107703-e3a10100-4b83-11ea-9c10-9e377dcd066a.jpeg)
+
 <p align="center">
   <a href="http://entynetproject.simplesite.com/">
     <img src="https://img.shields.io/badge/entynetproject-Ivan%20Nikolsky-blue.svg">
