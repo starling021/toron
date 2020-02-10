@@ -1,6 +1,6 @@
 # Copycat Toolkit
 
-![copycat](https://user-images.githubusercontent.com/54115104/74107703-e3a10100-4b83-11ea-9c10-9e377dcd066a.jpeg)
+![copycat](https://user-images.githubusercontent.com/54115104/74148826-68892a80-4c17-11ea-930a-07a40c026eef.jpeg)
 
 <p align="center">
   <a href="http://entynetproject.simplesite.com/">
