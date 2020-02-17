@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # MIT License
 #
@@ -67,7 +67,7 @@ MAPS = {
                                                                           
                           ,/           ______._.--._ _..---.---------._   
          ,-----"-..?----_/ )      _,-'"             "                  (  
-    
+    Map 1998 Matthew Thomas. Freely usable as long as this line is included
 '''
     }
 }
@@ -242,7 +242,7 @@ class MapApp(object):
                 m.draw(scr)
             except curses.error:
                 raise Exception('Terminal window too small')
-            scr.addstr(0, 1, 'Copycat Global Radar', curses.A_BOLD)
+            scr.addstr(0, 1, 'Shodan Radar', curses.A_BOLD)
             scr.addstr(0, 40, time.strftime("%c UTC", time.gmtime(now)).rjust(37), curses.A_BOLD)
 
             # Key Input
@@ -274,3 +274,4 @@ def main(argv=None):
 if __name__ == '__main__':
     import sys
     sys.exit(main())
+    
