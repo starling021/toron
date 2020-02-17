@@ -67,37 +67,37 @@ sleep 1
 {
 pkg update
 pkg -y install git
-pkg -y install python
+pkg -y install python3
 apt-get update
 apt-get -y istall git
-apt-get -y install python
-apt-get -y install python-pip
+apt-get -y install python3
+apt-get -y install python3-pip
 apk update
 apk add git
-apk add python
-apk add py-pip
+apk add python3
+apk add py3-pip
 pacman -Sy
 pacman -S --noconfirm git
-pacman -S --noconfirm python
-pacman -S --noconfirm python-pip
+pacman -S --noconfirm python3
+pacman -S --noconfirm python3-pip
 zypper refresh
 zypper install -y git
-zypper install -y python
-zypper install -y python-pip
+zypper install -y python3
+zypper install -y python3-pip
 yum -y install git
-yum -y install python
-yum -y install python-pip
+yum -y install python3
+yum -y install python3-pip
 dnf -y install git
-dnf -y install python
-dnf -y install python-pip
+dnf -y install python3
+dnf -y install python3-pip
 eopkg update-repo
 eopkg -y install git
-eopkg -y install python
+eopkg -y install python3
 eopkg -y install pip
 xbps-install -S
 xbps-install -y git
-xbps-install -y python
-xbps-install -y python-pip
+xbps-install -y python3
+xbps-install -y python3-pip
 } &> /dev/null
 
 if [[ -f /usr/local/bin/shodan ]]
@@ -116,8 +116,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5

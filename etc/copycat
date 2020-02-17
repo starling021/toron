@@ -61,8 +61,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -119,8 +119,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -160,8 +160,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -211,8 +211,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -243,8 +243,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -274,8 +274,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -305,8 +305,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -336,8 +336,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -367,8 +367,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -398,8 +398,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -429,8 +429,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -460,8 +460,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -491,8 +491,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -522,8 +522,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -553,8 +553,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -584,8 +584,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -615,8 +615,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -646,8 +646,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -685,8 +685,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -721,8 +721,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -752,8 +752,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -782,8 +782,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -792,7 +792,7 @@ SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
 shodan init "$SHO"
 } &> /dev/null
 fi
-python ~/copycat/core/copycat-radar.py
+python3 ~/copycat/core/copycat-radar.py
 exit
 
 elif [[ "$1" = "update" ]]
@@ -874,8 +874,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -910,8 +910,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
@@ -941,8 +941,8 @@ sleep 0.5
 else
      sleep 0.5
      {
-     pip install setuptools
-     pip uninstall shodan -y
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
 sleep 0.5
