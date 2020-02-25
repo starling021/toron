@@ -762,6 +762,7 @@ SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
 shodan init "$SHO"
 } &> /dev/null
 fi
+clear
 shodan stream
 exit
 
