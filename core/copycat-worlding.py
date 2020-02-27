@@ -24,7 +24,7 @@
 
 import os
 
-os.system("printf '\033]2;Copycat Radar\a'")
+os.system("printf '\033]2;Copycat Toolkit\a'")
 
 import curses
 import locale
