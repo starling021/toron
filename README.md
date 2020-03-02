@@ -27,8 +27,8 @@
 
 # About Copycat Toolkit
 
-    Copycat Toolkit is a set of tools to view information about a 
-    hostname, IP’s vulnerabilities, Internet connected computers and 
+    Copycat Toolkit is a set of tools for getting information about
+    hostnames, IP’s vulnerabilities, Internet connected computers and 
     etc. Copycat Toolkit also allows users to to find specific types 
     of computers connected to the Internet using a variety of filters. 
     
