@@ -28,9 +28,9 @@
 # About Copycat Toolkit
 
     Copycat Toolkit is a set of tools for getting information 
-    about hostnames, domains, Internet connected computers and etc. 
-    Copycat Toolkit can be used to find specific types of computers 
-    connected to the Internet using a variety of filters. 
+    about hostnames, domains, devices connected to the Internet 
+    and etc. Copycat Toolkit can be used to find specific types of 
+    devices connected to the Internet using a variety of filters. 
     
 ***
     
