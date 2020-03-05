@@ -90,6 +90,7 @@ echo  "  parse    <format> <filename>   Extract information out of compressed JS
 echo  "  stats    <request>             Provide summary information about a search."                 
 echo  "  search   <request>             Search the Internet database from Copycat."
 echo  "  domain   <domain>              Show all available information for a domain."
+echo  "  formats                        Show all available Copycat parse formats."
 echo  "  stream                         Stream Copycat search results in real-time."
 echo  "  radar                          The real-time map of Copycat search results."
 echo  "  update                         Update Copycat Toolkit and API configuration."
@@ -766,6 +767,51 @@ clear
 shodan stream
 exit
 
+elif [[ "$1" = "formats" ]]
+then
+if which shodan > /dev/null; then
+sleep 0.5
+     if [[ -f ~/.shodan/api_key ]]
+     then
+     sleep 0.5
+     else
+     sleep 0.5
+     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
+     {
+     shodan init "$SHO"
+     } &> /dev/null
+     fi
+else
+     sleep 0.5
+     {
+     python3 -m pip install setuptools
+     python3 -m pip uninstall shodan -y
+     easy_install shodan
+     } &> /dev/null
+sleep 0.5
+SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
+{
+shodan init "$SHO"
+} &> /dev/null
+fi
+echo
+echo  " --format-all             Format to display all."
+echo  " --format-ip              Format to display IP."    
+echo  " --format-port            Format to display port."
+echo  " --format-org             Format to display org."
+echo  " --format-hostnames       Format to display hostnames."
+echo  " --format-data            Format to display IP and port."
+echo  " --format-ip-port         Format to display IP and port."
+echo  " --format-ip-org          Format to display IP and org."
+echo  " --format-ip-hostnames    Format to display IP and hostnames."
+echo  " --format-port-org        Format to display port and org."
+echo  " --format-port-hostnames  Format to display port and hostnames."
+echo  " --format-org-hostnames   Format to display org and hostnames."
+echo  " --format-data-org        Format to display IP, port and org."
+echo  " --format-data-hostnames  Format to display IP, port and hostnames."
+echo
+exit
+
 elif [[ "$1" = "radar" ]]
 then
 if which shodan > /dev/null; then
@@ -983,6 +1029,7 @@ echo  "  parse    <format> <filename>   Extract information out of compressed JS
 echo  "  stats    <request>             Provide summary information about a search."                 
 echo  "  search   <request>             Search the Internet database from Copycat."
 echo  "  domain   <domain>              Show all available information for a domain."
+echo  "  formats                        Show all available Copycat parse formats."
 echo  "  stream                         Stream Copycat search results in real-time."
 echo  "  radar                          The real-time map of Copycat search results."
 echo  "  update                         Update Copycat Toolkit and API configuration."
