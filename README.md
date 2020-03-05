@@ -81,37 +81,22 @@
       update                         Update Copycat Toolkit and API configuration.
       help                           Show all available Copycat Toolkit options.
  
- ***
+***
  
- # Copycat Toolkit examples
- 
-> copycat host 183.63.126.164
- 
-    183.63.126.164
-    City:                    Guangzhou
-    Country:                 China
-    Organization:            China Telecom Guangdong
-    Updated:                 2019-05-12T15:43:53.018648
-    Number of open ports:    6
-    Vulnerabilities:         CVE-2010-1256	CVE-2010-2730	CVE-2010-3972	CVE-2010-1899	CVE-2012-2531	
+# Copycat Toolkit examples
 
-    Ports:
-         80/tcp  
-         84/tcp Microsoft IIS httpd (7.5)
-        443/tcp  
-       8013/tcp  
-       8080/tcp Apache Tomcat (3.1)
-       8081/tcp Apache Tomcat/Coyote JSP engine (1.1)
+> Example of scanning a host
+ 
+    copycat host 183.63.126.164
        
-> copycat download tomcat tomcat
+> Example of scanning a domain
 
-    Search query:			    tomcat
-    Total number of results:            77601
-    Query credits left:		    197673
-    Output file:			    tomcat.json.gz
-      [####################################]  100%  00:00:00
-    Saved 1000 results into file tomcat.json.gz
-    
+    copycat domain github.com
+
+> Example of checking if honeypot
+
+    copycat honeypot 183.63.126.164
+
 ***
     
 # Copycat parse formats
