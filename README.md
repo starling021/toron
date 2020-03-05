@@ -76,6 +76,7 @@
       stats    <request>             Provide summary information about a search.               
       search   <request>             Search the Internet database from Copycat.
       domain   <domain>              Show all available information for a domain.
+      formats                        Show all available Copycat parse formats.
       stream                         Stream Copycat search results in real-time.
       radar                          The real-time map of Copycat search results.
       update                         Update Copycat Toolkit and API configuration.
