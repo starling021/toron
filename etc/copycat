@@ -897,7 +897,7 @@ fi
 } &> /dev/null
 echo ""$GNS"Successfully updated!"$CE""
 cd .
-touch .update
+touch .updated
 sleep 1
 exit
 
