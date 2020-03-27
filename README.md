@@ -86,17 +86,17 @@
  
 # Copycat Toolkit examples
 
-> Example of scanning a host
+## Example of scanning a host
  
-    copycat host 183.63.126.164
+> copycat host 183.63.126.164
        
-> Example of scanning a domain
+## Example of scanning a domain
 
-    copycat domain github.com
+> copycat domain github.com
 
-> Example of checking if honeypot
+## Example of checking if honeypot
 
-    copycat honeypot 183.63.126.164
+> copycat honeypot 183.63.126.164
 
 ***
 
