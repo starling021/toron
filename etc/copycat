@@ -94,6 +94,7 @@ echo  "  formats                        Show all available Copycat parse formats
 echo  "  stream                         Stream Copycat search results in real-time."
 echo  "  radar                          The real-time map of Copycat search results."
 echo  "  update                         Update Copycat Toolkit and API configuration."
+echo  "  version                        Show current Copycat Toolkit version number."
 echo  "  help                           Show all available Copycat Toolkit options."
 echo    
 exit
@@ -1035,6 +1036,7 @@ echo  "  formats                        Show all available Copycat parse formats
 echo  "  stream                         Stream Copycat search results in real-time."
 echo  "  radar                          The real-time map of Copycat search results."
 echo  "  update                         Update Copycat Toolkit and API configuration."
+echo  "  version                        Show current Copycat Toolkit version number."
 echo  "  help                           Show all available Copycat Toolkit options."
 echo    
 exit
