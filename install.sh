@@ -100,12 +100,20 @@ xbps-install -y python3
 xbps-install -y python3-pip
 } &> /dev/null
 
-if [[ -f /usr/local/bin/shodan ]]
-then
+if which shodan > /dev/null; then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
      then
-     sleep 0.5
+     {
+     SED="$( cat ~/.shodan/api_key )"
+     } &> /dev/null
+     if [[ "$SED" != "PSKINdQe1GyxGgecYz2191H2JoS9qvgD" ]]
+     then
+     {
+     rm ~/.shodan/api_key
+     echo PSKINdQe1GyxGgecYz2191H2JoS9qvgD >> ~/.shodan/api_key
+     } &> /dev/null
+     fi
      else
      sleep 0.5
      SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -116,26 +124,16 @@ sleep 0.5
 else
      sleep 0.5
      {
+     rm -rf ~/.shodan
      python3 -m pip install setuptools
      python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
-
-{
-SED="$( cat ~/.shodan/api_key )"
-} &> /dev/null
-if [[ "$SED" != "PSKINdQe1GyxGgecYz2191H2JoS9qvgD" ]]
-then 
-{
-rm ~/.shodan/api_key
-echo PSKINdQe1GyxGgecYz2191H2JoS9qvgD >> ~/.shodan/api_key
-} &> /dev/null
+     sleep 0.5
+     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
+     {
+     shodan init "$SHO"
+     } &> /dev/null
 fi
 
 {

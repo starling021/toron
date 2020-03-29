@@ -33,24 +33,20 @@
 
 printf '\033]2;Copycat Toolkit\a'
 
-{
-SED="$( cat ~/.shodan/api_key )"
-} &> /dev/null
-if [[ "$SED" != "PSKINdQe1GyxGgecYz2191H2JoS9qvgD" ]]
-then 
-{
-rm ~/.shodan/api_key
-echo PSKINdQe1GyxGgecYz2191H2JoS9qvgD >> ~/.shodan/api_key
-} &> /dev/null
-fi
-
-if [[ "$1" = "help" ]]
-then
 if which shodan > /dev/null; then
 sleep 0.5
      if [[ -f ~/.shodan/api_key ]]
      then
-     sleep 0.5
+     {
+     SED="$( cat ~/.shodan/api_key )"
+     } &> /dev/null
+     if [[ "$SED" != "PSKINdQe1GyxGgecYz2191H2JoS9qvgD" ]]
+     then
+     {
+     rm ~/.shodan/api_key
+     echo PSKINdQe1GyxGgecYz2191H2JoS9qvgD >> ~/.shodan/api_key
+     } &> /dev/null
+     fi
      else
      sleep 0.5
      SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
@@ -61,16 +57,21 @@ sleep 0.5
 else
      sleep 0.5
      {
+     rm -rf ~/.shodan
      python3 -m pip install setuptools
      python3 -m pip uninstall shodan -y
      easy_install shodan
      } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
+     sleep 0.5
+     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
+     {
+     shodan init "$SHO"
+     } &> /dev/null
 fi
+
+if [[ "$1" = "help" ]]
+then
+
 sleep 1
 cat banner/banner.txt
 echo 
@@ -106,31 +107,7 @@ then
 echo -e "Usage: copycat $1 <host>"
 exit
 fi
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$2"
 shodan host "$SAS"
 exit
@@ -147,31 +124,7 @@ then
 echo -e "Usage: copycat $1 <request> <filename>"
 exit
 fi
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$2"
 SIS="$3"
 shodan download "$SIS" "$SAS"
@@ -198,31 +151,7 @@ exit
 fi
 if [[ "$2" = "--format-all" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$3"
 shodan parse "$SAS"
 exit
@@ -230,434 +159,98 @@ fi
 
 if [[ "$2" = "--format-ip-port" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$3"
 shodan parse --fields ip_str,port --separator , "$SAS"
 exit
 fi
 if [[ "$2" = "--format-ip-org" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$3"
 shodan parse --fields ip_str,org --separator , "$SAS"
 exit
 fi
 if [[ "$2" = "--format-org-hostnames" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$3"
 shodan parse --fields org,hostnames --separator , "$SAS"
 exit
 fi
 if [[ "$2" = "--format-port-hostnames" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$3"
 shodan parse --fields port,hostnames --separator , "$SAS"
 exit
 fi
 if [[ "$2" = "--format-port-org" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$3"
 shodan parse --fields port,org --separator , "$SAS"
 exit
 fi
 if [[ "$2" = "--format-data-hostnames" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$3"
 shodan parse --fields ip_str,port,hostnames --separator , "$SAS"
 exit
 fi
 if [[ "$2" = "--format-hostnames" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$3"
 shodan parse --fields hostnames --separator , "$SAS"
 exit
 fi
 if [[ "$2" = "--format-ip-org" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$3"
 shodan parse --fields ip_str,org --separator , "$SAS"
 exit
 fi
 if [[ "$2" = "--format-ip-hostnames" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$3"
 shodan parse --fields ip_str,hostnames --separator , "$SAS"
 exit
 fi
 if [[ "$2" = "--format-data-org" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$3"
 shodan parse --fields ip_str,port,org --separator , "$SAS"
 exit
 fi
 if [[ "$2" = "--format-data" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$3"
 shodan parse --fields ip_str,port --separator , "$SAS"
 exit
 fi
 if [[ "$2" = "--format-org" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$3"
 shodan parse --fields org --separator , "$SAS"
 exit
 fi
 if [[ "$2" = "--format-port" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$3"
 shodan parse --fields port --separator , "$SAS"
 exit
 fi
 if [[ "$2" = "--format-ip" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$3"
 shodan parse --fields ip_str --separator , "$SAS"
 exit
@@ -672,31 +265,7 @@ then
 echo -e "Usage: copycat $1 <request>"
 exit
 fi
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$2"
 shodan stats "$SAS"
 exit
@@ -708,93 +277,21 @@ then
 echo -e "Usage: copycat $1 <host>"
 exit
 fi
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$2"
 shodan honeyscore "$SAS"
 exit
 
 elif [[ "$1" = "stream" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 clear
 shodan stream
 exit
 
 elif [[ "$1" = "formats" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 echo
 echo  " --format-all             Format to display all."
 echo  " --format-ip              Format to display IP."    
@@ -815,31 +312,7 @@ exit
 
 elif [[ "$1" = "radar" ]]
 then
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 python3 core/copycat-radar.py
 exit
 
@@ -909,31 +382,7 @@ then
 echo -e "Usage: copycat $1 <request>"
 exit
 fi
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$2"
 shodan search "$SAS"
 exit
@@ -945,72 +394,11 @@ then
 echo -e "Usage: copycat $1 <domain>"
 exit
 fi
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
+
 SAS="$2"
 shodan domain "$SAS"
 exit
 
-fi
-
-if which shodan > /dev/null; then
-sleep 0.5
-     if [[ -f ~/.shodan/api_key ]]
-     then
-     sleep 0.5
-     else
-     sleep 0.5
-     SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-     {
-     shodan init "$SHO"
-     } &> /dev/null
-     fi
-else
-     sleep 0.5
-     {
-     python3 -m pip install setuptools
-     python3 -m pip uninstall shodan -y
-     easy_install shodan
-     } &> /dev/null
-sleep 0.5
-SHO="PSKINdQe1GyxGgecYz2191H2JoS9qvgD"
-{
-shodan init "$SHO"
-} &> /dev/null
-fi
-
-{
-SED="$( cat ~/.shodan/api_key )"
-} &> /dev/null
-if [[ "$SED" != "PSKINdQe1GyxGgecYz2191H2JoS9qvgD" ]]
-then 
-{
-rm ~/.shodan/api_key
-echo PSKINdQe1GyxGgecYz2191H2JoS9qvgD >> ~/.shodan/api_key
-} &> /dev/null
 fi
 
 sleep 1  
