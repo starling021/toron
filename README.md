@@ -81,6 +81,7 @@
       radar                          The real-time map of Copycat search results.
       update                         Update Copycat Toolkit and API configuration.
       help                           Show all available Copycat Toolkit options.
+      version                        Show current Copycat Toolkit version.
  
 ***
  
