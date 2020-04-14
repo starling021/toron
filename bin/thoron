@@ -25,9 +25,9 @@ then
 {
 cd ~/thoron
 mkdir etc/.disabled
-mv modules/payload/c.rb etc/.disabled
-mv etc/modules/payload/c.rb ~/thoron/modules/payload
-cp etc/.disabled/c.rb etc
+mv modules/payload/clang.rb etc/.disabled
+mv etc/modules/payload/clang.rb ~/thoron/modules/payload
+cp etc/.disabled/clang.rb etc
 rm -rf etc/.disabled
 mkdir etc/.disabled
 mv modules/payload/shell.rb etc/.disabled
@@ -43,6 +43,26 @@ mkdir etc/.disabled
 mv modules/payload/ruby.rb etc/.disabled
 mv etc/modules/payload/ruby.rb ~/thoron/modules/payload
 cp etc/.disabled/ruby.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/cpp.rb etc/.disabled
+mv etc/modules/payload/cpp.rb ~/thoron/modules/payload
+cp etc/.disabled/cpp.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/csharp.rb etc/.disabled
+mv etc/modules/payload/csharp.rb ~/thoron/modules/payload
+cp etc/.disabled/csharp.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/hex.rb etc/.disabled
+mv etc/modules/payload/hex.rb ~/thoron/modules/payload
+cp etc/.disabled/hex.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/cmd.rb etc/.disabled
+mv etc/modules/payload/cmd.rb ~/thoron/modules/payload
+cp etc/.disabled/cmd.rb etc
 rm -rf etc/.disabled
 } &> /dev/null
 chmod +x thoron
@@ -50,9 +70,9 @@ chmod +x thoron
 {
 cd ~/thoron
 mkdir etc/.disabled
-mv modules/payload/c.rb etc/.disabled
-mv etc/modules/payload/c.rb ~/thoron/modules/payload
-cp etc/.disabled/c.rb etc
+mv modules/payload/clang.rb etc/.disabled
+mv etc/modules/payload/clang.rb ~/thoron/modules/payload
+cp etc/.disabled/clang.rb etc
 rm -rf etc/.disabled
 mkdir etc/.disabled
 mv modules/payload/shell.rb etc/.disabled
@@ -68,6 +88,26 @@ mkdir etc/.disabled
 mv modules/payload/ruby.rb etc/.disabled
 mv etc/modules/payload/ruby.rb ~/thoron/modules/payload
 cp etc/.disabled/ruby.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/cpp.rb etc/.disabled
+mv etc/modules/payload/cpp.rb ~/thoron/modules/payload
+cp etc/.disabled/cpp.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/csharp.rb etc/.disabled
+mv etc/modules/payload/csharp.rb ~/thoron/modules/payload
+cp etc/.disabled/csharp.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/hex.rb etc/.disabled
+mv etc/modules/payload/hex.rb ~/thoron/modules/payload
+cp etc/.disabled/hex.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/cmd.rb etc/.disabled
+mv etc/modules/payload/cmd.rb ~/thoron/modules/payload
+cp etc/.disabled/cmd.rb etc
 rm -rf etc/.disabled
 } &> /dev/null
 else
@@ -82,9 +122,9 @@ git clone https://github.com/entynetproject/thoron.git
 cd $OLDPWD
 cd ~/thoron
 mkdir etc/.disabled
-mv modules/payload/c.rb etc/.disabled
-mv etc/modules/payload/c.rb ~/thoron/modules/payload
-cp etc/.disabled/c.rb etc
+mv modules/payload/clang.rb etc/.disabled
+mv etc/modules/payload/clang.rb ~/thoron/modules/payload
+cp etc/.disabled/clang.rb etc
 rm -rf etc/.disabled
 mkdir etc/.disabled
 mv modules/payload/shell.rb etc/.disabled
@@ -100,6 +140,26 @@ mkdir etc/.disabled
 mv modules/payload/ruby.rb etc/.disabled
 mv etc/modules/payload/ruby.rb ~/thoron/modules/payload
 cp etc/.disabled/ruby.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/cpp.rb etc/.disabled
+mv etc/modules/payload/cpp.rb ~/thoron/modules/payload
+cp etc/.disabled/cpp.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/csharp.rb etc/.disabled
+mv etc/modules/payload/csharp.rb ~/thoron/modules/payload
+cp etc/.disabled/csharp.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/hex.rb etc/.disabled
+mv etc/modules/payload/hex.rb ~/thoron/modules/payload
+cp etc/.disabled/hex.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/cmd.rb etc/.disabled
+mv etc/modules/payload/cmd.rb ~/thoron/modules/payload
+cp etc/.disabled/cmd.rb etc
 rm -rf etc/.disabled
 } &> /dev/null
 chmod +x thoron
@@ -107,9 +167,9 @@ chmod +x thoron
 {
 cd ~/thoron
 mkdir etc/.disabled
-mv modules/payload/c.rb etc/.disabled
-mv etc/modules/payload/c.rb ~/thoron/modules/payload
-cp etc/.disabled/c.rb etc
+mv modules/payload/clang.rb etc/.disabled
+mv etc/modules/payload/clang.rb ~/thoron/modules/payload
+cp etc/.disabled/clang.rb etc
 rm -rf etc/.disabled
 mkdir etc/.disabled
 mv modules/payload/shell.rb etc/.disabled
@@ -125,6 +185,26 @@ mkdir etc/.disabled
 mv modules/payload/ruby.rb etc/.disabled
 mv etc/modules/payload/ruby.rb ~/thoron/modules/payload
 cp etc/.disabled/ruby.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/cpp.rb etc/.disabled
+mv etc/modules/payload/cpp.rb ~/thoron/modules/payload
+cp etc/.disabled/cpp.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/csharp.rb etc/.disabled
+mv etc/modules/payload/csharp.rb ~/thoron/modules/payload
+cp etc/.disabled/csharp.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/hex.rb etc/.disabled
+mv etc/modules/payload/hex.rb ~/thoron/modules/payload
+cp etc/.disabled/hex.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/cmd.rb etc/.disabled
+mv etc/modules/payload/cmd.rb ~/thoron/modules/payload
+cp etc/.disabled/cmd.rb etc
 rm -rf etc/.disabled
 } &> /dev/null
 else
