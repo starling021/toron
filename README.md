@@ -66,19 +66,27 @@ should execute the following command.
 
 # Why Thoron Framework
 
-* .
+* Simple and clear UX/UI.
 
 ```
+Thoron Framework has a simple and clear UX/UI. 
+It is easy to understand and it will be easier 
+for you to master the Thoron Framework.
 ```
 
-* .
+* Powerful RubyCat.
 
 ```
+There is a powerful RubyCat listener in Thoron 
+Framework that supports secure SSL connection 
+and other useful functions.
 ```
 
-* .
+* A lot of different payloads.
 
 ```
+There are a lot of different payloads in Thoron 
+Framework such as Shell, Python and C payloads.
 ```
 
 ***
