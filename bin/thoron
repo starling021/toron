@@ -54,16 +54,6 @@ mv modules/payload/csharp.rb etc/.disabled
 mv etc/modules/payload/csharp.rb ~/thoron/modules/payload
 cp etc/.disabled/csharp.rb etc
 rm -rf etc/.disabled
-mkdir etc/.disabled
-mv modules/payload/hex.rb etc/.disabled
-mv etc/modules/payload/hex.rb ~/thoron/modules/payload
-cp etc/.disabled/hex.rb etc
-rm -rf etc/.disabled
-mkdir etc/.disabled
-mv modules/payload/cmd.rb etc/.disabled
-mv etc/modules/payload/cmd.rb ~/thoron/modules/payload
-cp etc/.disabled/cmd.rb etc
-rm -rf etc/.disabled
 } &> /dev/null
 chmod +x thoron
 ./thoron
@@ -98,16 +88,6 @@ mkdir etc/.disabled
 mv modules/payload/csharp.rb etc/.disabled
 mv etc/modules/payload/csharp.rb ~/thoron/modules/payload
 cp etc/.disabled/csharp.rb etc
-rm -rf etc/.disabled
-mkdir etc/.disabled
-mv modules/payload/hex.rb etc/.disabled
-mv etc/modules/payload/hex.rb ~/thoron/modules/payload
-cp etc/.disabled/hex.rb etc
-rm -rf etc/.disabled
-mkdir etc/.disabled
-mv modules/payload/cmd.rb etc/.disabled
-mv etc/modules/payload/cmd.rb ~/thoron/modules/payload
-cp etc/.disabled/cmd.rb etc
 rm -rf etc/.disabled
 } &> /dev/null
 else
@@ -151,16 +131,6 @@ mv modules/payload/csharp.rb etc/.disabled
 mv etc/modules/payload/csharp.rb ~/thoron/modules/payload
 cp etc/.disabled/csharp.rb etc
 rm -rf etc/.disabled
-mkdir etc/.disabled
-mv modules/payload/hex.rb etc/.disabled
-mv etc/modules/payload/hex.rb ~/thoron/modules/payload
-cp etc/.disabled/hex.rb etc
-rm -rf etc/.disabled
-mkdir etc/.disabled
-mv modules/payload/cmd.rb etc/.disabled
-mv etc/modules/payload/cmd.rb ~/thoron/modules/payload
-cp etc/.disabled/cmd.rb etc
-rm -rf etc/.disabled
 } &> /dev/null
 chmod +x thoron
 ./thoron
@@ -195,16 +165,6 @@ mkdir etc/.disabled
 mv modules/payload/csharp.rb etc/.disabled
 mv etc/modules/payload/csharp.rb ~/thoron/modules/payload
 cp etc/.disabled/csharp.rb etc
-rm -rf etc/.disabled
-mkdir etc/.disabled
-mv modules/payload/hex.rb etc/.disabled
-mv etc/modules/payload/hex.rb ~/thoron/modules/payload
-cp etc/.disabled/hex.rb etc
-rm -rf etc/.disabled
-mkdir etc/.disabled
-mv modules/payload/cmd.rb etc/.disabled
-mv etc/modules/payload/cmd.rb ~/thoron/modules/payload
-cp etc/.disabled/cmd.rb etc
 rm -rf etc/.disabled
 } &> /dev/null
 else
