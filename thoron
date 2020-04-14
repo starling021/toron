@@ -42,7 +42,9 @@ puts ""
 loop do
 print "\033[4mthoron\033[0m> "
 c = gets.chomp
-if c == "exit"
+if c == ""
+    nil
+elsif c == "exit"
     abort()
 elsif c == "clear"
     system("clear")
@@ -84,7 +86,9 @@ elsif c[0..2] == "use"
                 ifraw = c[4..-1]
                 print "\033[4mthoron\033[0m(\033[1;31m#{c[4..-1]}\033[0m)> "
                 ui = gets.chomp
-                if ui == "help"
+                if ui == ""
+                    nil
+                elsif ui == "help"
                     puts ""
                     puts "Core Commands"
                     puts "============="
