@@ -53,9 +53,17 @@ elsif c[0..6] == "modules"
         puts "Usage: modules [-p|-l]"
     else
         if c[8..-1] == "-l"
+            puts ""
+            puts "Listeners"
+            puts "========="
             system("cat data/listeners/listeners.txt")
+            puts ""
         elsif c[8..-1] == "-p"
+            puts ""
+            puts "Payloads"
+            puts "========"
             system("cat data/payloads/payloads.txt")
+            puts ""
         else
             puts "Usage: modules [-p|-l]"
         end
@@ -84,6 +92,26 @@ elsif c[0..2] == "use"
                     system("chmod +x etc/update.sh && etc/update.sh")
                 elsif ui == "exit"
                     break
+                elsif ui[0..6] == "modules"
+                    if ui[8..-1] == ""
+                        puts "Usage: modules [-p|-l]"
+                    else
+                        if ui[8..-1] == "-l"
+                            puts ""
+                            puts "Listeners"
+                            puts "========="
+                            system("cat data/listeners/listeners.txt")
+                            puts ""
+                        elsif ui[8..-1] == "-p"
+                            puts ""
+                            puts "Payloads"
+                            puts "========"
+                            system("cat data/payloads/payloads.txt")
+                            puts ""
+                        else
+                            puts "Usage: modules [-p|-l]"
+                        end
+                    end
                 elsif ui[0..2] == "use"
                     if ui[4..-1] == ""
                         puts "Usage: use <module>"
@@ -101,17 +129,27 @@ elsif c[0..2] == "use"
                         if ui.split()[2] == ""
                             puts "Usage: set <option> <value>"
                         else
-                            if c[4..-3] == "payload"
-                                if ui.split()[1].downcase == "lhost"
-                                    lhost = ui.split()[2]
-                                elsif ui.split()[1].downcase == "lport"
-                                    lport = ui.split()[2]
-                                elsif ui.split()[1].downcase == "shell"
-                                    shell = ui.split()[2]
-                                elsif ui.split()[1].downcase == "output"
-                                    file = ui.split()[2]
+                            if ui[4..-3] == "payload"
+                                if ui[4..-1] == "payload/cmd" or ui[4..-1] == "payload/raw"
+                                    if ui.split()[1].downcase == "lhost"
+                                        lhost = ui.split()[2]
+                                    elsif ui.split()[1].downcase == "lport"
+                                        lport = ui.split()[2]
+                                    else
+                                        puts "#{e}No such option!"
+                                    end
                                 else
-                                    puts "#{e}No such option!"
+                                    if ui.split()[1].downcase == "lhost"
+                                        lhost = ui.split()[2]
+                                    elsif ui.split()[1].downcase == "lport"
+                                        lport = ui.split()[2]
+                                    elsif ui.split()[1].downcase == "shell"
+                                        shell = ui.split()[2]
+                                    elsif ui.split()[1].downcase == "output"
+                                        file = ui.split()[2]
+                                    else
+                                        puts "#{e}No such option!"
+                                    end
                                 end
                             else
                                 if ui.split()[1].downcase == "lhost"
@@ -126,7 +164,11 @@ elsif c[0..2] == "use"
                     end
                 elsif ui == "run"
                     if c[4..-3] == "payload"
-                        system("ruby modules/#{c[4..-1]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell} --output-file=#{file}")
+                        if ui[4..-1] == "payload/cmd" or ui[4..-1] == "payload/raw"
+                            system("ruby modules/#{c[4..-1]}.rb --local-host=#{lhost} --local-port=#{lport}")
+                        else
+                            system("ruby modules/#{c[4..-1]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell} --output-file=#{file}")
+                        end
                     else
                         system("ruby modules/#{c[4..-1]}.rb --local-host=#{lhost} --local-port=#{lport}")
                     end
