@@ -89,26 +89,11 @@ optparse = OptionParser.new do |opts|
   opts.banner = "Usage: #{$0} [OPTIONS]"
   opts.separator ""
   opts.separator "Options: "
-  opts.on('-c', '--connect', "\n\tSimple Connector.") do |mode|
-    options[:method] = 0
-  end
   opts.on('-l', '--listen', "\n\tSetup Listener.") do |mode|
-    options[:method] = 1
-  end
-  opts.on('-b', '--bind', "\n\tSetup Bind Shell.") do |mode|
-    options[:method] = 2
-  end
-  opts.on('-r', '--reverse', "\n\tSetup Reverse Shell.") do |mode|
-    options[:method] = 3
-  end
-  opts.on('-i', '--ip IP', "\n\tIP for Reverse Shell Connection.") do |ip|
-    options[:ip] = ip.chomp
+    options[:method] = 0
   end
   opts.on('-p', '--port PORT', "\n\tPort to use for Connection.") do |port|
     options[:port] = port.to_i
-  end
-  opts.on('-P', '--pass PASS', "\n\tPassword for Bind Shell.") do |pass|
-    options[:pass] = pass
   end
   opts.on('-h', '--help', "\n\tHelp Menu.") do 
     puts opts
@@ -118,39 +103,21 @@ end
 begin
   foo = ARGV[0] || ARGV[0] = "-h"
   optparse.parse!
-  if options[:method].to_i == 3 or options[:method].to_i == 0
-    mandatory = [:method,:port,:ip]
-  else
-    mandatory = [:method,:port]
-  end
+  mandatory = [:method,:port]
   missing = mandatory.select{ |param| options[param].nil? }
   if not missing.empty?
-    puts
     puts "Missing options: #{missing.join(', ')}"
-    puts optparse
     exit 666;
   end
 rescue OptionParser::InvalidOption, OptionParser::MissingArgument
-  puts
   puts $!.to_s
   puts
   puts optparse
-  puts
   exit 666;   
 end
 
 rc = ThorCat.new
 case options[:method].to_i
 when 0
-  rc.listener(options[:port].to_i, options[:ip])
-when 1
   rc.listener(options[:port].to_i)
-when 2
-  if options[:pass].nil?
-    rc.bind_shell(options[:port].to_i)
-  else
-    rc.bind_shell(options[:port].to_i, options[:pass].to_s)
-  end
-when 3
-  rc.reverse_shell(options[:ip], options[:port].to_i)
 end
