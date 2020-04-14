@@ -33,6 +33,7 @@ shell = ""
 file = ""
 type = ""
 
+system("clear")
 system("cat banner/banner.txt")
 puts ""
 puts "Thoron Framework v1.0"
