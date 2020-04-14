@@ -92,7 +92,7 @@ optparse = OptionParser.new do |opts|
   opts.on('-l', '--listen', "\n\tStart ThorCat listener.") do |mode|
     options[:method] = 0
   end
-  opts.on('-p', '--port PORT', "\n\tPort used for listener.") do |port|
+  opts.on('-p', '--port <local_port>', "\n\tPort used for listener.") do |port|
     options[:port] = port.to_i
   end
   opts.on('-h', '--help', "\n\tShow this help list.") do 
