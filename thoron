@@ -81,6 +81,7 @@ elsif c[0..2] == "use"
         if File.exists? "modules/#{c[4..-1]}.rb"
             loop do
                 type = c[c.index(' ')+1..c.index('/')][0..-2]
+                ifraw = c[4..-1]
                 print "\033[4mthoron\033[0m(\033[1;31m#{c[4..-1]}\033[0m)> "
                 ui = gets.chomp
                 if ui == "help"
@@ -126,6 +127,7 @@ elsif c[0..2] == "use"
                         if File.exists? "modules/#{ui[4..-1]}.rb"
                             c[4..-1] = ui[4..-1]
                             type = ui[ui.index(' ')+1..ui.index('/')][0..-2]
+                            ifraw = ui[4..-1]
                         else
                             puts "#{e}No such module!"
                         end
@@ -138,7 +140,7 @@ elsif c[0..2] == "use"
                             puts "Usage: set <option> <value>"
                         else
                             if type == "payload"
-                                if ui[4..-1] == "payload/cmd" or ui[4..-1] == "payload/raw"
+                                if ifraw == "payload/cmd" or ifraw == "payload/raw"
                                     if ui.split()[1].downcase == "lhost"
                                         lhost = ui.split()[2]
                                     elsif ui.split()[1].downcase == "lport"
@@ -172,7 +174,7 @@ elsif c[0..2] == "use"
                     end
                 elsif ui == "run"
                     if type == "payload"
-                        if ui[4..-1] == "payload/cmd" or ui[4..-1] == "payload/raw"
+                        if ifraw == "payload/cmd" or ifraw == "payload/raw"
                             if lhost == "" or lport == ""
                                 puts "#{e}Failed to generate payload!"
                             else
