@@ -1,6 +1,6 @@
 # Thoron Framework
 
-![thoron](https://user-images.githubusercontent.com/54115104/79206549-2911d100-7e48-11ea-975f-f1a8294a516a.jpeg)
+![thoron](https://user-images.githubusercontent.com/54115104/79224763-5e2c1c80-7e64-11ea-853a-f720a1c60cfb.jpeg)
 
 <p align="center">
   <a href="http://entynetproject.simplesite.com/">
