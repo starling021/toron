@@ -2,7 +2,9 @@
     Payload        Description
     -------        -----------
     clang          Clang payload.
+    cmd            Command payload.
     cpp            C++ payload.
     python         Python payload.
+    raw            Raw payload.
     ruby           Ruby payload.
     shell          Shell payload.
