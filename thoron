@@ -143,20 +143,26 @@ elsif c[0..2] == "use"
                                 if ifraw == "payload/cmd" or ifraw == "payload/raw"
                                     if ui.split()[1].downcase == "lhost"
                                         lhost = ui.split()[2]
+                                        puts "#{s}LHOST ==> #{ui.split()[2]}"
                                     elsif ui.split()[1].downcase == "lport"
                                         lport = ui.split()[2]
+                                        puts "#{s}LPORT ==> #{ui.split()[2]}"
                                     else
                                         puts "#{e}No such option!"
                                     end
                                 else
                                     if ui.split()[1].downcase == "lhost"
                                         lhost = ui.split()[2]
+                                        puts "#{s}LHOST ==> #{ui.split()[2]}"
                                     elsif ui.split()[1].downcase == "lport"
                                         lport = ui.split()[2]
+                                        puts "#{s}LPORT ==> #{ui.split()[2]}"
                                     elsif ui.split()[1].downcase == "shell"
                                         shell = ui.split()[2]
+                                        puts "#{s}SHELL ==> #{ui.split()[2]}"
                                     elsif ui.split()[1].downcase == "output"
                                         file = ui.split()[2]
+                                        puts "#{s}OUTPUT ==> #{ui.split()[2]}"
                                     else
                                         puts "#{e}No such option!"
                                     end
@@ -164,8 +170,10 @@ elsif c[0..2] == "use"
                             else
                                 if ui.split()[1].downcase == "lhost"
                                     lhost = ui.split()[2]
+                                    puts "#{s}LHOST ==> #{ui.split()[2]}"
                                 elsif ui.split()[1].downcase == "lport"
                                     lport = ui.split()[2]
+                                    puts "#{s}LPORT ==> #{ui.split()[2]}"
                                 else
                                     puts "#{e}No such option!"
                                 end
