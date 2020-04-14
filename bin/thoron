@@ -49,11 +49,6 @@ mv modules/payload/cpp.rb etc/.disabled
 mv etc/modules/payload/cpp.rb ~/thoron/modules/payload
 cp etc/.disabled/cpp.rb etc
 rm -rf etc/.disabled
-mkdir etc/.disabled
-mv modules/payload/csharp.rb etc/.disabled
-mv etc/modules/payload/csharp.rb ~/thoron/modules/payload
-cp etc/.disabled/csharp.rb etc
-rm -rf etc/.disabled
 } &> /dev/null
 chmod +x thoron
 ./thoron
@@ -83,11 +78,6 @@ mkdir etc/.disabled
 mv modules/payload/cpp.rb etc/.disabled
 mv etc/modules/payload/cpp.rb ~/thoron/modules/payload
 cp etc/.disabled/cpp.rb etc
-rm -rf etc/.disabled
-mkdir etc/.disabled
-mv modules/payload/csharp.rb etc/.disabled
-mv etc/modules/payload/csharp.rb ~/thoron/modules/payload
-cp etc/.disabled/csharp.rb etc
 rm -rf etc/.disabled
 } &> /dev/null
 else
@@ -126,11 +116,6 @@ mv modules/payload/cpp.rb etc/.disabled
 mv etc/modules/payload/cpp.rb ~/thoron/modules/payload
 cp etc/.disabled/cpp.rb etc
 rm -rf etc/.disabled
-mkdir etc/.disabled
-mv modules/payload/csharp.rb etc/.disabled
-mv etc/modules/payload/csharp.rb ~/thoron/modules/payload
-cp etc/.disabled/csharp.rb etc
-rm -rf etc/.disabled
 } &> /dev/null
 chmod +x thoron
 ./thoron
@@ -160,11 +145,6 @@ mkdir etc/.disabled
 mv modules/payload/cpp.rb etc/.disabled
 mv etc/modules/payload/cpp.rb ~/thoron/modules/payload
 cp etc/.disabled/cpp.rb etc
-rm -rf etc/.disabled
-mkdir etc/.disabled
-mv modules/payload/csharp.rb etc/.disabled
-mv etc/modules/payload/csharp.rb ~/thoron/modules/payload
-cp etc/.disabled/csharp.rb etc
 rm -rf etc/.disabled
 } &> /dev/null
 else
