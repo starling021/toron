@@ -2,6 +2,7 @@
     Payload        Description
     -------        -----------
     clang          Clang payload.
+    cpp            C++ payload.
     python         Python payload.
     ruby           Ruby payload.
     shell          Shell payload.
