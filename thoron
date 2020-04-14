@@ -80,7 +80,7 @@ elsif c[0..2] == "use"
     else
         if File.exists? "modules/#{c[4..-1]}.rb"
             loop do
-                type = ui[ui.index(' ')+1..ui.index('/')][0..-2]
+                type = c[c.index(' ')+1..ui.index('/')][0..-2]
                 print "\033[4mthoron\033[0m(\033[1;31m#{c[4..-1]}\033[0m)> "
                 ui = gets.chomp
                 if ui == "help"
