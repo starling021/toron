@@ -134,7 +134,7 @@ elsif c[0..2] == "use"
                         if ui.split()[2] == ""
                             puts "Usage: set <option> <value>"
                         else
-                            if ui[4..-3] == "payload"
+                            if ui[ui.index(' ')+1..ui.index('/')][0..-2] == "payload"
                                 if ui[4..-1] == "payload/cmd" or ui[4..-1] == "payload/raw"
                                     if ui.split()[1].downcase == "lhost"
                                         lhost = ui.split()[2]
@@ -168,7 +168,7 @@ elsif c[0..2] == "use"
                         end
                     end
                 elsif ui == "run"
-                    if ui[4..-3] == "payload"
+                    if ui[ui.index(' ')+1..ui.index('/')][0..-2] == "payload"
                         if ui[4..-1] == "payload/cmd" or ui[4..-1] == "payload/raw"
                             if lhost == "" or lport == ""
                                 puts "#{e}Failed to generate payload!"
