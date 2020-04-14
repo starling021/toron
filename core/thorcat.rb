@@ -86,16 +86,16 @@ end
 
 options = {}
 optparse = OptionParser.new do |opts| 
-  opts.banner = "Usage: #{$0} [OPTIONS]"
+  opts.banner = "Usage: #{$0} [option] <arguments>"
   opts.separator ""
   opts.separator "Options: "
-  opts.on('-l', '--listen', "\n\tSetup Listener.") do |mode|
+  opts.on('-l', '--listen', "\n\tStart ThorCat listener.") do |mode|
     options[:method] = 0
   end
-  opts.on('-p', '--port PORT', "\n\tPort to use for Connection.") do |port|
+  opts.on('-p', '--port PORT', "\n\tPort used for listener.") do |port|
     options[:port] = port.to_i
   end
-  opts.on('-h', '--help', "\n\tHelp Menu.") do 
+  opts.on('-h', '--help', "\n\tShow this help list.") do 
     puts opts
     exit 69;
   end
