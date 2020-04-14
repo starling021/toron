@@ -1,0 +1,143 @@
+#!/usr/bin/env ruby
+
+#            ---------------------------------------------------
+#                             Thoron Framework                                
+#            ---------------------------------------------------
+#                  Copyright (C) <2020>  <Entynetproject>       
+#
+#        This program is free software: you can redistribute it and/or modify
+#        it under the terms of the GNU General Public License as published by
+#        the Free Software Foundation, either version 3 of the License, or
+#        any later version.
+#
+#        This program is distributed in the hope that it will be useful,
+#        but WITHOUT ANY WARRANTY; without even the implied warranty of
+#        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#        GNU General Public License for more details.
+#
+#        You should have received a copy of the GNU General Public License
+#        along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+system("printf '\033]2;Thoron Framework\a'")
+
+e = "\033[1;31m[-] \033[0m"
+p = "\033[1;77m[>] \033[0m"
+g = "\033[1;34m[*] \033[0m"
+s = "\033[1;32m[+] \033[0m"
+h = "\033[1;77m[@] \033[0m"
+
+system("cat banner/banner.txt")
+puts ""
+puts "Thoron Framework v1.0"
+puts "---------------------"
+puts ""
+
+loop do
+print "\033[4mthoron\033[0m> "
+c = gets.chomp
+if c == "exit"
+    abort()
+elsif c == "clear"
+    system("clear")
+elsif c == "update"
+    system("chmod +x etc/update.sh && etc/update.sh")
+elsif c == "help"
+    puts ""
+    puts "Core Commands"
+    puts "============="
+    system("cat data/cmds/core_cmds.txt")
+    puts ""
+elsif c[0..6] == "modules"
+    if c[8..-1] == ""
+        puts "Usage: modules [-p|-l]"
+    else
+        if c[8..-1] == "-l"
+            system("cat data/listeners/listeners.txt")
+        elsif c[8..-1] == "-p"
+            system("cat data/payloads/payloads.txt")
+        else
+            puts "Usage: modules [-p|-l]"
+        end
+    end
+elsif c[0..2] == "use"
+    if c[4..-1] == ""
+        puts "Usage: use <module>"
+    else
+        if File.exists? "modules/#{c[4..-1]}.rb"
+            loop do
+                print "\033[4mthoron\033[0m(\033[1;31m#{c[4..-1]}\033[0m)> "
+                ui = gets.chomp
+                if ui == "help"
+                    puts ""
+                    puts "Core Commands"
+                    puts "============="
+                    system("cat data/cmds/core_cmds.txt")
+                    puts ""
+                    puts "Module Commands"
+                    puts "==============="
+                    system("cat data/cmds/module_cmds.txt")
+                    puts ""
+                elsif ui == "clear"
+                    system("clear")
+                elsif ui == "update"
+                    system("chmod +x etc/update.sh && etc/update.sh")
+                elsif ui == "exit"
+                    break
+                elsif ui[0..2] == "use"
+                    if ui[4..-1] == ""
+                        puts "Usage: use <module>"
+                    else
+                        if File.exists? "modules/#{ui[4..-1]}.rb"
+                            c[4..-1] = ui[4..-1]
+                        else
+                            puts "#{e}No such module!"
+                        end
+                    end
+                elsif ui.split()[0] == "set"
+                    if ui.split()[1] == ""
+                        puts "Usage: set <option> <value>"
+                    else
+                        if ui.split()[2] == ""
+                            puts "Usage: set <option> <value>"
+                        else
+                            if c[4..-3] == "payload"
+                                if ui.split()[1].downcase == "lhost"
+                                    lhost = ui.split()[2]
+                                elsif ui.split()[1].downcase == "lport"
+                                    lport = ui.split()[2]
+                                elsif ui.split()[1].downcase == "shell"
+                                    shell = ui.split()[2]
+                                elsif ui.split()[1].downcase == "output"
+                                    file = ui.split()[2]
+                                else
+                                    puts "#{e}No such option!"
+                                end
+                            else
+                                if ui.split()[1].downcase == "lhost"
+                                    lhost = ui.split()[2]
+                                elsif ui.split()[1].downcase == "lport"
+                                    lport = ui.split()[2]
+                                else
+                                    puts "#{e}No such option!"
+                                end
+                            end
+                        end
+                    end
+                elsif ui == "run"
+                    if c[4..-3] == "payload"
+                        system("ruby modules/#{c[4..-1]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell} --output-file=#{file}")
+                    else
+                        system("ruby modules/#{c[4..-1]}.rb --local-host=#{lhost} --local-port=#{lport}")
+                    end
+                else
+                    puts "#{e}Unrecognized command!"
+                end
+            end
+        else
+            puts "#{e}No such module!"
+        end
+    end
+else
+    puts "#{e}Urecognized command!" 
+end
+end

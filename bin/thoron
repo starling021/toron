@@ -1,0 +1,135 @@
+#!/bin/bash
+
+#            ---------------------------------------------------
+#                             Thoron Framework                                
+#            ---------------------------------------------------
+#                  Copyright (C) <2020>  <Entynetproject>       
+#
+#        This program is free software: you can redistribute it and/or modify
+#        it under the terms of the GNU General Public License as published by
+#        the Free Software Foundation, either version 3 of the License, or
+#        any later version.
+#
+#        This program is distributed in the hope that it will be useful,
+#        but WITHOUT ANY WARRANTY; without even the implied warranty of
+#        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#        GNU General Public License for more details.
+#
+#        You should have received a copy of the GNU General Public License
+#        along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+printf '\033]2;Thoron Framework\a'
+
+if [[ -d ~/thoron ]]
+then
+{
+cd ~/thoron
+mkdir etc/.disabled
+mv modules/payload/c.rb etc/.disabled
+mv etc/modules/payload/c.rb ~/thoron/modules/payload
+cp etc/.disabled/c.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/shell.rb etc/.disabled
+mv etc/modules/payload/shell.rb ~/thoron/modules/payload
+cp etc/.disabled/shell.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/python.rb etc/.disabled
+mv etc/modules/payload/python.rb ~/thoron/modules/payload
+cp etc/.disabled/python.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/ruby.rb etc/.disabled
+mv etc/modules/payload/ruby.rb ~/thoron/modules/payload
+cp etc/.disabled/ruby.rb etc
+rm -rf etc/.disabled
+} &> /dev/null
+chmod +x thoron
+./thoron
+{
+cd ~/thoron
+mkdir etc/.disabled
+mv modules/payload/c.rb etc/.disabled
+mv etc/modules/payload/c.rb ~/thoron/modules/payload
+cp etc/.disabled/c.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/shell.rb etc/.disabled
+mv etc/modules/payload/shell.rb ~/thoron/modules/payload
+cp etc/.disabled/shell.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/python.rb etc/.disabled
+mv etc/modules/payload/python.rb ~/thoron/modules/payload
+cp etc/.disabled/python.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/ruby.rb etc/.disabled
+mv etc/modules/payload/ruby.rb ~/thoron/modules/payload
+cp etc/.disabled/ruby.rb etc
+rm -rf etc/.disabled
+} &> /dev/null
+else
+{
+ASESR="$( curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
+} &> /dev/null
+if [[ "$ASESR" != "" ]]
+then 
+cd ~
+{
+git clone https://github.com/entynetproject/thoron.git
+cd $OLDPWD
+cd ~/thoron
+mkdir etc/.disabled
+mv modules/payload/c.rb etc/.disabled
+mv etc/modules/payload/c.rb ~/thoron/modules/payload
+cp etc/.disabled/c.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/shell.rb etc/.disabled
+mv etc/modules/payload/shell.rb ~/thoron/modules/payload
+cp etc/.disabled/shell.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/python.rb etc/.disabled
+mv etc/modules/payload/python.rb ~/thoron/modules/payload
+cp etc/.disabled/python.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/ruby.rb etc/.disabled
+mv etc/modules/payload/ruby.rb ~/thoron/modules/payload
+cp etc/.disabled/ruby.rb etc
+rm -rf etc/.disabled
+} &> /dev/null
+chmod +x thoron
+./thoron
+{
+cd ~/thoron
+mkdir etc/.disabled
+mv modules/payload/c.rb etc/.disabled
+mv etc/modules/payload/c.rb ~/thoron/modules/payload
+cp etc/.disabled/c.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/shell.rb etc/.disabled
+mv etc/modules/payload/shell.rb ~/thoron/modules/payload
+cp etc/.disabled/shell.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/python.rb etc/.disabled
+mv etc/modules/payload/python.rb ~/thoron/modules/payload
+cp etc/.disabled/python.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/ruby.rb etc/.disabled
+mv etc/modules/payload/ruby.rb ~/thoron/modules/payload
+cp etc/.disabled/ruby.rb etc
+rm -rf etc/.disabled
+} &> /dev/null
+else
+cd ~
+sleep 1
+exit
+fi
+fi

@@ -1,0 +1,6 @@
+
+    Command        Description
+    -------        -----------
+    info           Show module options.
+    run            Run current module.
+    set            Set an option to value.

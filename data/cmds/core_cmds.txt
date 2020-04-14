@@ -1,0 +1,9 @@
+
+    Command        Description
+    -------        -----------
+    clear          Clear terminal window.
+    exit           Exit Ghost Framework.
+    help           Show help information.
+    modules        Show payloads and listeners.
+    update         Update Ghost Framework.
+    use            Use specified module.
