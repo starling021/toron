@@ -81,10 +81,10 @@ There are a lot of different payloads in Thoron
 Framework such as Shell, Python and C payloads.
 ```
 
-* Powerful RubyCat listener.
+* Powerful ThorCat listener.
 
 ```
-There is a powerful RubyCat listener in Thoron 
+There is a powerful ThorCat listener in Thoron 
 Framework that supports secure SSL connection 
 and other useful functions.
 ```
