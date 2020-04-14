@@ -27,6 +27,11 @@ s = "\033[1;32m[+] \033[0m"
 h = "\033[1;77m[@] \033[0m"
 r = "\033[1;77m[#] \033[0m"
 
+lhost = ""
+lport = ""
+shell = ""
+file = ""
+
 system("cat banner/banner.txt")
 puts ""
 puts "Thoron Framework v1.0"
@@ -163,14 +168,26 @@ elsif c[0..2] == "use"
                         end
                     end
                 elsif ui == "run"
-                    if c[4..-3] == "payload"
+                    if ui[4..-3] == "payload"
                         if ui[4..-1] == "payload/cmd" or ui[4..-1] == "payload/raw"
-                            system("ruby modules/#{c[4..-1]}.rb --local-host=#{lhost} --local-port=#{lport}")
+                            if lhost == "" or lport == ""
+                                puts "#{e}Failed to generate payload!"
+                            else
+                                system("ruby modules/#{c[4..-1]}.rb --local-host=#{lhost} --local-port=#{lport}")
+                            end
                         else
-                            system("ruby modules/#{c[4..-1]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell} --output-file=#{file}")
+                            if lhost == "" or lport == "" or shell == "" or file == ""
+                                puts "#{e}Failed to generate payload!"
+                            else
+                                system("ruby modules/#{c[4..-1]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell} --output-file=#{file}")
+                            end
                         end
                     else
-                        system("ruby modules/#{c[4..-1]}.rb --local-host=#{lhost} --local-port=#{lport}")
+                        if lhost == "" or lport == ""
+                            puts "#{e}Failed to start listener!"
+                        else
+                            system("ruby modules/#{c[4..-1]}.rb --local-host=#{lhost} --local-port=#{lport}")
+                        end
                     end
                 else
                     puts "#{e}Unrecognized command!"
