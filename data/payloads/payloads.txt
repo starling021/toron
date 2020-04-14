@@ -1,10 +1,10 @@
 
     Payload        Description
     -------        -----------
-    payload/clang  Clang payload.
-    payload/cmd    Command payload.
-    payload/cpp    C++ payload.
-    payload/python Python payload.
-    payload/raw    Raw payload.
-    payload/ruby   Ruby payload.
-    payload/shell  Shell payload.
+    clang          Clang payload.
+    cmd            Command payload.
+    cpp            C++ payload.
+    python         Python payload.
+    raw            Raw payload.
+    ruby           Ruby payload.
+    shell          Shell payload.
