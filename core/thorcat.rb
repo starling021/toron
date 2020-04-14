@@ -20,10 +20,6 @@
 
 require 'optparse'
 
-def randz
-  (0...1).map{ ('0'..'3').to_a[rand(4)] }.join
-end
-
 class ThorCat
   def initialize
     require 'ostruct'
