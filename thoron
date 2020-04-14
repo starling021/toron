@@ -132,6 +132,28 @@ elsif c[0..2] == "use"
                             puts "#{e}No such module!"
                         end
                     end
+                elsif ui == "info"
+                    if type == "payload"
+                        if ifraw == "payload/cmd" or ifraw == "payload/raw"
+                            puts ""
+                            puts "Payload Options"
+                            puts "==============="
+                            system("cat data/payloads/raw/info.txt")
+                            puts ""
+                        else
+                            puts ""
+                            puts "Payload Options"
+                            puts "==============="
+                            system("cat data/payloads/other/info.txt")
+                            puts ""
+                        end
+                    else
+                        puts ""
+                        puts "Listener Options"
+                        puts "================"
+                        system("cat data/listeners/info.txt")
+                        puts ""
+                    end
                 elsif ui.split()[0] == "set"
                     if ui.split()[1] == ""
                         puts "Usage: set <option> <value>"
