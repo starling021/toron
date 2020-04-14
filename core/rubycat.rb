@@ -83,16 +83,14 @@ class RubyCat
   end
 
   def bind_shell(port=31337, password='knock-knock')
-    # Messages for those who visit but don't have proper pass
     @greetz=["Piss Off!", "Grumble, Grumble......?", "Run along now, nothing to see here.....", "Who's There?"]
 
     Socket.tcp_server_loop("#{port}") do |socket, client_addrinfo|
       command = socket.gets.chomp
       if command.downcase == password
         socket.puts "\nYou've Been Authenticated!\n"
-        socket.puts "This Bind connection brought to you by a little Ruby Magic xD\n"
-        socket.puts "Type 'EXIT' or 'QUIT' to exit shell & keep port listening..."
-        socket.puts "Type 'KILL' or 'CLOSE' to close listenr for good!\n\n"
+        socket.puts "Type 'exit' or 'quit' to exit shell & keep port listening..."
+        socket.puts "Type 'kill' or 'close' to close listenr for good!\n"
         socket.puts "Server Info: "
         begin
           count=0
