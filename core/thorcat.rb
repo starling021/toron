@@ -34,7 +34,7 @@ def randz
   (0...1).map{ ('0'..'3').to_a[rand(4)] }.join
 end
 
-class RubyCat
+class ThorCat
   def initialize
     require 'ostruct'
     require 'socket'
@@ -116,7 +116,7 @@ class RubyCat
             end
           end
           while(true)
-            socket.print "\n(RubyCat)> "
+            socket.print "\n(ThorCat)> "
             command = socket.gets.chomp
             if command.downcase == 'exit' or command.downcase == 'quit'
               socket.puts "\nGot root?\n\n"
@@ -178,7 +178,7 @@ class RubyCat
         end
       end
       while(true)
-        socket.print "\n(RubyCat)> "
+        socket.print "\n(ThorCat)> "
         command = socket.gets.chomp
         if command.downcase == 'exit' or command.downcase == 'quit'
           socket.puts "\nGot root?\n\n"
@@ -253,7 +253,7 @@ rescue OptionParser::InvalidOption, OptionParser::MissingArgument
   exit 666;   
 end
 
-rc = RubyCat.new
+rc = ThorCat.new
 case options[:method].to_i
 when 0
   rc.listener(options[:port].to_i, options[:ip])
