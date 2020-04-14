@@ -1,5 +1,5 @@
 
     Option        Value
     ------        -----
-    lhost         Local Host.
-    lport         Local Port.
+    LHOST         Local Host.
+    LPORT         Local Port.
