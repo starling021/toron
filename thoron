@@ -80,6 +80,7 @@ elsif c[0..2] == "use"
     else
         if File.exists? "modules/#{c[4..-1]}.rb"
             loop do
+                type = ui[ui.index(' ')+1..ui.index('/')][0..-2]
                 print "\033[4mthoron\033[0m(\033[1;31m#{c[4..-1]}\033[0m)> "
                 ui = gets.chomp
                 if ui == "help"
@@ -124,6 +125,7 @@ elsif c[0..2] == "use"
                     else
                         if File.exists? "modules/#{ui[4..-1]}.rb"
                             c[4..-1] = ui[4..-1]
+                            type = ui[ui.index(' ')+1..ui.index('/')][0..-2]
                         else
                             puts "#{e}No such module!"
                         end
@@ -135,7 +137,6 @@ elsif c[0..2] == "use"
                         if ui.split()[2] == ""
                             puts "Usage: set <option> <value>"
                         else
-                            type = ui[ui.index(' ')+1..ui.index('/')][0..-2]
                             if type == "payload"
                                 if ui[4..-1] == "payload/cmd" or ui[4..-1] == "payload/raw"
                                     if ui.split()[1].downcase == "lhost"
