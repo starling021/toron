@@ -1,1 +1,7 @@
 
+    Payload        Description
+    -------        -----------
+    clang          Clang payload.
+    python         Python payload.
+    ruby           Ruby payload.
+    shell          Shell payload.
