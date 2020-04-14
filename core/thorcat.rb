@@ -18,13 +18,6 @@
 #        You should have received a copy of the GNU General Public License
 #        along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-e = "\033[1;31m[-] \033[0m"
-p = "\033[1;77m[>] \033[0m"
-g = "\033[1;34m[*] \033[0m"
-s = "\033[1;32m[+] \033[0m"
-h = "\033[1;77m[@] \033[0m"
-r = "\033[1;77m[#] \033[0m"
-
 require 'optparse'
 
 def randz
@@ -51,6 +44,7 @@ class ThorCat
     g = "\033[1;34m[*] \033[0m"
     s = "\033[1;32m[+] \033[0m"
     h = "\033[1;77m[@] \033[0m"
+    r = "\033[1;77m[#] \033[0m"
     puts "#{g}Handling new connection..."
     sleep(0.5)
     puts "#{g}Sending payload to target..."
