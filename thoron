@@ -42,7 +42,7 @@ puts ""
 
 loop do
 print "\033[4mthoron\033[0m> "
-c = gets.chomp
+c = gets.split(" ")
 if c == ""
     nil
 elsif c == "exit"
@@ -86,7 +86,7 @@ elsif c[0..2] == "use"
                 type = c[c.index(' ')+1..c.index('/')][0..-2]
                 ifraw = c[4..-1]
                 print "\033[4mthoron\033[0m(\033[1;31m#{c[4..-1]}\033[0m)> "
-                ui = gets.chomp
+                ui = gets.split(" ")
                 if ui == ""
                     nil
                 elsif ui == "help"
