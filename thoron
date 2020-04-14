@@ -45,13 +45,13 @@ print "\033[4mthoron\033[0m> "
 c = gets.split(" ")
 if c == ""
     nil
-elsif c == "exit"
+elsif c[0..3] == "exit"
     abort()
-elsif c == "clear"
+elsif c[0..4] == "clear"
     system("clear")
-elsif c == "update"
+elsif c[0..5] == "update"
     system("chmod +x etc/update.sh && etc/update.sh")
-elsif c == "help"
+elsif c[0..3] == "help"
     puts ""
     puts "Core Commands"
     puts "============="
@@ -89,7 +89,7 @@ elsif c[0..2] == "use"
                 ui = gets.split(" ")
                 if ui == ""
                     nil
-                elsif ui == "help"
+                elsif ui[0..3] == "help"
                     puts ""
                     puts "Core Commands"
                     puts "============="
@@ -99,11 +99,11 @@ elsif c[0..2] == "use"
                     puts "==============="
                     system("cat data/cmds/module_cmds.txt")
                     puts ""
-                elsif ui == "clear"
+                elsif ui[0..4] == "clear"
                     system("clear")
-                elsif ui == "update"
+                elsif ui[0..5] == "update"
                     system("chmod +x etc/update.sh && etc/update.sh")
-                elsif ui == "exit"
+                elsif ui[0..3] == "exit"
                     break
                 elsif ui[0..6] == "modules"
                     if ui[8..-1] == ""
@@ -137,7 +137,7 @@ elsif c[0..2] == "use"
                             puts "#{e}No such module!"
                         end
                     end
-                elsif ui == "info"
+                elsif ui[0..3] == "info"
                     if type == "payload"
                         if ifraw == "payload/cmd" or ifraw == "payload/raw"
                             puts ""
@@ -207,7 +207,7 @@ elsif c[0..2] == "use"
                             end
                         end
                     end
-                elsif ui == "run"
+                elsif ui[0..2] == "run"
                     if type == "payload"
                         if ifraw == "payload/cmd" or ifraw == "payload/raw"
                             if lhost == "" or lport == ""
