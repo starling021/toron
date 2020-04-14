@@ -43,31 +43,33 @@ puts ""
 loop do
 print "\033[4mthoron\033[0m> "
 c = gets.split(" ")
+a = c
+c = c.split()
 if c == ""
     nil
-elsif c[0..3] == "exit"
+elsif c[0] == "exit"
     abort()
-elsif c[0..4] == "clear"
+elsif c[0] == "clear"
     system("clear")
-elsif c[0..5] == "update"
+elsif c[0] == "update"
     system("chmod +x etc/update.sh && etc/update.sh")
-elsif c[0..3] == "help"
+elsif c[0] == "help"
     puts ""
     puts "Core Commands"
     puts "============="
     system("cat data/cmds/core_cmds.txt")
     puts ""
-elsif c[0..6] == "modules"
-    if c[8..-1] == ""
+elsif c[0] == "modules"
+    if c[1] == ""
         puts "Usage: modules [-p|-l]"
     else
-        if c[8..-1] == "-l"
+        if c[1] == "-l"
             puts ""
             puts "Listeners"
             puts "========="
             system("cat data/listeners/listeners.txt")
             puts ""
-        elsif c[8..-1] == "-p"
+        elsif c[1] == "-p"
             puts ""
             puts "Payloads"
             puts "========"
@@ -77,19 +79,21 @@ elsif c[0..6] == "modules"
             puts "Usage: modules [-p|-l]"
         end
     end
-elsif c[0..2] == "use"
-    if c[4..-1] == ""
+elsif c[0] == "use"
+    if c[1] == ""
         puts "Usage: use <module>"
     else
-        if File.exists? "modules/#{c[4..-1]}.rb"
+        if File.exists? "modules/#{c[1]}.rb"
             loop do
-                type = c[c.index(' ')+1..c.index('/')][0..-2]
-                ifraw = c[4..-1]
-                print "\033[4mthoron\033[0m(\033[1;31m#{c[4..-1]}\033[0m)> "
+                type = a[a.index(' ')+1..a.index('/')][0..-2]
+                ifraw = c[1]
+                print "\033[4mthoron\033[0m(\033[1;31m#{c[1]}\033[0m)> "
                 ui = gets.split(" ")
+                b = ui
+                ui = ui.split()
                 if ui == ""
                     nil
-                elsif ui[0..3] == "help"
+                elsif ui[0] == "help"
                     puts ""
                     puts "Core Commands"
                     puts "============="
@@ -99,23 +103,23 @@ elsif c[0..2] == "use"
                     puts "==============="
                     system("cat data/cmds/module_cmds.txt")
                     puts ""
-                elsif ui[0..4] == "clear"
+                elsif ui[0] == "clear"
                     system("clear")
-                elsif ui[0..5] == "update"
+                elsif ui[0] == "update"
                     system("chmod +x etc/update.sh && etc/update.sh")
-                elsif ui[0..3] == "exit"
+                elsif ui[0] == "exit"
                     break
-                elsif ui[0..6] == "modules"
-                    if ui[8..-1] == ""
+                elsif ui[0] == "modules"
+                    if ui[1] == ""
                         puts "Usage: modules [-p|-l]"
                     else
-                        if ui[8..-1] == "-l"
+                        if ui[1] == "-l"
                             puts ""
                             puts "Listeners"
                             puts "========="
                             system("cat data/listeners/listeners.txt")
                             puts ""
-                        elsif ui[8..-1] == "-p"
+                        elsif ui[1] == "-p"
                             puts ""
                             puts "Payloads"
                             puts "========"
@@ -125,19 +129,19 @@ elsif c[0..2] == "use"
                             puts "Usage: modules [-p|-l]"
                         end
                     end
-                elsif ui[0..2] == "use"
-                    if ui[4..-1] == ""
+                elsif ui[0] == "use"
+                    if ui[1] == ""
                         puts "Usage: use <module>"
                     else
-                        if File.exists? "modules/#{ui[4..-1]}.rb"
-                            c[4..-1] = ui[4..-1]
-                            type = ui[ui.index(' ')+1..ui.index('/')][0..-2]
-                            ifraw = ui[4..-1]
+                        if File.exists? "modules/#{ui[1]}.rb"
+                            c[1] = ui[1]
+                            type = b[ui.index(' ')+1..b.index('/')][0..-2]
+                            ifraw = ui[1]
                         else
                             puts "#{e}No such module!"
                         end
                     end
-                elsif ui[0..3] == "info"
+                elsif ui[0] == "info"
                     if type == "payload"
                         if ifraw == "payload/cmd" or ifraw == "payload/raw"
                             puts ""
@@ -159,74 +163,74 @@ elsif c[0..2] == "use"
                         system("cat data/listeners/info.txt")
                         puts ""
                     end
-                elsif ui.split()[0] == "set"
-                    if ui.split()[1] == ""
+                elsif ui[0] == "set"
+                    if ui[1] == ""
                         puts "Usage: set <option> <value>"
                     else
-                        if ui.split()[2] == ""
+                        if ui[2] == ""
                             puts "Usage: set <option> <value>"
                         else
                             if type == "payload"
                                 if ifraw == "payload/cmd" or ifraw == "payload/raw"
-                                    if ui.split()[1].downcase == "lhost"
-                                        lhost = ui.split()[2]
-                                        puts "#{s}LHOST ==> #{ui.split()[2]}"
-                                    elsif ui.split()[1].downcase == "lport"
-                                        lport = ui.split()[2]
-                                        puts "#{s}LPORT ==> #{ui.split()[2]}"
+                                    if ui[1].downcase == "lhost"
+                                        lhost = ui[2]
+                                        puts "#{s}LHOST ==> #{ui[2]}"
+                                    elsif ui[1].downcase == "lport"
+                                        lport = ui[2]
+                                        puts "#{s}LPORT ==> #{ui[2]}"
                                     else
                                         puts "#{e}No such option!"
                                     end
                                 else
-                                    if ui.split()[1].downcase == "lhost"
+                                    if ui[1].downcase == "lhost"
                                         lhost = ui.split()[2]
-                                        puts "#{s}LHOST ==> #{ui.split()[2]}"
-                                    elsif ui.split()[1].downcase == "lport"
-                                        lport = ui.split()[2]
-                                        puts "#{s}LPORT ==> #{ui.split()[2]}"
-                                    elsif ui.split()[1].downcase == "shell"
-                                        shell = ui.split()[2]
-                                        puts "#{s}SHELL ==> #{ui.split()[2]}"
-                                    elsif ui.split()[1].downcase == "output"
-                                        file = ui.split()[2]
-                                        puts "#{s}OUTPUT ==> #{ui.split()[2]}"
+                                        puts "#{s}LHOST ==> #{ui[2]}"
+                                    elsif ui[1].downcase == "lport"
+                                        lport = ui[2]
+                                        puts "#{s}LPORT ==> #{ui.[2]}"
+                                    elsif ui[1].downcase == "shell"
+                                        shell = ui[2]
+                                        puts "#{s}SHELL ==> #{ui[2]}"
+                                    elsif ui[1].downcase == "output"
+                                        file = ui[2]
+                                        puts "#{s}OUTPUT ==> #{ui.[2]}"
                                     else
                                         puts "#{e}No such option!"
                                     end
                                 end
                             else
-                                if ui.split()[1].downcase == "lhost"
-                                    lhost = ui.split()[2]
-                                    puts "#{s}LHOST ==> #{ui.split()[2]}"
-                                elsif ui.split()[1].downcase == "lport"
-                                    lport = ui.split()[2]
-                                    puts "#{s}LPORT ==> #{ui.split()[2]}"
+                                if ui[1].downcase == "lhost"
+                                    lhost = ui[2]
+                                    puts "#{s}LHOST ==> #{ui[2]}"
+                                elsif ui[1].downcase == "lport"
+                                    lport = ui[2]
+                                    puts "#{s}LPORT ==> #{ui[2]}"
                                 else
                                     puts "#{e}No such option!"
                                 end
                             end
                         end
                     end
-                elsif ui[0..2] == "run"
+                elsif ui[0] == "run"
                     if type == "payload"
                         if ifraw == "payload/cmd" or ifraw == "payload/raw"
                             if lhost == "" or lport == ""
                                 puts "#{e}Failed to generate payload!"
                             else
-                                system("ruby modules/#{c[4..-1]}.rb --local-host=#{lhost} --local-port=#{lport}")
+                                system("ruby modules/#{c[1]}.rb --local-host=#{lhost} --local-port=#{lport}")
                             end
                         else
                             if lhost == "" or lport == "" or shell == "" or file == ""
                                 puts "#{e}Failed to generate payload!"
                             else
-                                system("ruby modules/#{c[4..-1]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell} --output-file=#{file}")
+                                system("ruby modules/#{c[1]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell} --output-file=#{file}")
                             end
                         end
                     else
                         if lhost == "" or lport == ""
                             puts "#{e}Failed to start listener!"
                         else
-                            system("ruby modules/#{c[4..-1]}.rb --local-host=#{lhost} --local-port=#{lport}")
+                            system("ruby modules/#{c[1]}.rb --local-host=#{lhost} --local-port=#{lport}")
                         end
                     end
                 else
