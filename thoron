@@ -42,9 +42,7 @@ puts ""
 
 loop do
 print "\033[4mthoron\033[0m> "
-c = gets.split(" ")
-a = c
-c = c.split()
+c = gets.chomp.split()
 if c == ""
     nil
 elsif c[0] == "exit"
@@ -85,12 +83,10 @@ elsif c[0] == "use"
     else
         if File.exists? "modules/#{c[1]}.rb"
             loop do
-                type = a[a.index(' ')+1..a.index('/')][0..-2]
+                type = c[1][0..c.index('/')][0..-2]
                 ifraw = c[1]
                 print "\033[4mthoron\033[0m(\033[1;31m#{c[1]}\033[0m)> "
-                ui = gets.split(" ")
-                b = ui
-                ui = ui.split()
+                ui = gets.chomp.split()
                 if ui == ""
                     nil
                 elsif ui[0] == "help"
@@ -135,7 +131,7 @@ elsif c[0] == "use"
                     else
                         if File.exists? "modules/#{ui[1]}.rb"
                             c[1] = ui[1]
-                            type = b[ui.index(' ')+1..b.index('/')][0..-2]
+                            type = ui[1][0..ui.index('/')][0..-2]
                             ifraw = ui[1]
                         else
                             puts "#{e}No such module!"
