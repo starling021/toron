@@ -29,6 +29,11 @@ r = "\033[1;77m[#] \033[0m"
 
 lhost = ""
 lport = ""
+
+require 'socket'
+lhost = IPSocket.getaddress(Socket.gethostname)
+lport = "4444"
+
 shell = ""
 output = ""
 type = ""
