@@ -42,7 +42,7 @@ shell = options.target_shell
 file = options.output_file
 
 if host == "" or port == "" or shell == "" or file == ""
-    puts "Usage: clang.rb --local-host=<local_host> --local-port=<local_port>"
+    puts "Usage: shell.rb --local-host=<local_host> --local-port=<local_port>"
     puts "                --target-shell=<target_shell> --output-file=<output_file>"
     puts ""
     puts "  --local-host=<local_host>      Local host."
