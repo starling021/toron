@@ -49,7 +49,8 @@ if host == "" or port == "" or shell == "" or file == ""
     puts "  --local-port=<local_port>      Local port."
     puts "  --target-shell=<target_shell>  Target shell."
     puts "  --output-file=<output_file>    Output file."
-
+end
+  
 begin
     sleep(0.5)
     puts "#{g}Writing payload..."
