@@ -1,7 +1,0 @@
-
-    Option        Value
-    ------        -----
-    LHOST         Local host.
-    LPORT         Local port.
-    SHELL         Target shell.
-    OUTPUT        Output file.
