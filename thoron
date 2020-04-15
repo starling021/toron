@@ -140,27 +140,101 @@ elsif c[0] == "use"
                 elsif ui[0] == "info"
                     if type == "payload"
                         if ifraw == "payload/cmd" or ifraw == "payload/raw"
+                            if lhost.length >= 13
+                                stf = " " * (lhost.length - 3)
+                                fts = lhost.length + 2
+                            else
+                                stf = " " * 8
+                                fts = 13
+                            end
+                            if lport.length >= 13
+                                stf = " " * (lport.length - 3)
+                                fts = lport.length + 2
+                            else
+                                stf = " " * 8
+                                fts = 13
+                            end
+                            if shell.length >= 13
+                                stf = " " * (shell.length - 3)
+                                fts = shell.length + 2
+                            else
+                                stf = " " * 8
+                                fts = 13
+                            end
                             puts ""
                             puts "Payload Options"
                             puts "==============="
                             puts ""
-                            puts "    Option        Value        Description"
-                            puts "    ------        -----        -----------"
-                            puts "    LHOST         #{lhost}     Local host."
-                            puts "    LPORT         #{lport}     Local port."
+                            puts "    Option        Value#{stf}Description"
+                            puts "    ------        -----#{stf}-----------"
+                            printf "    %-14s%-#{fts}s%s\n", "LHOST", lhost, "Local host."
+                            printf "    %-14s%-#{fts}s%s\n", "LPORT", lport, "Local port."
+                            printf "    %-14s%-#{fts}s%s\n", "SHELL", shell, "Target shell."
                             puts ""
                         else
+                            if lhost.length >= 13
+                                stf = " " * (lhost.length - 3)
+                                fts = lhost.length + 2
+                            else
+                                stf = " " * 8
+                                fts = 13
+                            end
+                            if lport.length >= 13
+                                stf = " " * (lport.length - 3)
+                                fts = lport.length + 2
+                            else
+                                stf = " " * 8
+                                fts = 13
+                            end
+                            if shell.length >= 13
+                                stf = " " * (shell.length - 3)
+                                fts = shell.length + 2
+                            else
+                                stf = " " * 8
+                                fts = 13
+                            end
+                            if output.length >= 13
+                                stf = " " * (output.length - 3)
+                                fts = output.length + 2
+                            else
+                                stf = " " * 8
+                                fts = 13
+                            end
                             puts ""
                             puts "Payload Options"
                             puts "==============="
-                            system("cat data/payloads/other/info.txt")
+                            puts ""
+                            puts "    Option        Value#{stf}Description"
+                            puts "    ------        -----#{stf}-----------"
+                            printf "    %-14s%-#{fts}s%s\n", "LHOST", lhost, "Local host."
+                            printf "    %-14s%-#{fts}s%s\n", "LPORT", lport, "Local port."
+                            printf "    %-14s%-#{fts}s%s\n", "SHELL", shell, "Target shell."
+                            printf "    %-14s%-#{fts}s%s\n", "OUTPUT", output, "Output file."
                             puts ""
                         end
                     else
+                        if lhost.length >= 13
+                            stf = " " * (lhost.length - 3)
+                            fts = lhost.length + 2
+                        else
+                            stf = " " * 8
+                            fts = 13
+                        end
+                        if lport.length >= 13
+                            stf = " " * (lport.length - 3)
+                            fts = lport.length + 2
+                        else
+                            stf = " " * 8
+                            fts = 13
+                        end
                         puts ""
-                        puts "Listener Options"
-                        puts "================"
-                        system("cat data/listeners/info.txt")
+                        puts "Payload Options"
+                        puts "==============="
+                        puts ""
+                        puts "    Option        Value#{stf}Description"
+                        puts "    ------        -----#{stf}-----------"
+                        printf "    %-14s%-#{fts}s%s\n", "LHOST", lhost, "Local host."
+                        printf "    %-14s%-#{fts}s%s\n", "LPORT", lport, "Local port."
                         puts ""
                     end
                 elsif ui[0] == "set"
@@ -178,6 +252,9 @@ elsif c[0] == "use"
                                     elsif ui[1].downcase == "lport"
                                         lport = ui[2]
                                         puts "#{s}LPORT ==> #{ui[2]}"
+                                    elsif ui[1].downcase == "shell"
+                                        shell = ui[2]
+                                        puts "#{s}SHELL ==> #{ui[2]}"
                                     else
                                         puts "#{e}Option is not found!"
                                     end
@@ -217,7 +294,7 @@ elsif c[0] == "use"
                             if lhost == "" or lport == ""
                                 puts "#{e}Failed to generate payload!"
                             else
-                                system("ruby modules/#{c[1]}.rb --local-host=#{lhost} --local-port=#{lport}")
+                                system("ruby modules/#{c[1]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell}")
                             end
                         else
                             if lhost == "" or lport == "" or shell == "" or file == ""
