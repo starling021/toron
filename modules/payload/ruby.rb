@@ -53,7 +53,7 @@ end
   
 begin
     sleep(0.5)
-    puts "#{g}Writing payload..."
+    puts "#{g}Generating payload..."
     sleep(1)
     puts "#{g}Saving to #{file}..."
     sleep(0.5)
@@ -62,5 +62,5 @@ begin
     }
     puts "#{s}Saved to #{file}!"
 rescue
-    puts "#{e}Failed to write payload!"
+    puts "#{e}Failed to generate payload!"
 end

