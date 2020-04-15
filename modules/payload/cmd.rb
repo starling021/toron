@@ -38,7 +38,6 @@ end.parse!
 host = options.local_host
 port = options.local_port
 shell = options.target_shell
-file = options.output_file
 
 if host == "" or port == "" or shell == ""
     puts "Usage: cmd.rb --local-host=<local_host> --local-port=<local_port>"
