@@ -30,7 +30,7 @@ r = "\033[1;77m[#] \033[0m"
 lhost = ""
 lport = ""
 shell = ""
-file = ""
+output = ""
 type = ""
 
 system("clear")
@@ -269,7 +269,7 @@ elsif c[0] == "use"
                                         shell = ui[2]
                                         puts "#{s}SHELL ==> #{ui[2]}"
                                     elsif ui[1].downcase == "output"
-                                        file = ui[2]
+                                        output = ui[2]
                                         puts "#{s}OUTPUT ==> #{ui[2]}"
                                     else
                                         puts "#{e}Option is not found!"
@@ -291,16 +291,16 @@ elsif c[0] == "use"
                 elsif ui[0] == "run"
                     if type == "payload"
                         if ifraw == "payload/cmd" or ifraw == "payload/raw"
-                            if lhost == "" or lport == ""
+                            if lhost == "" or lport == "" or shell == ""
                                 puts "#{e}Failed to generate payload!"
                             else
                                 system("ruby modules/#{c[1]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell}")
                             end
                         else
-                            if lhost == "" or lport == "" or shell == "" or file == ""
+                            if lhost == "" or lport == "" or shell == "" or output == ""
                                 puts "#{e}Failed to generate payload!"
                             else
-                                system("ruby modules/#{c[1]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell} --output-file=#{file}")
+                                system("ruby modules/#{c[1]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell} --output-file=#{output}")
                             end
                         end
                     else
