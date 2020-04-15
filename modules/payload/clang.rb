@@ -41,6 +41,15 @@ port = options.local_port
 shell = options.target_shell
 file = options.output_file
 
+if host == "" or port == "" or shell == "" or file == ""
+    puts "Usage: clang.rb --local-host=<local_host> --local-port=<local_port>"
+    puts "                --target-shell=<target_shell> --output-file=<output_file>"
+    puts ""
+    puts "  --local-host=<local_host>      Local host."
+    puts "  --local-port=<local_port>      Local port."
+    puts "  --target-shell=<target_shell>  Target shell."
+    puts "  --output-file=<output_file>    Output file."
+
 begin
     sleep(0.5)
     puts "#{g}Writing payload..."
