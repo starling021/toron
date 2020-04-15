@@ -30,10 +30,10 @@ require 'ostruct'
 
 options = OpenStruct.new
 OptionParser.new do |opt|
-  opt.on('-h', '--local-host <local_host>', 'Local Host.') { |o| options.local_host = o }
-  opt.on('-p', '--local-port <local_port>', 'Local Port.') { |o| options.local_port = o }
-  opt.on('-s', '--target-shell <target_shell>', 'Target Shell.') { |o| options.target_shell = o }
-  opt.on('-o', '--output-file <output_file>', 'Output File.') { |o| options.output_file = o }
+  opt.on('-h', '--local-host <local_host>', 'Local host.') { |o| options.local_host = o }
+  opt.on('-p', '--local-port <local_port>', 'Local port.') { |o| options.local_port = o }
+  opt.on('-s', '--target-shell <target_shell>', 'Target shell.') { |o| options.target_shell = o }
+  opt.on('-o', '--output-file <output_file>', 'Output file.') { |o| options.output_file = o }
 end.parse!
 
 host = options.local_host
