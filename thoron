@@ -143,7 +143,11 @@ elsif c[0] == "use"
                             puts ""
                             puts "Payload Options"
                             puts "==============="
-                            system("cat data/payloads/raw/info.txt")
+                            puts ""
+                            puts "    Option        Value        Description"
+                            puts "    ------        -----        -----------"
+                            puts "    LHOST         #{lhost}     Local host."
+                            puts "    LPORT         #{lport}     Local port."
                             puts ""
                         else
                             puts ""
