@@ -23,6 +23,8 @@
  </a>
 </p>
 
+![thoron](https://user-images.githubusercontent.com/54115104/79371299-d1b15500-7f5c-11ea-9e77-b878d6f95011.png)
+
 ***
 
 # About Thoron Framework
@@ -88,6 +90,8 @@ There is a powerful ThorCat listener in Thoron
 Framework that supports secure SSL connection 
 and other useful functions.
 ```
+
+![thorcat](https://user-images.githubusercontent.com/54115104/79371304-d2e28200-7f5c-11ea-92e7-795e86718241.png)
 
 ***
     
