@@ -134,7 +134,7 @@ elsif c[0] == "use"
                             type = ui[1][0..ui.index('/')][0..-2]
                             ifraw = ui[1]
                         else
-                            puts "#{e}No such module!"
+                            puts "#{e}Module is not found!"
                         end
                     end
                 elsif ui[0] == "info"
@@ -175,7 +175,7 @@ elsif c[0] == "use"
                                         lport = ui[2]
                                         puts "#{s}LPORT ==> #{ui[2]}"
                                     else
-                                        puts "#{e}No such option!"
+                                        puts "#{e}Option is not found!"
                                     end
                                 else
                                     if ui[1].downcase == "lhost"
@@ -191,7 +191,7 @@ elsif c[0] == "use"
                                         file = ui[2]
                                         puts "#{s}OUTPUT ==> #{ui[2]}"
                                     else
-                                        puts "#{e}No such option!"
+                                        puts "#{e}Option is not found!"
                                     end
                                 end
                             else
@@ -202,7 +202,7 @@ elsif c[0] == "use"
                                     lport = ui[2]
                                     puts "#{s}LPORT ==> #{ui[2]}"
                                 else
-                                    puts "#{e}No such option!"
+                                    puts "#{e}Option is not found!"
                                 end
                             end
                         end
@@ -234,7 +234,7 @@ elsif c[0] == "use"
                 end
             end
         else
-            puts "#{e}No such module!"
+            puts "#{e}Module is not found!"
         end
     end
 else
