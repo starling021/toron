@@ -169,21 +169,13 @@ elsif c[0] == "use"
                 elsif ui[0] == "info"
                     if type == "payload"
                         if ifraw == "payload/cmd" or ifraw == "payload/raw"
-                            if lhost.length >= 13
+                            if lhost.length >= 12
                                 stf = " " * (lhost.length - 3)
-                                fts = lhost.length + 2
-                            else
-                                stf = " " * 8
-                                fts = 13
-                            end
-                            if lport.length >= 13
+                                fts = lport.length + 2
+                            elsif lport.length >= 12
                                 stf = " " * (lport.length - 3)
                                 fts = lport.length + 2
-                            else
-                                stf = " " * 8
-                                fts = 13
-                            end
-                            if shell.length >= 13
+                            elsif shell.length >= 12
                                 stf = " " * (shell.length - 3)
                                 fts = shell.length + 2
                             else
@@ -201,28 +193,16 @@ elsif c[0] == "use"
                             printf "    %-14s%-#{fts}s%s\n", "SHELL", shell, "Target shell."
                             puts ""
                         else
-                            if lhost.length >= 13
+                            if lhost.length >= 12
                                 stf = " " * (lhost.length - 3)
-                                fts = lhost.length + 2
-                            else
-                                stf = " " * 8
-                                fts = 13
-                            end
-                            if lport.length >= 13
+                                fts = lport.length + 2
+                            elsif lport.length >= 12
                                 stf = " " * (lport.length - 3)
                                 fts = lport.length + 2
-                            else
-                                stf = " " * 8
-                                fts = 13
-                            end
-                            if shell.length >= 13
+                            elsif shell.length >= 12
                                 stf = " " * (shell.length - 3)
                                 fts = shell.length + 2
-                            else
-                                stf = " " * 8
-                                fts = 13
-                            end
-                            if output.length >= 13
+                            elsif output.length >= 12
                                 stf = " " * (output.length - 3)
                                 fts = output.length + 2
                             else
@@ -242,14 +222,10 @@ elsif c[0] == "use"
                             puts ""
                         end
                     else
-                        if lhost.length >= 13
+                        if lhost.length >= 12
                             stf = " " * (lhost.length - 3)
-                            fts = lhost.length + 2
-                        else
-                            stf = " " * 8
-                            fts = 13
-                        end
-                        if lport.length >= 13
+                            fts = lport.length + 2
+                        elsif lport.length >= 12
                             stf = " " * (lport.length - 3)
                             fts = lport.length + 2
                         else
