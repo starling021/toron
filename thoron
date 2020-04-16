@@ -48,6 +48,9 @@ shell = ""
 output = ""
 type = ""
 
+location = Array[]
+pwd = 0
+
 system("clear")
 system("cat banner/banner.txt")
 puts ""
@@ -97,6 +100,7 @@ elsif c[0] == "use"
         puts "Usage: use <module>"
     else
         if File.exists? "modules/#{c[1]}.rb"
+            location[pwd] = c[1]
             loop do
                 type = c[1][0..c[1].index('/')][0..-2]
                 ifraw = c[1]
@@ -140,11 +144,21 @@ elsif c[0] == "use"
                             puts "Usage: modules [-p|-l]"
                         end
                     end
+                elsif ui[0] == "back"
+                    pwd -= 1
+                    location = location[0..-2]
+                    if location == []
+                        break
+                    end
+                    type = location[pwd][0..location[pwd].index('/')][0..-2]
+                    ifraw = location[pwd]
                 elsif ui[0] == "use"
                     if ui[1] == ""
                         puts "Usage: use <module>"
                     else
                         if File.exists? "modules/#{ui[1]}.rb"
+                            pwd += 1
+                            location[pwd] = ui[1]
                             c[1] = ui[1]
                             type = ui[1][0..ui[1].index('/')][0..-2]
                             ifraw = ui[1]
