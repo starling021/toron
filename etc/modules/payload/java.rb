@@ -57,8 +57,8 @@ begin
     sleep(1)
     puts "#{g}Saving to #{file}..."
     sleep(0.5)
-    w = os.environ['OLDPWD']
-    os.chdir(w)
+    w = ENV['OLDPWD']
+    Dir.chdir(w)
     open(file, 'w') { |f|
         f.puts "import java.io.IOException;"
         f.puts "public class Payload"
@@ -71,8 +71,8 @@ begin
 	f.puts "    }"
         f.puts "}"
     }
-    g = os.environ['HOME']
-    os.chdir(g + "/thoron")
+    g = ENV['HOME']
+    Dir.chdir(g + "/thoron")
     puts "#{s}Saved to #{file}!"
 rescue
     puts "#{e}Failed to generate payload!"
