@@ -64,6 +64,8 @@ c = gets.chomp.split()
 if c == ""
     nil
 elsif c[0] == "exit"
+    location = []
+    pwd = 0
     abort()
 elsif c[0] == "clear"
     system("clear")
@@ -113,7 +115,9 @@ elsif c[0] == "use"
                 elsif ui[0] == "update"
                     system("chmod +x etc/update.sh && etc/update.sh")
                 elsif ui[0] == "exit"
-                    break
+                    location = []
+                    pwd = 0
+                    abort()
                 elsif ui[0] == "modules"
                     puts ""
                     puts "Payloads"
@@ -146,7 +150,7 @@ elsif c[0] == "use"
                             puts "#{e}Module is not found!"
                         end
                     end
-                elsif ui[0] == "info"
+                elsif ui[0] == "options"
                     if type == "payload"
                         if ifraw == "payload/cmd" or ifraw == "payload/raw"
                             if lhost.length >= 12 or lport.length >= 12 or shell.length >= 12
