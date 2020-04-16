@@ -148,6 +148,7 @@ elsif c[0] == "use"
                     pwd -= 1
                     location = location[0..-2]
                     if location == []
+                        pwd = 0
                         break
                     end
                     type = location[pwd][0..location[pwd].index('/')][0..-2]
