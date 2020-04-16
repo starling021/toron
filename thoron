@@ -76,25 +76,15 @@ elsif c[0] == "help"
     system("cat data/cmds/core_cmds.txt")
     puts ""
 elsif c[0] == "modules"
-    if c[1] == ""
-        puts "Usage: modules [-p|-l]"
-    else
-        if c[1] == "-l"
-            puts ""
-            puts "Listeners"
-            puts "========="
-            system("cat data/listeners/listeners.txt")
-            puts ""
-        elsif c[1] == "-p"
-            puts ""
-            puts "Payloads"
-            puts "========"
-            system("cat data/payloads/payloads.txt")
-            puts ""
-        else
-            puts "Usage: modules [-p|-l]"
-        end
-    end
+    puts ""
+    puts "Payloads"
+    puts "========"
+    system("cat data/payloads/payloads.txt")
+    puts ""
+    puts "Listeners"
+    puts "========="
+    system("cat data/listeners/listeners.txt")
+    puts ""
 elsif c[0] == "use"
     if c[1] == ""
         puts "Usage: use <module>"
