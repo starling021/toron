@@ -257,8 +257,8 @@ elsif c[0] == "use"
                             fts = 13
                         end
                         puts ""
-                        puts "Payload Options"
-                        puts "==============="
+                        puts "Listener Options"
+                        puts "================"
                         puts ""
                         puts "    Option        Value#{stf}Description"
                         puts "    ------        -----#{stf}-----------"
