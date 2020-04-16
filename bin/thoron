@@ -49,6 +49,41 @@ mv modules/payload/cpp.rb etc/.disabled
 mv etc/modules/payload/cpp.rb ~/thoron/modules/payload
 cp etc/.disabled/cpp.rb etc
 rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/golang.rb etc/.disabled
+mv etc/modules/payload/golang.rb ~/thoron/modules/payload
+cp etc/.disabled/golang.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/java.rb etc/.disabled
+mv etc/modules/payload/java.rb ~/thoron/modules/payload
+cp etc/.disabled/java.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/lua.rb etc/.disabled
+mv etc/modules/payload/lua.rb ~/thoron/modules/payload
+cp etc/.disabled/lua.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/nodejs.rb etc/.disabled
+mv etc/modules/payload/nodejs.rb ~/thoron/modules/payload
+cp etc/.disabled/nodejs.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/pascal.rb etc/.disabled
+mv etc/modules/payload/pascal.rb ~/thoron/modules/payload
+cp etc/.disabled/pascal.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/perl.rb etc/.disabled
+mv etc/modules/payload/perl.rb ~/thoron/modules/payload
+cp etc/.disabled/perl.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/php.rb etc/.disabled
+mv etc/modules/payload/php.rb ~/thoron/modules/payload
+cp etc/.disabled/php.rb etc
+rm -rf etc/.disabled
 } &> /dev/null
 chmod +x thoron
 ./thoron
@@ -78,6 +113,41 @@ mkdir etc/.disabled
 mv modules/payload/cpp.rb etc/.disabled
 mv etc/modules/payload/cpp.rb ~/thoron/modules/payload
 cp etc/.disabled/cpp.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/golang.rb etc/.disabled
+mv etc/modules/payload/golang.rb ~/thoron/modules/payload
+cp etc/.disabled/golang.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/java.rb etc/.disabled
+mv etc/modules/payload/java.rb ~/thoron/modules/payload
+cp etc/.disabled/java.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/lua.rb etc/.disabled
+mv etc/modules/payload/lua.rb ~/thoron/modules/payload
+cp etc/.disabled/lua.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/nodejs.rb etc/.disabled
+mv etc/modules/payload/nodejs.rb ~/thoron/modules/payload
+cp etc/.disabled/nodejs.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/pascal.rb etc/.disabled
+mv etc/modules/payload/pascal.rb ~/thoron/modules/payload
+cp etc/.disabled/pascal.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/perl.rb etc/.disabled
+mv etc/modules/payload/perl.rb ~/thoron/modules/payload
+cp etc/.disabled/perl.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/php.rb etc/.disabled
+mv etc/modules/payload/php.rb ~/thoron/modules/payload
+cp etc/.disabled/php.rb etc
 rm -rf etc/.disabled
 } &> /dev/null
 else
@@ -116,6 +186,41 @@ mv modules/payload/cpp.rb etc/.disabled
 mv etc/modules/payload/cpp.rb ~/thoron/modules/payload
 cp etc/.disabled/cpp.rb etc
 rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/golang.rb etc/.disabled
+mv etc/modules/payload/golang.rb ~/thoron/modules/payload
+cp etc/.disabled/golang.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/java.rb etc/.disabled
+mv etc/modules/payload/java.rb ~/thoron/modules/payload
+cp etc/.disabled/java.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/lua.rb etc/.disabled
+mv etc/modules/payload/lua.rb ~/thoron/modules/payload
+cp etc/.disabled/lua.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/nodejs.rb etc/.disabled
+mv etc/modules/payload/nodejs.rb ~/thoron/modules/payload
+cp etc/.disabled/nodejs.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/pascal.rb etc/.disabled
+mv etc/modules/payload/pascal.rb ~/thoron/modules/payload
+cp etc/.disabled/pascal.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/perl.rb etc/.disabled
+mv etc/modules/payload/perl.rb ~/thoron/modules/payload
+cp etc/.disabled/perl.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/php.rb etc/.disabled
+mv etc/modules/payload/php.rb ~/thoron/modules/payload
+cp etc/.disabled/php.rb etc
+rm -rf etc/.disabled
 } &> /dev/null
 chmod +x thoron
 ./thoron
@@ -145,6 +250,41 @@ mkdir etc/.disabled
 mv modules/payload/cpp.rb etc/.disabled
 mv etc/modules/payload/cpp.rb ~/thoron/modules/payload
 cp etc/.disabled/cpp.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/golang.rb etc/.disabled
+mv etc/modules/payload/golang.rb ~/thoron/modules/payload
+cp etc/.disabled/golang.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/java.rb etc/.disabled
+mv etc/modules/payload/java.rb ~/thoron/modules/payload
+cp etc/.disabled/java.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/lua.rb etc/.disabled
+mv etc/modules/payload/lua.rb ~/thoron/modules/payload
+cp etc/.disabled/lua.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/nodejs.rb etc/.disabled
+mv etc/modules/payload/nodejs.rb ~/thoron/modules/payload
+cp etc/.disabled/nodejs.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/pascal.rb etc/.disabled
+mv etc/modules/payload/pascal.rb ~/thoron/modules/payload
+cp etc/.disabled/pascal.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/perl.rb etc/.disabled
+mv etc/modules/payload/perl.rb ~/thoron/modules/payload
+cp etc/.disabled/perl.rb etc
+rm -rf etc/.disabled
+mkdir etc/.disabled
+mv modules/payload/php.rb etc/.disabled
+mv etc/modules/payload/php.rb ~/thoron/modules/payload
+cp etc/.disabled/php.rb etc
 rm -rf etc/.disabled
 } &> /dev/null
 else
