@@ -2,6 +2,6 @@
     Command        Description
     -------        -----------
     back           Return to previous menu.
-    info           Show module options.
+    options        Show module options.
     run            Run current module.
     set            Set an option value.
