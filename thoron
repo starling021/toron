@@ -102,9 +102,9 @@ elsif c[0] == "use"
         if File.exists? "modules/#{c[1]}.rb"
             location[pwd] = c[1]
             loop do
-                type = c[1][0..c[1].index('/')][0..-2]
-                ifraw = c[1]
-                print "\033[4mthoron\033[0m(\033[1;31m#{c[1]}\033[0m)> "
+                type = location[pwd][0..location[pwd].index('/')][0..-2]
+                ifraw = location[pwd]
+                print "\033[4mthoron\033[0m(\033[1;31m#{location[pwd]}\033[0m)> "
                 ui = gets.chomp.split()
                 if ui == ""
                     nil
@@ -160,7 +160,6 @@ elsif c[0] == "use"
                         if File.exists? "modules/#{ui[1]}.rb"
                             pwd += 1
                             location[pwd] = ui[1]
-                            c[1] = ui[1]
                             type = ui[1][0..ui[1].index('/')][0..-2]
                             ifraw = ui[1]
                         else
@@ -258,8 +257,8 @@ elsif c[0] == "use"
                             fts = 13
                         end
                         puts ""
-                        puts "Listener Options"
-                        puts "================"
+                        puts "Payload Options"
+                        puts "==============="
                         puts ""
                         puts "    Option        Value#{stf}Description"
                         puts "    ------        -----#{stf}-----------"
