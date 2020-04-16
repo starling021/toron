@@ -4,4 +4,4 @@
     back           Return to previous menu.
     info           Show module options.
     run            Run current module.
-    set            Set an option to value.
+    set            Set an option value.
