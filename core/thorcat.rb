@@ -50,7 +50,7 @@ class ThorCat
     sleep(0.5)
     puts "#{g}Sending payload to #{address}..."
     sleep(0.5)
-    puts "#{g}Opening target shell..."
+    puts "#{g}Opening #{address} shell..."
     sleep(1)
     while(true)
       if(IO.select([],[],[@socket, STDIN],0))
