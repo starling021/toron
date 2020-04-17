@@ -41,9 +41,14 @@ class ThorCat
     s = "\033[1;32m[+] \033[0m"
     h = "\033[1;77m[@] \033[0m"
     r = "\033[1;77m[#] \033[0m"
-    puts "#{g}Connecting to #{@socket.peeraddr[2][7..-1]}..."
+    if @socket.peeraddr[2][7..-1] == ""
+        address = "127.0.0.1"
+    else
+        address = @socket.peeraddr[2][7..-1]
+    end
+    puts "#{g}Connecting to #{address}..."
     sleep(0.5)
-    puts "#{g}Sending payload to #{@socket.peeraddr[2][7..-1]}..."
+    puts "#{g}Sending payload to #{address}..."
     sleep(0.5)
     puts "#{g}Opening target shell..."
     sleep(1)
