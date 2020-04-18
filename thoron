@@ -1,0 +1,324 @@
+#!/usr/bin/env ruby
+
+#            ---------------------------------------------------
+#                             Thoron Framework                                
+#            ---------------------------------------------------
+#                  Copyright (C) <2020>  <Entynetproject>       
+#
+#        This program is free software: you can redistribute it and/or modify
+#        it under the terms of the GNU General Public License as published by
+#        the Free Software Foundation, either version 3 of the License, or
+#        any later version.
+#
+#        This program is distributed in the hope that it will be useful,
+#        but WITHOUT ANY WARRANTY; without even the implied warranty of
+#        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#        GNU General Public License for more details.
+#
+#        You should have received a copy of the GNU General Public License
+#        along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+system("printf '\033]2;Thoron Framework\a'")
+
+e = "\033[1;31m[-] \033[0m"
+p = "\033[1;77m[>] \033[0m"
+g = "\033[1;34m[*] \033[0m"
+s = "\033[1;32m[+] \033[0m"
+h = "\033[1;77m[@] \033[0m"
+r = "\033[1;77m[#] \033[0m"
+
+lhost = ""
+lport = ""
+
+require 'readline'
+require 'socket'
+def local_ip
+    orig, Socket.do_not_reverse_lookup = Socket.do_not_reverse_lookup, true
+    UDPSocket.open do |s|
+        s.connect '192.168.1.1', 1
+        s.addr.last
+    end
+ensure
+    Socket.do_not_reverse_lookup = orig
+end
+
+lhost = local_ip
+lport = "4444"
+
+shell = ""
+output = ""
+type = ""
+
+location = Array[]
+pwd = 0
+
+system("clear")
+system("cat banner/banner.txt")
+puts ""
+puts "Thoron Framework v1.0"
+puts "---------------------"
+puts ""
+
+loop do
+c = Readline.readline("\033[4mthoron\033[0m> ", true).chomp.split()
+if c == []
+    nil
+elsif c[0] == "exit"
+    location = []
+    pwd = 0
+    abort()
+elsif c[0] == "clear"
+    system("clear")
+elsif c[0] == "update"
+    system("chmod +x etc/update.sh && etc/update.sh")
+elsif c[0] == "help"
+    puts ""
+    puts "Core Commands"
+    puts "============="
+    system("cat data/cmds/core_cmds.txt")
+    puts ""
+elsif c[0] == "modules"
+    puts ""
+    puts "Payloads"
+    puts "========"
+    system("cat data/payloads/payloads.txt")
+    puts ""
+    puts "Listeners"
+    puts "========="
+    system("cat data/listeners/listeners.txt")
+    puts ""
+elsif c[0] == "use"
+    if c[1] == ""
+        puts "Usage: use <module>"
+    else
+        if File.exists? "modules/#{c[1]}.rb"
+            location[pwd] = c[1]
+            loop do
+                type = location[pwd][0..location[pwd].index('/')][0..-2]
+                ifraw = location[pwd]
+                ui = Readline.readline("\033[4mthoron\033[0m(\033[1;31m#{location[pwd]}\033[0m)> ", true).chomp.split()
+                if ui == []
+                    nil
+                elsif ui[0] == "help"
+                    puts ""
+                    puts "Core Commands"
+                    puts "============="
+                    system("cat data/cmds/core_cmds.txt")
+                    puts ""
+                    puts "Module Commands"
+                    puts "==============="
+                    system("cat data/cmds/module_cmds.txt")
+                    puts ""
+                elsif ui[0] == "clear"
+                    system("clear")
+                elsif ui[0] == "update"
+                    system("chmod +x etc/update.sh && etc/update.sh")
+                elsif ui[0] == "exit"
+                    location = []
+                    pwd = 0
+                    abort()
+                elsif ui[0] == "modules"
+                    puts ""
+                    puts "Payloads"
+                    puts "========"
+                    system("cat data/payloads/payloads.txt")
+                    puts ""
+                    puts "Listeners"
+                    puts "========="
+                    system("cat data/listeners/listeners.txt")
+                    puts ""
+                elsif ui[0] == "back"
+                    pwd -= 1
+                    location = location[0..-2]
+                    if location == []
+                        pwd = 0
+                        break
+                    end
+                    type = location[pwd][0..location[pwd].index('/')][0..-2]
+                    ifraw = location[pwd]
+                elsif ui[0] == "use"
+                    if ui[1] == ""
+                        puts "Usage: use <module>"
+                    else
+                        if File.exists? "modules/#{ui[1]}.rb"
+                            pwd += 1
+                            location[pwd] = ui[1]
+                            type = ui[1][0..ui[1].index('/')][0..-2]
+                            ifraw = ui[1]
+                        else
+                            puts "#{e}Module is not found!"
+                        end
+                    end
+                elsif ui[0] == "options"
+                    if type == "payload"
+                        if ifraw == "payload/cmd" or ifraw == "payload/raw"
+                            if lhost.length >= 12 or lport.length >= 12 or shell.length >= 12
+                                if lhost.length >= lport.length and lhost.length >= shell.length
+                                    stf = " " * (lhost.length - 3)
+                                    fts = lhost.length + 2
+                                end
+                                if lport.length >= lhost.length and lport.length >= shell.length
+                                    stf = " " * (lport.length - 3)
+                                    fts = lport.length + 2
+                                end
+                                if shell.length >= lhost.length and shell.length >= lport.length
+                                    stf = " " * (shell.length - 3)
+                                    fts = shell.length + 2
+                                end
+                            else
+                                stf = " " * 8
+                                fts = 13
+                            end
+                            puts ""
+                            puts "Payload Options"
+                            puts "==============="
+                            puts ""
+                            puts "    Option        Value#{stf}Description"
+                            puts "    ------        -----#{stf}-----------"
+                            printf "    %-14s%-#{fts}s%s\n", "LHOST", lhost, "Local host."
+                            printf "    %-14s%-#{fts}s%s\n", "LPORT", lport, "Local port."
+                            printf "    %-14s%-#{fts}s%s\n", "SHELL", shell, "Target shell."
+                            puts ""
+                        else
+                            if lhost.length >= 12 or lport.length >= 12 or shell.length >= 12 or output.length >= 12
+                                if lhost.length >= lport.length and lhost.length >= shell.length and lhost.length >= output.length
+                                    stf = " " * (lhost.length - 3)
+                                    fts = lhost.length + 2
+                                end
+                                if lport.length >= lhost.length and lport.length >= shell.length and lport.length >= output.length
+                                    stf = " " * (lport.length - 3)
+                                    fts = lport.length + 2
+                                end
+                                if shell.length >= lhost.length and shell.length >= lport.length and shell.length >= output.length
+                                    stf = " " * (shell.length - 3)
+                                    fts = shell.length + 2
+                                end
+                                if output.length >= lhost.length and output.length >= lport.length and output.length >= shell.length
+                                    stf = " " * (output.length - 3)
+                                    fts = output.length + 2
+                                end
+                            else
+                                stf = " " * 8
+                                fts = 13
+                            end
+                            puts ""
+                            puts "Payload Options"
+                            puts "==============="
+                            puts ""
+                            puts "    Option        Value#{stf}Description"
+                            puts "    ------        -----#{stf}-----------"
+                            printf "    %-14s%-#{fts}s%s\n", "LHOST", lhost, "Local host."
+                            printf "    %-14s%-#{fts}s%s\n", "LPORT", lport, "Local port."
+                            printf "    %-14s%-#{fts}s%s\n", "SHELL", shell, "Target shell."
+                            printf "    %-14s%-#{fts}s%s\n", "OUTPUT", output, "Output file."
+                            puts ""
+                        end
+                    else
+                        if lhost.length >= 12 or lport.length >= 12
+                            if lhost.length >= lport.length
+                                stf = " " * (lhost.length - 3)
+                                fts = lhost.length + 2
+                            end
+                            if lport.length >= lhost.length
+                                stf = " " * (lport.length - 3)
+                                fts = lport.length + 2
+                            end
+                        else
+                            stf = " " * 8
+                            fts = 13
+                        end
+                        puts ""
+                        puts "Listener Options"
+                        puts "================"
+                        puts ""
+                        puts "    Option        Value#{stf}Description"
+                        puts "    ------        -----#{stf}-----------"
+                        printf "    %-14s%-#{fts}s%s\n", "LHOST", lhost, "Local host."
+                        printf "    %-14s%-#{fts}s%s\n", "LPORT", lport, "Local port."
+                        puts ""
+                    end
+                elsif ui[0] == "set"
+                    if ui[1] == ""
+                        puts "Usage: set <option> <value>"
+                    else
+                        if ui[2] == ""
+                            puts "Usage: set <option> <value>"
+                        else
+                            if type == "payload"
+                                if ifraw == "payload/cmd" or ifraw == "payload/raw"
+                                    if ui[1].downcase == "lhost"
+                                        lhost = ui[2]
+                                        puts "#{s}LHOST ==> #{ui[2]}"
+                                    elsif ui[1].downcase == "lport"
+                                        lport = ui[2]
+                                        puts "#{s}LPORT ==> #{ui[2]}"
+                                    elsif ui[1].downcase == "shell"
+                                        shell = ui[2]
+                                        puts "#{s}SHELL ==> #{ui[2]}"
+                                    else
+                                        puts "#{e}Option is not found!"
+                                    end
+                                else
+                                    if ui[1].downcase == "lhost"
+                                        lhost = ui.split()[2]
+                                        puts "#{s}LHOST ==> #{ui[2]}"
+                                    elsif ui[1].downcase == "lport"
+                                        lport = ui[2]
+                                        puts "#{s}LPORT ==> #{ui[2]}"
+                                    elsif ui[1].downcase == "shell"
+                                        shell = ui[2]
+                                        puts "#{s}SHELL ==> #{ui[2]}"
+                                    elsif ui[1].downcase == "output"
+                                        output = ui[2]
+                                        puts "#{s}OUTPUT ==> #{ui[2]}"
+                                    else
+                                        puts "#{e}Option is not found!"
+                                    end
+                                end
+                            else
+                                if ui[1].downcase == "lhost"
+                                    lhost = ui[2]
+                                    puts "#{s}LHOST ==> #{ui[2]}"
+                                elsif ui[1].downcase == "lport"
+                                    lport = ui[2]
+                                    puts "#{s}LPORT ==> #{ui[2]}"
+                                else
+                                    puts "#{e}Option is not found!"
+                                end
+                            end
+                        end
+                    end
+                elsif ui[0] == "run"
+                    if type == "payload"
+                        if ifraw == "payload/cmd" or ifraw == "payload/raw"
+                            if lhost == "" or lport == "" or shell == ""
+                                puts "#{e}Failed to generate payload!"
+                            else
+                                system("ruby modules/#{location[pwd]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell}")
+                            end
+                        else
+                            if lhost == "" or lport == "" or shell == "" or output == ""
+                                puts "#{e}Failed to generate payload!"
+                            else
+                                system("ruby modules/#{location[pwd]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell} --output-file=#{output}")
+                            end
+                        end
+                    else
+                        if lhost == "" or lport == ""
+                            puts "#{e}Failed to start listener!"
+                        else
+                            system("ruby modules/#{location[pwd]}.rb --local-host=#{lhost} --local-port=#{lport}")
+                        end
+                    end
+                else
+                    puts "#{e}Unrecognized command!"
+                end
+            end
+        else
+            puts "#{e}Module is not found!"
+        end
+    end
+else
+    puts "#{e}Urecognized command!" 
+end
+end
