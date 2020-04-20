@@ -4,6 +4,13 @@
     payload/clang   Clang payload.
     payload/cmd     Command payload.
     payload/cpp     C++ payload.
+    payload/golang  Golang payload.
+    payload/java    Java payload.
+    payload/lua     Lua payload.
+    payload/nodejs  NodeJS payload.
+    payload/pascal  Pascal payload.
+    payload/perl    Perl payload.
+    payload/php     PHP payload.
     payload/python  Python payload.
     payload/raw     Raw payload.
     payload/ruby    Ruby payload.
