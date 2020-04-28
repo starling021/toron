@@ -12,6 +12,5 @@
     payload/perl    Perl payload.
     payload/php     PHP payload.
     payload/python  Python payload.
-    payload/raw     Raw payload.
     payload/ruby    Ruby payload.
     payload/shell   Shell payload.
