@@ -319,6 +319,6 @@ elsif c[0] == "use"
         end
     end
 else
-    puts "#{e}Urecognized command!" 
+    puts "#{e}Unrecognized command!" 
 end
 end
