@@ -87,8 +87,7 @@ if File.directory? file
         abort()
     end
 else
-    direct = file.split(File::SEPARATOR)
-    direct = direct[0]
+    direct = File.dirname(file)
     if direct == ""
         direct = "."
     else
