@@ -91,7 +91,7 @@ else
     if direct == ""
         direct = "."
     else
-        pass
+        nil
     end
     if File.exists? direct
         if File.directory? direct
