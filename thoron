@@ -45,7 +45,7 @@ end
 lhost = local_ip
 lport = "4444"
 
-shell = ""
+shell = "bash"
 output = ""
 type = ""
 
