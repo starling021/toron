@@ -88,7 +88,7 @@ elsif c[0] == "modules"
     system("cat data/listeners/listeners.txt")
     puts ""
 elsif c[0] == "use"
-    if c[1] == ""
+    if not c[1]
         puts "Usage: use <module>"
     else
         if File.exists? "modules/#{c[1]}.rb"
@@ -137,7 +137,7 @@ elsif c[0] == "use"
                     type = location[pwd][0..location[pwd].index('/')][0..-2]
                     ifraw = location[pwd]
                 elsif ui[0] == "use"
-                    if ui[1] == ""
+                    if not ui[1]
                         puts "Usage: use <module>"
                     else
                         if File.exists? "modules/#{ui[1]}.rb"
@@ -238,10 +238,10 @@ elsif c[0] == "use"
                         puts ""
                     end
                 elsif ui[0] == "set"
-                    if ui[1] == ""
+                    if not ui[1]
                         puts "Usage: set <option> <value>"
                     else
-                        if ui[2] == ""
+                        if not ui[2]
                             puts "Usage: set <option> <value>"
                         else
                             if type == "payload"
