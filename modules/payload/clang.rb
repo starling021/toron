@@ -53,7 +53,7 @@ end
   
 if File.directory? file
     if File.exists? file
-        if file[-1:] == "/"
+        if file[-1] == "/"
             file = "#{file}payload.c"
             sleep(0.5)
             puts "#{g}Generating payload..."
