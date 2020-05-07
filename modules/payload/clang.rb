@@ -33,22 +33,22 @@ OptionParser.new do |opt|
   opt.on('-l', '--local-host <local_host>', 'Local host.') { |o| options.local_host = o }
   opt.on('-p', '--local-port <local_port>', 'Local port.') { |o| options.local_port = o }
   opt.on('-s', '--target-shell <target_shell>', 'Target shell.') { |o| options.target_shell = o }
-  opt.on('-o', '--output-file <output_file>', 'Output path.') { |o| options.output_file = o }
+  opt.on('-o', '--output-path <output_path>', 'Output path.') { |o| options.output_path = o }
 end.parse!
 
 host = options.local_host
 port = options.local_port
 shell = options.target_shell
-file = options.output_file
+file = options.output_path
 
 if host == "" or port == "" or shell == "" or file == ""
     puts "Usage: clang.rb --local-host=<local_host> --local-port=<local_port>"
-    puts "                --target-shell=<target_shell> --output-file=<output_file>"
+    puts "                --target-shell=<target_shell> --output-path=<output_path>"
     puts ""
     puts "  --local-host=<local_host>      Local host."
     puts "  --local-port=<local_port>      Local port."
     puts "  --target-shell=<target_shell>  Target shell."
-    puts "  --output-file=<output_file>    Output path."
+    puts "  --output-path=<output_path>    Output path."
 end
   
 if File.directory? file

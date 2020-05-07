@@ -325,7 +325,7 @@ elsif c[0] == "use"
                             if lhost == "" or lport == "" or shell == "" or output == ""
                                 puts "#{e}Failed to generate payload!"
                             else
-                                system("ruby modules/#{location[pwd]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell} --output-file=#{output}")
+                                system("ruby modules/#{location[pwd]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell} --output-path=#{output}")
                             end
                         end
                     else
