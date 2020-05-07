@@ -84,6 +84,8 @@ if File.directory? file
         end
     else
         puts "#{e}Output directory: #{file}: does not exist!"
+	g = ENV['HOME']
+	Dir.chdir(g + "/thoron")
         abort()
     end
 else
@@ -108,10 +110,16 @@ else
             puts "#{s}Saved to #{file}!"
         else
             puts "#{e}Error: #{direct}: not a directory!"
+	    g = ENV['HOME']
+	    Dir.chdir(g + "/thoron")
             abort()
         end
     else
         puts "#{e}Output directory: #{direct}: does not exist!"
+	g = ENV['HOME']
+	Dir.chdir(g + "/thoron")
         abort()
     end
 end
+g = ENV['HOME']
+Dir.chdir(g + "/thoron")
