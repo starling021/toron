@@ -41,7 +41,7 @@ class ThorCat
     s = "\033[1;32m[+] \033[0m"
     h = "\033[1;77m[@] \033[0m"
     r = "\033[1;77m[#] \033[0m"
-    if @socket.peeraddr[2][7..-1] == ""
+    if not @socket.peeraddr[2][7..-1]
         address = "127.0.0.1"
     else
         address = @socket.peeraddr[2][7..-1]
