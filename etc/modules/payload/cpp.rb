@@ -51,6 +51,8 @@ if host == "" or port == "" or shell == "" or file == ""
     puts "  --output-path=<output_path>    Output path."
 end
   
+w = ENV['OLDPWD']
+Dir.chdir(w)
 if File.directory? file
     if File.exists? file
         if file[-1] == "/"
