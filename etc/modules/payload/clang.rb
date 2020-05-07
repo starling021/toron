@@ -50,7 +50,7 @@ if host == "" or port == "" or shell == "" or file == ""
     puts "  --target-shell=<target_shell>  Target shell."
     puts "  --output-path=<output_path>    Output path."
 end
-
+  
 w = ENV['OLDPWD']
 Dir.chdir(w)
 if File.directory? file
@@ -118,3 +118,5 @@ else
         abort()
     end
 end
+g = ENV['HOME']
+Dir.chdir(g + "/thoron")
