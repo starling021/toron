@@ -65,7 +65,7 @@ if File.directory? file
             }
             puts "#{s}Saved to #{file}!"
         else
-            file = "#{file}/payload.c"
+            file = "#{file}/payload.rb"
             sleep(0.5)
             puts "#{g}Generating payload..."
             sleep(1)
