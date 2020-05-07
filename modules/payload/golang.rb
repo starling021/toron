@@ -54,7 +54,7 @@ end
 if File.directory? file
     if File.exists? file
         if file[-1] == "/"
-            file = "#{file}payload.c"
+            file = "#{file}payload.go"
             sleep(0.5)
             puts "#{g}Generating payload..."
             sleep(1)
@@ -71,7 +71,7 @@ if File.directory? file
             }
             puts "#{s}Saved to #{file}!"
         else
-            file = "#{file}/payload.c"
+            file = "#{file}/payload.go"
             sleep(0.5)
             puts "#{g}Generating payload..."
             sleep(1)
