@@ -33,7 +33,7 @@ OptionParser.new do |opt|
   opt.on('-l', '--local-host <local_host>', 'Local host.') { |o| options.local_host = o }
   opt.on('-p', '--local-port <local_port>', 'Local port.') { |o| options.local_port = o }
   opt.on('-s', '--target-shell <target_shell>', 'Target shell.') { |o| options.target_shell = o }
-  opt.on('-o', '--output-file <output_file>', 'Output file.') { |o| options.output_file = o }
+  opt.on('-o', '--output-file <output_file>', 'Output path.') { |o| options.output_file = o }
 end.parse!
 
 host = options.local_host
@@ -48,7 +48,7 @@ if host == "" or port == "" or shell == "" or file == ""
     puts "  --local-host=<local_host>      Local host."
     puts "  --local-port=<local_port>      Local port."
     puts "  --target-shell=<target_shell>  Target shell."
-    puts "  --output-file=<output_file>    Output file."
+    puts "  --output-file=<output_file>    Output path."
 end
   
 if File.directory? file
@@ -83,7 +83,7 @@ if File.directory? file
             puts "#{s}Saved to #{file}!"
         end
     else
-        puts "#{e}Local directory: #{file}: does not exist!"
+        puts "#{e}Output directory: #{file}: does not exist!"
         abort()
     end
 else
@@ -112,7 +112,7 @@ else
             abort()
         end
     else
-        puts "#{e}Local directory: #{direct}: does not exist!"
+        puts "#{e}Output directory: #{direct}: does not exist!"
         abort()
     end
 end
