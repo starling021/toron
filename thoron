@@ -235,7 +235,7 @@ elsif c[0] == "use"
                             printf "    %-14s%-#{fts}s%s\n", "LHOST", lhost, "Local host."
                             printf "    %-14s%-#{fts}s%s\n", "LPORT", lport, "Local port."
                             printf "    %-14s%-#{fts}s%s\n", "SHELL", shell, "Target shell."
-                            printf "    %-14s%-#{fts}s%s\n", "OUTPUT", output, "Output file."
+                            printf "    %-14s%-#{fts}s%s\n", "OUTPUT", output, "Output path."
                             puts ""
                         end
                     else
