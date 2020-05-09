@@ -37,6 +37,4 @@ end.parse!
 host = options.local_host
 port = options.local_port
 
-puts "#{g}Using #{host}:#{port}..."
-puts "#{g}Listening on port #{port}..."
 system("ruby core/thorcat.rb -l #{host} -p #{port}")
