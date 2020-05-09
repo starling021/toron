@@ -80,18 +80,21 @@ end
 
 options = {}
 optparse = OptionParser.new do |opts| 
-  opts.banner = "Usage: #{$0} [option] <arguments>"
+  opts.banner = "Usage: thorcat.rb [-h] [-l <local_host> -p <local_port>]"
   opts.separator ""
   opts.separator "Options: "
-  opts.on('-l', '--listen', "\n\tStart ThorCat listener.") do |mode|
+  opts.on('-l', '--listen <local_host>', "Start ThorCat listener.") do |mode|
     options[:method] = 0
   end
-  opts.on('-p', '--port <local_port>', "\n\tPort used for listener.") do |port|
+  opts.on('-p', '--port <local_port>', "Local port.") do |port|
     options[:port] = port.to_i
   end
-  opts.on('-h', '--help', "\n\tShow this help list.") do 
-    puts opts
-    exit 69;
+  opts.on('-h', '--help', "Show options.") do 
+    puts "Usage: thorcat.rb [-h] [-l <local_host> -p <local_port>]"
+    puts ""
+    puts "  -h, --help  Show options."
+    puts "  -l, --listen <local_host> -p, --port <local_port>  Start ThorCat listener."
+    abort()
   end
 end
 begin
@@ -100,14 +103,18 @@ begin
   mandatory = [:method,:port]
   missing = mandatory.select{ |param| options[param].nil? }
   if not missing.empty?
-    puts "Missing options: #{missing.join(', ')}"
-    exit 666;
+    puts "Usage: thorcat.rb [-h] [-l <local_host> -p <local_port>]"
+    puts ""
+    puts "  -h, --help  Show options."
+    puts "  -l, --listen <local_host> -p, --port <local_port>  Start ThorCat listener."
+    abort()
   end
 rescue OptionParser::InvalidOption, OptionParser::MissingArgument
-  puts $!.to_s
-  puts
-  puts optparse
-  exit 666;   
+    puts "Usage: thorcat.rb [-h] [-l <local_host> -p <local_port>]"
+    puts ""
+    puts "  -h, --help  Show options."
+    puts "  -l, --listen <local_host> -p, --port <local_port>  Start ThorCat listener."
+    abort()  
 end
 
 rc = ThorCat.new
