@@ -39,13 +39,14 @@ host = options.local_host
 port = options.local_port
 shell = options.target_shell
 
-if host == "" or port == "" or shell == ""
+if not host or not port or not shell
     puts "Usage: cmd.rb --local-host=<local_host> --local-port=<local_port>"
     puts "              --target-shell=<target_shell>"
     puts ""
     puts "  --local-host=<local_host>      Local host."
     puts "  --local-port=<local_port>      Local port."
     puts "  --target-shell=<target_shell>  Target shell."
+    abort()
 end
   
 begin
