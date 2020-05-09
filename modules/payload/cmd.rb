@@ -30,9 +30,18 @@ require 'ostruct'
 
 options = OpenStruct.new
 OptionParser.new do |opt|
-  opt.on('-h', '--local-host <local_host>', 'Local host.') { |o| options.local_host = o }
-  opt.on('-p', '--local-port <local_port>', 'Local port.') { |o| options.local_port = o }
-  opt.on('-s', '--target-shell <target_shell>', 'Target shell.') { |o| options.target_shell = o }
+    opt.on('-l', '--local-host <local_host>', 'Local host.') { |o| options.local_host = o }
+    opt.on('-p', '--local-port <local_port>', 'Local port.') { |o| options.local_port = o }
+    opt.on('-s', '--target-shell <target_shell>', 'Target shell.') { |o| options.target_shell = o }
+    opt.on('-h', '--help', "Show options.") do
+        puts "Usage: cmd.rb [-h] --local-host=<local_host> --local-port=<local_port>"
+        puts "              --target-shell=<target_shell>"
+        puts ""
+        puts "  -h, --help                     Show options."
+        puts "  --local-host=<local_host>      Local host."
+        puts "  --local-port=<local_port>      Local port."
+        puts "  --target-shell=<target_shell>  Target shell."
+    end
 end.parse!
 
 host = options.local_host
@@ -40,9 +49,10 @@ port = options.local_port
 shell = options.target_shell
 
 if not host or not port or not shell
-    puts "Usage: cmd.rb --local-host=<local_host> --local-port=<local_port>"
-    puts "              --target-shell=<target_shell>"
+    puts "Usage: cmd.rb [-h] --local-host=<local_host> --local-port=<local_port>"
+    puts "                --target-shell=<target_shell>"
     puts ""
+    puts "  -h, --help                     Show options."
     puts "  --local-host=<local_host>      Local host."
     puts "  --local-port=<local_port>      Local port."
     puts "  --target-shell=<target_shell>  Target shell."
