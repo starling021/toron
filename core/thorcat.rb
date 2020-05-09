@@ -120,6 +120,7 @@ end
 rc = ThorCat.new
 case options[:method].to_i
 when 0
+  g = "\033[1;34m[*] \033[0m"
   port = options[:port].to_i
   host = "127.0.0.1"
   puts "#{g}Using #{host}:#{port}..."
