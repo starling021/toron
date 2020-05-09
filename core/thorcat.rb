@@ -28,11 +28,6 @@ class ThorCat
   end
 
   def listener(port=31337, ip=nil)
-    g = "\033[1;34m[*] \033[0m"
-    ports = options[:port].to_i
-    host = "127.0.0.1"
-    puts "#{g}Using #{host}:#{ports}..."
-    puts "#{g}Listening on port #{ports}..."
     if ip.nil?
       server = TCPServer.new(port)
       server.listen(1)
@@ -121,6 +116,12 @@ rescue OptionParser::InvalidOption, OptionParser::MissingArgument
     puts "  -l, --listen <local_host> -p, --port <local_port>  Start ThorCat listener."
     abort()  
 end
+
+g = "\033[1;34m[*] \033[0m"
+port = options[:port].to_i
+host = "127.0.0.1"
+puts "#{g}Using #{host}:#{port}..."
+puts "#{g}Listening on port #{port}..."
 
 rc = ThorCat.new
 case options[:method].to_i
