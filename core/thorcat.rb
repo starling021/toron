@@ -84,7 +84,7 @@ optparse = OptionParser.new do |opts|
   opts.separator ""
   opts.separator "Options: "
   opts.on('-l', '--listen <local_host>', "Start ThorCat listener.") do |mode|
-    options[:mode] = mode.to_i
+    options[:mode] = mode
     options[:method] = 0
   end
   opts.on('-p', '--port <local_port>', "Local port.") do |port|
@@ -120,7 +120,7 @@ end
 
 g = "\033[1;34m[*] \033[0m"
 port = options[:port].to_i
-host = options[:mode].to_i
+host = options[:mode]
 puts "#{g}Using #{host}:#{port}..."
 puts "#{g}Listening on port #{port}..."
 
