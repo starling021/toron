@@ -35,8 +35,8 @@ OptionParser.new do |opt|
     opt.on('-s', '--target-shell <target_shell>', 'Target shell.') { |o| options.target_shell = o }
     opt.on('-o', '--output-path <output_path>', 'Output path.') { |o| options.output_path = o }
     opt.on('-h', '--help', "Show options.") do
-        puts "Usage: lua.rb [-h] --local-host=<local_host> --local-port=<local_port>"
-        puts "              --target-shell=<target_shell> --output-path=<output_path>"
+        puts "Usage: java.rb [-h] --local-host=<local_host> --local-port=<local_port>"
+        puts "               --target-shell=<target_shell> --output-path=<output_path>"
         puts ""
         puts "  -h, --help                     Show options."
         puts "  --local-host=<local_host>      Local host."
@@ -53,8 +53,8 @@ shell = options.target_shell
 file = options.output_path
 
 if not host or not port or not shell or not file
-    puts "Usage: lua.rb [-h] --local-host=<local_host> --local-port=<local_port>"
-    puts "              --target-shell=<target_shell> --output-path=<output_path>"
+    puts "Usage: java.rb [-h] --local-host=<local_host> --local-port=<local_port>"
+    puts "               --target-shell=<target_shell> --output-path=<output_path>"
     puts ""
     puts "  -h, --help                     Show options."
     puts "  --local-host=<local_host>      Local host."
