@@ -43,6 +43,7 @@ OptionParser.new do |opt|
         puts "  --local-port=<local_port>      Local port."
         puts "  --target-shell=<target_shell>  Target shell."
         puts "  --output-path=<output_path>    Output path."
+        abort()
     end
 end.parse!
 
