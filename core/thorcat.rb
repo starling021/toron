@@ -120,5 +120,9 @@ end
 rc = ThorCat.new
 case options[:method].to_i
 when 0
+  port = options[:port].to_i
+  host = "127.0.0.1"
+  puts "#{g}Using #{host}:#{port}..."
+  puts "#{g}Listening on port #{port}..."
   rc.listener(options[:port].to_i)
 end
