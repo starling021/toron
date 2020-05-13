@@ -33,7 +33,7 @@ printf '\033]2;uninstall.sh\a'
 
 if [[ $EUID -ne 0 ]]
 then
-   echo -e ""$RS"[-]"$WS" This script must be run as root!"$CE"" 1>&2
+   echo -e ""$RS"[-]"$WS" This script must be run as root!"$CE""
    exit
 fi
 
