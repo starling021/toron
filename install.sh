@@ -51,20 +51,9 @@ then
    exit
 fi
 
-if [[ -d ~/entropy ]]
-then
-sleep 0
-else
-cd ~
-{
-git clone https://github.com/entynetproject/entropy.git
-} &> /dev/null
-fi
-
 sleep 0.5
 clear
 sleep 0.5
-cd ~/thoron
 cat banner/banner.txt
 echo
 
@@ -100,8 +89,18 @@ xbps-install -y git
 xbps-install -y ruby
 } &> /dev/null
 
+if [[ -d ~/thoron ]]
+then
+sleep 0
+else
+cd ~
 {
-cd ~/thoron/bin
+git clone https://github.com/entynetproject/thoron.git
+} &> /dev/null
+fi
+
+{
+cd bin
 cp thoron /usr/local/bin
 chmod +x /usr/local/bin/thoron
 cp thoron /bin
