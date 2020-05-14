@@ -43,7 +43,7 @@ ASESR="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
 } &> /dev/null
 if [[ "$ASESR" != 0 ]]
 then 
-   echo -e ""$RS"[-] "$WS"No Internet connection!"$CE""
+   echo -e ""$RS"[-]"$WS" No Internet connection!"$CE""
    exit
 fi
 
@@ -99,7 +99,7 @@ if [[ -d ~/thoron ]]
 then
 cd ~/thoron
 else
-echo -e ""$RS"[-]"$WHS" Installation failed!"$CE""
+echo -e ""$RS"[-]"$WS" Installation failed!"$CE""
 exit
 fi
 
