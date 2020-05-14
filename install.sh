@@ -95,6 +95,14 @@ git clone https://github.com/entynetproject/thoron.git
 } &> /dev/null
 fi
 
+if [[ -d ~/thoron ]]
+then
+cd ~/thoron
+else
+echo -e ""$RS"[-]"$WHS" Installation failed!"$CE""
+exit
+fi
+
 {
 cd bin
 cp thoron /usr/local/bin
