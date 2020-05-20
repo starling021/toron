@@ -52,7 +52,7 @@ class ThorCat
         sleep(0.5)
         puts "#{g}Opening #{address} shell..."
         sleep(1)
-        while(true)
+        while (true)
           if (IO.select([],[],[@socket, STDIN],0))
               socket.close
               return
