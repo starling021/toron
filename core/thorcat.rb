@@ -53,19 +53,19 @@ class ThorCat
         puts "#{g}Opening #{address} shell..."
         sleep(1)
         while(true)
-          if(IO.select([],[],[@socket, STDIN],0))
+          if (IO.select([],[],[@socket, STDIN],0))
               socket.close
               return
           end
           begin
-              while( (data = @socket.recv_nonblock(100)) != "")
+              while ((data = @socket.recv_nonblock(100)) != "")
                   STDOUT.write(data);
               end
               break
           rescue Errno::EAGAIN
           end
           begin
-              while( (data = STDIN.read_nonblock(100)) != "")
+              while ((data = STDIN.read_nonblock(100)) != "")
                   @socket.write(data);
               end
               break
