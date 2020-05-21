@@ -46,7 +46,7 @@ cat banner/banner.txt
 echo
 
 sleep 1
-echo ""$G"Installing dependencies..."
+echo -e ""$G"Installing dependencies..."
 sleep 1
 
 {
@@ -106,5 +106,5 @@ chmod +x /data/data/com.termux/files/usr/bin/thoron
 } &> /dev/null
 
 sleep 1
-echo ""$S"Successfully installed!"
+echo -e ""$S"Successfully installed!"
 sleep 1
