@@ -32,6 +32,7 @@ lport = ""
 
 require 'readline'
 require 'socket'
+
 def local_ip
     orig, Socket.do_not_reverse_lookup = Socket.do_not_reverse_lookup, true
     UDPSocket.open do |s|
