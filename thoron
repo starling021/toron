@@ -171,8 +171,8 @@ elsif c[0] == "use"
                             location[pwd] = ui[1]
                             type = ui[1][0..ui[1].index('/')][0..-2]
                             ifraw = ui[1]
-                            lhost = ""
-                            lport = ""
+                            lhost = local_ip
+                            lport = "4444"
                             output = ""
                             shell = ""
                         else
