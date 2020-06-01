@@ -286,7 +286,7 @@ elsif c[0] == "use"
                                     end
                                 else
                                     if ui[1].downcase == "lhost"
-                                        lhost = ui.split()[2]
+                                        lhost = ui[2]
                                         puts "#{s}LHOST ==> #{ui[2]}"
                                     elsif ui[1].downcase == "lport"
                                         lport = ui[2]
