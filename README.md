@@ -79,8 +79,8 @@ for you to master the Thoron Framework.
 * A lot of different payloads.
 
 ```
-There are a lot of different payloads in Thoron 
-Framework such as Shell and Python payloads.
+There are a lot of different Linux payloads in 
+Thoron Framework such as Shell and Python payloads.
 ```
 
 * Powerful ThorCat listener.
