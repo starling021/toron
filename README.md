@@ -80,7 +80,7 @@ for you to master the Thoron Framework.
 
 ```
 There are a lot of different payloads in Thoron 
-Framework such as Shell, Python and C payloads.
+Framework such as Shell and Python payloads.
 ```
 
 * Powerful ThorCat listener.
