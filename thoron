@@ -20,6 +20,7 @@
 
 system("printf '\033]2;Thoron Framework\a'")
 
+i = "\033[1;77m[i] \033[0m"
 e = "\033[1;31m[-] \033[0m"
 p = "\033[1;77m[>] \033[0m"
 g = "\033[1;34m[*] \033[0m"
@@ -303,29 +304,29 @@ elsif c[0] == "use"
                                 if ifraw == "payload/cmd" or ifraw == "payload/raw"
                                     if ui[1].downcase == "lhost"
                                         lhost = ui[2]
-                                        puts "#{s}LHOST ==> #{ui[2]}"
+                                        puts "#{i}LHOST ==> #{ui[2]}"
                                     elsif ui[1].downcase == "lport"
                                         lport = ui[2]
-                                        puts "#{s}LPORT ==> #{ui[2]}"
+                                        puts "#{i}LPORT ==> #{ui[2]}"
                                     elsif ui[1].downcase == "shell"
                                         shell = ui[2]
-                                        puts "#{s}SHELL ==> #{ui[2]}"
+                                        puts "#{i}SHELL ==> #{ui[2]}"
                                     else
                                         puts "#{e}Option is not found!"
                                     end
                                 else
                                     if ui[1].downcase == "lhost"
                                         lhost = ui[2]
-                                        puts "#{s}LHOST ==> #{ui[2]}"
+                                        puts "#{i}LHOST ==> #{ui[2]}"
                                     elsif ui[1].downcase == "lport"
                                         lport = ui[2]
-                                        puts "#{s}LPORT ==> #{ui[2]}"
+                                        puts "#{i}LPORT ==> #{ui[2]}"
                                     elsif ui[1].downcase == "shell"
                                         shell = ui[2]
-                                        puts "#{s}SHELL ==> #{ui[2]}"
+                                        puts "#{i}SHELL ==> #{ui[2]}"
                                     elsif ui[1].downcase == "output"
                                         output = ui[2]
-                                        puts "#{s}OUTPUT ==> #{ui[2]}"
+                                        puts "#{i}OUTPUT ==> #{ui[2]}"
                                     else
                                         puts "#{e}Option is not found!"
                                     end
@@ -333,10 +334,10 @@ elsif c[0] == "use"
                             else
                                 if ui[1].downcase == "lhost"
                                     lhost = ui[2]
-                                    puts "#{s}LHOST ==> #{ui[2]}"
+                                    puts "#{i}LHOST ==> #{ui[2]}"
                                 elsif ui[1].downcase == "lport"
                                     lport = ui[2]
-                                    puts "#{s}LPORT ==> #{ui[2]}"
+                                    puts "#{i}LPORT ==> #{ui[2]}"
                                 else
                                     puts "#{e}Option is not found!"
                                 end
