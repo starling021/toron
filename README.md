@@ -58,8 +58,8 @@
 # Thoron Framework execution
 
 ```
-To execute Thoron Framework you
-should execute the following command.
+To run Thoron Framework you should 
+execute the following command.
 ```
 
 > thoron
