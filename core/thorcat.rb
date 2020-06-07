@@ -127,6 +127,7 @@ sr = system("ping -c 1 #{host} >/dev/null 2>&1")
 if sr != true
     puts "#{e}Failed to bind to #{host}:#{port}!"
     abort()
+end
 puts "#{g}Listening on port #{port}..."
 
 rc = ThorCat.new
