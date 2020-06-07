@@ -47,7 +47,7 @@ end
 lhost = local_ip
 lport = "4444"
 
-shell = "bash"
+shell = "sh"
 output = ""
 type = ""
 
@@ -200,7 +200,7 @@ elsif c[0] == "use"
                             elsif location[pwd] == "payload/shell"
                                 output = "payload.sh"
                             end
-                            shell = "bash"
+                            shell = "sh"
                         else
                             puts "#{e}Module is not found!"
                         end
