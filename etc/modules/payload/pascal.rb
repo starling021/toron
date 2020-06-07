@@ -71,7 +71,7 @@ if File.directory? file
         if file[-1] == "/"
             file = "#{file}payload.pas"
             sleep(0.5)
-            puts "#{g}Generating payload..."
+            puts "#{g}Creating payload..."
             sleep(1)
             puts "#{g}Saving to #{file}..."
             sleep(0.5)
@@ -84,7 +84,7 @@ if File.directory? file
         else
             file = "#{file}/payload.pas"
             sleep(0.5)
-            puts "#{g}Generating payload..."
+            puts "#{g}Creating payload..."
             sleep(1)
             puts "#{g}Saving to #{file}..."
             sleep(0.5)
@@ -111,7 +111,7 @@ else
     if File.exists? direct
         if File.directory? direct
             sleep(0.5)
-            puts "#{g}Generating payload..."
+            puts "#{g}Creating payload..."
             sleep(1)
             puts "#{g}Saving to #{file}..."
             sleep(0.5)

@@ -31,7 +31,7 @@
 
     Thoron Framework is a Linux post-exploitation framework that exploits
     Linux TCP vulnerability to provide a shell-like connection. Thoron Framework 
-    has the ability to generate simple payloads to provide Linux TCP attack. 
+    has the ability to create simple payloads to provide Linux TCP attack. 
 
 ***
 

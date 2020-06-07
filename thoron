@@ -348,13 +348,13 @@ elsif c[0] == "use"
                     if type == "payload"
                         if ifraw == "payload/cmd"
                             if lhost == "" or lport == "" or shell == ""
-                                puts "#{e}Failed to generate payload!"
+                                puts "#{e}Failed to create payload!"
                             else
                                 system("ruby modules/#{location[pwd]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell}")
                             end
                         else
                             if lhost == "" or lport == "" or shell == "" or output == ""
-                                puts "#{e}Failed to generate payload!"
+                                puts "#{e}Failed to create payload!"
                             else
                                 system("ruby modules/#{location[pwd]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell} --output-path=#{output}")
                             end
