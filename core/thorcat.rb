@@ -119,9 +119,14 @@ rescue OptionParser::InvalidOption, OptionParser::MissingArgument
 end
 
 g = "\033[1;34m[*] \033[0m"
+e = "\033[1;31m[-] \033[0m"
 port = options[:port].to_i
 host = options[:mode]
-puts "#{g}Using #{host}:#{port}..."
+puts "#{g}Binding to #{host}:#{port}..."
+sr = system("ping -c 1 #{host} >/dev/null 2>&1")
+if sr != true
+    puts "#{e}Failed to bind to #{host}:#{port}!"
+    abort()
 puts "#{g}Listening on port #{port}..."
 
 rc = ThorCat.new
