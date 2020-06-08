@@ -37,7 +37,11 @@ require 'socket'
 def local_ip
     orig, Socket.do_not_reverse_lookup = Socket.do_not_reverse_lookup, true
     UDPSocket.open do |s|
-        s.connect '192.168.1.1', 1
+        begin
+            s.connect '192.168.1.1', 1
+        rescue
+            s.connect '127.0.0.1', 1
+        end
         s.addr.last
     end
 ensure
@@ -45,7 +49,7 @@ ensure
 end
 
 lhost = local_ip
-lport = "4444"
+lport = 4444
 
 shell = "sh"
 output = ""
@@ -173,7 +177,7 @@ elsif c[0] == "use"
                             type = ui[1][0..ui[1].index('/')][0..-2]
                             ifraw = ui[1]
                             lhost = local_ip
-                            lport = "4444"
+                            lport = 4444
                             output = ""
                             if location[pwd] == "payload/clang"
                                 output = "payload.c"
