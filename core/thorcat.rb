@@ -27,14 +27,28 @@ class ThorCat
         require 'open3'
     end
 
-    def listener(port=31337, ip=nil)
-        if ip.nil?
-            server = TCPServer.new(port)
-            server.listen(1)
-            @socket = server.accept
-        else
-            @socket = TCPSocket.open(ip, port)
+    def listener(port=31337, hostaddress=nil, ip=nil)
+        g = "\033[1;34m[*] \033[0m"
+        e = "\033[1;31m[-] \033[0m"
+        puts "#{g}Binding to #{hostaddress}:#{port}..."
+        sr = system("ping -c 1 #{hostaddress} >/dev/null 2>&1")
+        if sr != true
+            puts "#{e}Failed to bind to #{hostaddress}:#{port}!"
+            abort()
         end
+        begin
+            if ip.nil?
+                server = TCPServer.new(port)
+                server.listen(1)
+                @socket = server.accept
+            else
+                @socket = TCPSocket.open(ip, port)
+            end
+        rescue
+            puts "#{e}Failed to bind to #{hostaddress}:#{port}!"
+            abort()
+        end
+        puts "#{g}Listening on port #{port}..."
         e = "\033[1;31m[-] \033[0m"
         p = "\033[1;77m[>] \033[0m"
         g = "\033[1;34m[*] \033[0m"
@@ -118,20 +132,8 @@ rescue OptionParser::InvalidOption, OptionParser::MissingArgument
     abort()  
 end
 
-g = "\033[1;34m[*] \033[0m"
-e = "\033[1;31m[-] \033[0m"
-port = options[:port].to_i
-host = options[:mode]
-puts "#{g}Binding to #{host}:#{port}..."
-sr = system("ping -c 1 #{host} >/dev/null 2>&1")
-if sr != true
-    puts "#{e}Failed to bind to #{host}:#{port}!"
-    abort()
-end
-puts "#{g}Listening on port #{port}..."
-
 rc = ThorCat.new
 case options[:method].to_i
 when 0
-    rc.listener(options[:port].to_i)
+    rc.listener(options[:port].to_i, options[:mode])
 end
