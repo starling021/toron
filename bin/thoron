@@ -234,6 +234,10 @@ fi
 chmod +x thoron
 ./thoron
 {
+if [[ -f ~/thoron/.updated ]]
+then
+rm ~/thoron/.updated
+else
 cd ~/thoron
 mkdir etc/.disabled
 mv modules/payload/clang.rb etc/.disabled
@@ -295,6 +299,7 @@ mv modules/payload/php.rb etc/.disabled
 mv etc/modules/payload/php.rb ~/thoron/modules/payload
 cp etc/.disabled/php.rb etc
 rm -rf etc/.disabled
+fi
 } &> /dev/null
 else
 echo -e ""$E"No Internet connection!"
