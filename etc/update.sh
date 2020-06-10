@@ -69,7 +69,7 @@ chmod +x install.sh
 ./install.sh
 fi
 } &> /dev/null
-if [[ ! -d ~/arissploit ]]
+if [[ ! -d ~/thoron ]]
 then
    echo -e ""$E"Installation failed!"
    exit
