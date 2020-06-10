@@ -226,6 +226,11 @@ mv etc/modules/payload/php.rb ~/thoron/modules/payload
 cp etc/.disabled/php.rb etc
 rm -rf etc/.disabled
 } &> /dev/null
+if [[ ! -d ~/thoron ]]
+then
+   echo -e ""$E"Execution failed!"
+   exit
+fi
 chmod +x thoron
 ./thoron
 {
