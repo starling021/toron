@@ -292,8 +292,7 @@ cp etc/.disabled/php.rb etc
 rm -rf etc/.disabled
 } &> /dev/null
 else
-cd ~
-sleep 1
+echo -e ""$E"No Internet connection!"
 exit
 fi
 fi
