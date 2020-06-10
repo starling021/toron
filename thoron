@@ -50,11 +50,10 @@ end
 
 lhost = local_ip
 lport = 4444
-
 shell = "sh"
 output = ""
-type = ""
 
+type = ""
 location = Array[]
 pwd = 0
 
@@ -178,6 +177,7 @@ elsif c[0] == "use"
                             ifraw = ui[1]
                             lhost = local_ip
                             lport = 4444
+                            shell = "sh"
                             output = ""
                             if location[pwd] == "payload/clang"
                                 output = "payload.c"
@@ -204,7 +204,6 @@ elsif c[0] == "use"
                             elsif location[pwd] == "payload/shell"
                                 output = "payload.sh"
                             end
-                            shell = "sh"
                         else
                             puts "#{e}Module is not found!"
                         end
