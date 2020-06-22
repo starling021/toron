@@ -35,7 +35,7 @@ OptionParser.new do |opt|
     opt.on('-p', '--local-port <local_port>', 'Local port.') { |o| options.local_port = o }
     opt.on('-h', '--help', "Show options.") do
         puts "Usage: thorcat.rb [-h] --local-host=<local_host>"
-        puts "                   --local-port=<local_port>"
+        puts "                  --local-port=<local_port>"
         puts ""
         puts "  -h, --help                     Show options."
         puts "  --local-host=<local_host>      Local host."
@@ -49,7 +49,7 @@ port = options.local_port
 
 if not host or not port
     puts "Usage: thorcat.rb [-h] --local-host=<local_host>"
-    puts "                   --local-port=<local_port>"
+    puts "                  --local-port=<local_port>"
     puts ""
     puts "  -h, --help                     Show options."
     puts "  --local-host=<local_host>      Local host."
