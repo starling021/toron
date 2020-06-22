@@ -49,7 +49,7 @@ ensure
 end
 
 lhost = local_ip
-lport = 4444
+lport = "4444"
 shell = "sh"
 output = ""
 
@@ -176,7 +176,7 @@ elsif c[0] == "use"
                             type = ui[1][0..ui[1].index('/')][0..-2]
                             ifraw = ui[1]
                             lhost = local_ip
-                            lport = 4444
+                            lport = "4444"
                             shell = "sh"
                             output = ""
                             if location[pwd] == "payload/clang"
