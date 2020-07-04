@@ -23,7 +23,7 @@
  </a>
 </p>
 
-![thoron](https://user-images.githubusercontent.com/54115104/83969287-d862a580-a8d7-11ea-8eb3-7362b3e6692c.png)
+![thoron](https://user-images.githubusercontent.com/54115104/86508323-dfea7100-bde7-11ea-8eec-629b65236281.png)
 
 ***
 
@@ -91,7 +91,7 @@ Framework that supports secure SSL connection
 and other useful functions.
 ```
 
-![thorcat](https://user-images.githubusercontent.com/54115104/83969288-d8fb3c00-a8d7-11ea-8561-e8acfb41006b.png)
+![thorcat](https://user-images.githubusercontent.com/54115104/86508324-e11b9e00-bde7-11ea-84c2-426512f070ba.png)
 
 ***
     
