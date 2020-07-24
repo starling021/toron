@@ -14,7 +14,7 @@ require 'readline'
 require 'socket'
 
 Signal.trap("INT") { 
-  abort()
+    abort()
 }
 
 lhost = ""
