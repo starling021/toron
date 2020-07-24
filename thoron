@@ -13,10 +13,6 @@ r = "\033[1;77m[#] \033[0m"
 require 'readline'
 require 'socket'
 
-Signal.trap("INT") { 
-    abort()
-}
-
 lhost = ""
 lport = ""
 
@@ -51,7 +47,11 @@ puts "---------------------"
 puts ""
 
 loop do
-c = Readline.readline("\033[4mthoron\033[0m> ", true).split()
+begin
+    c = Readline.readline("\033[4mthoron\033[0m> ", true).split()
+rescue Exception
+    abort()
+end
 if c == []
     nil
 elsif c[0] == "exit"
@@ -112,7 +112,11 @@ elsif c[0] == "use"
             loop do
                 type = location[pwd][0..location[pwd].index('/')][0..-2]
                 ifraw = location[pwd]
-                ui = Readline.readline("\033[4mthoron\033[0m(\033[1;31m#{location[pwd]}\033[0m)> ", true).split()
+                begin
+                    ui = Readline.readline("\033[4mthoron\033[0m(\033[1;31m#{location[pwd]}\033[0m)> ", true).split()
+                rescue Exception
+                    abort()
+                end
                 if ui == []
                     nil
                 elsif ui[0] == "help"
