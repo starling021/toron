@@ -343,20 +343,32 @@ elsif c[0] == "use"
                             if lhost == "" or lport == "" or shell == ""
                                 puts "#{e}Failed to create payload!"
                             else
-                                system("ruby modules/#{location[pwd]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell}")
+                                begin
+                                    system("ruby modules/#{location[pwd]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell}")
+                                rescue Exception
+                                    nil
+                                end
                             end
                         else
                             if lhost == "" or lport == "" or shell == "" or output == ""
                                 puts "#{e}Failed to create payload!"
                             else
-                                system("ruby modules/#{location[pwd]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell} --output-path=#{output}")
+                                begin
+                                    system("ruby modules/#{location[pwd]}.rb --local-host=#{lhost} --local-port=#{lport} --target-shell=#{shell} --output-path=#{output}")
+                                rescue Exception
+                                    nil
+                                end
                             end
                         end
                     else
                         if lhost == "" or lport == ""
                             puts "#{e}Failed to start listener!"
                         else
-                            system("ruby modules/#{location[pwd]}.rb --local-host=#{lhost} --local-port=#{lport}")
+                            begin
+                                system("ruby modules/#{location[pwd]}.rb --local-host=#{lhost} --local-port=#{lport}")
+                            rescue Exception
+                                nil
+                            end
                         end
                     end
                 else
