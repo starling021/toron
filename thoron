@@ -13,6 +13,10 @@ r = "\033[1;77m[#] \033[0m"
 require 'readline'
 require 'socket'
 
+Signal.trap("INT") { 
+  abort()
+}
+
 lhost = ""
 lport = ""
 
