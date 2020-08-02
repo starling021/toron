@@ -2,6 +2,10 @@
 
 require 'optparse'
 
+Signal.trap("INT") {
+    abort()
+}
+
 class ThorCat
     def initialize
         require 'ostruct'

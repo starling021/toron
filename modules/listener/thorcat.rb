@@ -11,6 +11,10 @@ r = "\033[1;77m[#] \033[0m"
 require 'optparse'
 require 'ostruct'
 
+Signal.trap("INT") {
+    abort()
+}
+
 options = OpenStruct.new
 OptionParser.new do |opt|
     opt.on('-h', '--local-host <local_host>', 'Local host.') { |o| options.local_host = o }
